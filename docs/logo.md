@@ -69,3 +69,16 @@ compris) est propre et precise, ce n'est pas la qualite d'execution qui les rend
 critiquables, c'est leur manque de specificite conceptuelle par rapport a Cayus. Le vrai
 enseignement a retenir des deux : **precision geometrique deliberee**, ce qui manquait
 dans la premiere version du sceau.
+
+## Deuxieme correction, meme jour : abandon du sceau festonne
+
+Le medaillon a 8 pointes, meme mathematiquement precis, se lisait comme "un biscuit" ou
+"une vieille etoile" (retour direct d'Enzo sur les fichiers). Diagnostic correct : le
+festonnage/organique n'est simplement pas le bon registre, quelle que soit la precision
+d'execution. Toutes les references qu'Enzo a validees (Softriver, Monty, Apytel) sont des
+**formes geometriques simples et abstraites** (arcs, chevrons, barres), jamais des
+contours ondules. Nouveau mark : un anneau ouvert formant un "C" litteral, un seul arc
+epais (rayon 62, epaisseur de trait 26, extremites arrondies), meme registre que le S de
+Softriver. Propage partout. Un vrai bug trouve au passage : le filtre `drop-shadow` du
+composant React debordait le viewport SVG et se faisait tronquer net a droite — corrige
+avec `overflow: visible` sur le SVG et un flou reduit.
