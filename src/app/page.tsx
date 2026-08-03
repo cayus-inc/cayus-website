@@ -97,7 +97,7 @@ export default function Home() {
       <Header />
 
       {/* Hero */}
-      <div className="mx-auto grid max-w-[1200px] grid-cols-1 items-center gap-16 px-6 pb-24 pt-16 md:grid-cols-[1.1fr_0.9fr] md:pb-32 md:pt-32">
+      <div className="mx-auto grid max-w-[1280px] grid-cols-1 items-center gap-20 px-6 pb-32 pt-20 md:grid-cols-[1.1fr_0.9fr] md:pb-44 md:pt-44">
         <Reveal>
           <span className="mb-8 inline-flex items-center gap-2 rounded-full border border-border px-3 py-1.5 text-[0.72rem] font-medium text-fg-soft">
             <span className="relative flex size-1.5">
@@ -106,14 +106,12 @@ export default function Home() {
             </span>
             Qualified interviews, on your calendar
           </span>
-          <h1 className="font-serif-display text-[3.2rem] font-medium leading-[0.96] tracking-[-0.015em] text-balance md:text-[6rem]">
+          <h1 className="font-serif-display text-[3.4rem] font-medium leading-[0.95] tracking-[-0.02em] text-balance md:text-[6.8rem]">
             We book the
             <br />
             <span style={{ color: "var(--metal)" }}>interview.</span>
             <br />
-            You decide who
-            <br />
-            you hire.
+            You decide who you hire.
           </h1>
           <p className="mt-8 max-w-[46ch] text-[1.15rem] leading-[1.6] text-fg-soft">
             We source, contact, and qualify candidates who already said yes
@@ -165,7 +163,7 @@ export default function Home() {
       </div>
 
       {/* Problem / solution contrast */}
-      <section className="px-6 py-28 md:py-36">
+      <section className="px-6 py-28 md:py-40">
         <div className="mx-auto max-w-[1160px]">
           <Reveal>
             <SectionHead
@@ -223,7 +221,7 @@ export default function Home() {
       </section>
 
       {/* How it works */}
-      <section id="how" className="border-t border-border px-6 py-28 md:py-36">
+      <section id="how" className="border-t border-border px-6 py-28 md:py-40">
         <div className="mx-auto max-w-[1160px]">
           <Reveal>
             <SectionHead
@@ -263,7 +261,7 @@ export default function Home() {
 
       {/* One thing, done well — forced-dark band regardless of theme */}
       <section
-        className="border-t border-border px-6 py-28 md:py-36"
+        className="border-t border-border px-6 py-28 md:py-40"
         style={{
           background: "#0d0d0c",
           color: "#faf8f4",
@@ -321,7 +319,7 @@ export default function Home() {
       </section>
 
       {/* What this isn't */}
-      <section className="border-t border-border bg-bg-raised px-6 py-28 md:py-36">
+      <section className="border-t border-border bg-bg-raised px-6 py-28 md:py-40">
         <div className="mx-auto max-w-[1160px]">
           <Reveal>
             <SectionHead
@@ -367,7 +365,7 @@ export default function Home() {
       </section>
 
       {/* Pricing */}
-      <section id="pricing" className="border-t border-border px-6 py-28 md:py-36">
+      <section id="pricing" className="border-t border-border px-6 py-28 md:py-40">
         <div className="mx-auto max-w-[1160px]">
           <Reveal>
             <SectionHead
@@ -419,7 +417,7 @@ export default function Home() {
       </section>
 
       {/* FAQ */}
-      <section className="border-t border-border bg-bg-raised px-6 py-28 md:py-36">
+      <section className="border-t border-border bg-bg-raised px-6 py-28 md:py-40">
         <div className="mx-auto max-w-[1160px]">
           <Reveal>
             <SectionHead eyebrow="Questions" title="Answered plainly." />
