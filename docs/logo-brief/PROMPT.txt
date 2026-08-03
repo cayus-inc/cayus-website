@@ -1,0 +1,42 @@
+Design a logo mark for "Cayus," a premium B2B recruitment agency in the US that books
+qualified candidate interviews for hiring companies. The brand should feel discreet,
+serious, and trustworthy -- closer to a high-end consultancy or a precision instrument
+brand than a consumer app or a dated corporate firm.
+
+NAME MEANING (use as creative inspiration, not literally): Cayus comes from Caius/Gaius
+Octavius, the birth name of Augustus, Rome's first emperor, before he took the name
+"Augustus" at 35. Augustus ended a century of civil war through discipline and quiet
+authority, not conquest or spectacle. The brand should echo precision and restraint, not
+grandeur or ornamentation.
+
+STRICT PALETTE: warm near-black ink (#0D0D0C), warm near-white paper (#FAF8F4), and one
+desaturated metallic accent -- pewter (#9A9488, lighter #C7C0B2, darker #6B6559). No
+saturated or vivid colors of any kind. The mark should work as a single flat color (pure
+ink on paper, or pure paper on ink) as well as with the pewter gradient as an accent.
+
+STYLE DIRECTION, based on real reference logos I'm attaching (all from one branding
+studio's portfolio, do not copy them, use them as a quality and style bar): the marks
+that work are simple, deliberate, abstract geometric constructions -- arcs, chevrons,
+bars, circles, triangles, combined with precision. Look especially at the Softriver mark
+itself (two curved chevrons forming an abstract "S"), the Monty mark (a minimal "//."
+glyph), the Exposure mark (four vertical bars of varying height), and the Atlas mark (a
+mountain/peak "A" abstraction in a classical, sober register). Notice none of these are
+organic, wavy, or scalloped shapes -- they're all built from a small number of precise
+geometric primitives.
+
+WHAT NOT TO DO, from things I already tried and rejected: no hand-drawn or organic blob
+shapes, no scalloped/wavy medallion or flower-like outlines (tried this, it read as "a
+cookie" or "an old star," not premium), no generic rounded-square-plus-icon startup logo
+cliche, no literal serif letter dropped inside a plain circle badge.
+
+WHAT IT SHOULD DO: evoke the initial "C" for Cayus, or an abstract form that echoes it,
+without being a literal typeset letter in a bubble. It needs to read clearly at very
+small sizes (a 16px browser favicon) and hold up large (a 1200px social share image). It
+should look at home next to Stripe, Linear, or Vercel in terms of restraint and
+precision, but with a slightly more classical, grounded weight given the Roman naming
+story -- not futuristic, not playful.
+
+You have full creative freedom on the exact concept (an arc, a chevron, a negative-space
+cut, an abstract monogram, or something else entirely) as long as it is geometric,
+deliberately constructed, simple, and fits the palette and tone above. Please generate a
+few distinct directions rather than one single option.
