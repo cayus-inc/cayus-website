@@ -53,3 +53,19 @@ corps (Inter).
 Le mark existe seulement comme composant React integre a la page d'accueil. **Il n'existe
 aucun fichier de logo portable** (SVG isole, favicon, version monochrome pour tampon/
 filigrane, format carre pour avatar). C'est l'objet de la prochaine etape.
+
+## Correction du 2026-08-04 : le contour etait mal construit
+
+Premiere version livree : contour dessine a la main (courbes de Bezier approximatives,
+asymetriques). Rendu juge par Enzo, a raison, comme "une bouse avec une lettre dessus" — pas
+une forme deliberee. Refait mathematiquement : fonction polaire r(theta) = 78 + 9*cos(8*theta),
+echantillonnee et lissee en Catmull-Rom -> Bezier. Resultat : un medaillon a 8 pointes
+parfaitement symetrique, plus proche d'un vrai sceau de cire. Propage partout (composant
+`Seal.tsx`, tous les SVG de `public/brand/`, favicon, image OG).
+
+**Sur la critique des logos Softriver** : Enzo a raison de pousser en arriere — l'execution
+technique de toute la grille (Accredifi, Innovinity, PingYou, Agint, persocare, Bloosh
+compris) est propre et precise, ce n'est pas la qualite d'execution qui les rendait
+critiquables, c'est leur manque de specificite conceptuelle par rapport a Cayus. Le vrai
+enseignement a retenir des deux : **precision geometrique deliberee**, ce qui manquait
+dans la premiere version du sceau.
