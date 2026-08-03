@@ -70,13 +70,15 @@ export default function AboutPage() {
         <Reveal delay={0.1}>
           <div className="mt-16 rounded-sm border border-border bg-bg-raised p-8">
             <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-fg-soft">
-              Where we are today
+              Why one segment, not a broad practice
             </p>
             <p className="mt-4 max-w-[62ch] text-[0.98rem] leading-[1.65] text-fg-soft">
-              Cayus is early. We would rather say that plainly than dress
-              up a first engagement as a track record. What&rsquo;s on this
-              site is the model and the terms we hold ourselves to, not
-              invented case studies or numbers we haven&rsquo;t earned yet.
+              Depth on one role, in one market, beats a wide net every
+              time — the sourcing gets sharper, the qualification bar gets
+              clearer, and the candidates we&rsquo;ve already talked to
+              compound into the next search instead of starting from zero.
+              That focus is deliberate, and it stays until it stops being
+              the right call.
             </p>
           </div>
         </Reveal>

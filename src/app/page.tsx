@@ -138,11 +138,11 @@ export default function Home() {
 
       {/* Proof strip */}
       <div className="border-y border-border bg-bg-raised">
-        <div className="mx-auto max-w-[1160px] px-6">
-          <StaggerGroup className="grid grid-cols-1 divide-y divide-border sm:grid-cols-2 sm:divide-x sm:divide-y-0 lg:grid-cols-4">
+        <div className="mx-auto max-w-[1160px] px-6 py-6">
+          <StaggerGroup className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
             {proof.map((p) => (
-              <StaggerItem key={p} className="flex items-start gap-3 px-6 py-8 first:pl-0 last:pr-0 sm:px-8">
-                <svg width="15" height="15" viewBox="0 0 12 12" className="mt-0.5 flex-none">
+              <StaggerItem key={p} className="flex items-center gap-2.5 whitespace-nowrap">
+                <svg width="14" height="14" viewBox="0 0 12 12" className="flex-none">
                   <path
                     d="M2 6.5 L5 9.5 L10 3"
                     fill="none"
@@ -152,11 +152,23 @@ export default function Home() {
                     strokeLinejoin="round"
                   />
                 </svg>
-                <span className="text-[0.85rem] leading-[1.4] text-fg-soft">{p}</span>
+                <span className="text-[0.85rem] text-fg-soft">{p}</span>
               </StaggerItem>
             ))}
           </StaggerGroup>
         </div>
+      </div>
+
+      {/* Who this is for */}
+      <div className="border-b border-border px-6 py-10 text-center">
+        <Reveal>
+          <p className="mx-auto max-w-[62ch] text-[0.98rem] leading-[1.6] text-fg-soft">
+            Built for one search: <span className="text-fg">Sales Engineers and Solutions
+            Engineers at funded AI startups in the US</span>, the GTM role
+            that stays open longest and costs the most to leave empty. If
+            that&rsquo;s your req, this is built for exactly that.
+          </p>
+        </Reveal>
       </div>
 
       {/* Problem / solution contrast */}
