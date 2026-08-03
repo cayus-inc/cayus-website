@@ -1,11 +1,14 @@
 import Link from "next/link";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { Reveal } from "@/components/ui/Reveal";
+import { Reveal, StaggerGroup, StaggerItem } from "@/components/ui/Reveal";
 import { Seal } from "@/components/ui/Seal";
 import { SectionHead } from "@/components/ui/SectionHead";
 import { StepVisual } from "@/components/ui/StepVisual";
 import { FAQ } from "@/components/ui/FAQ";
+import { CTA } from "@/components/ui/CTA";
+
+const BOOK_A_CALL_HREF = "mailto:contact@cayus.io?subject=Booking%20a%20call";
 
 const proof = [
   "Verified before every contact",
@@ -119,12 +122,7 @@ export default function Home() {
             before we start. The hiring decision stays entirely yours.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
-            <Link
-              href="/#pricing"
-              className="inline-flex items-center gap-2 rounded-sm bg-fg px-6 py-3.5 text-[0.92rem] font-semibold text-bg transition-all hover:-translate-y-0.5 hover:opacity-90 hover:shadow-[0_14px_28px_-10px_rgba(0,0,0,0.35)]"
-            >
-              Book a call
-            </Link>
+            <CTA href={BOOK_A_CALL_HREF}>Book a call</CTA>
             <Link
               href="/#how"
               className="border-b border-border pb-0.5 text-[0.92rem] transition-colors hover:border-fg"
@@ -139,26 +137,25 @@ export default function Home() {
       </div>
 
       {/* Proof strip */}
-      <div className="border-y border-border">
-        <div className="mx-auto flex max-w-[1160px] flex-wrap items-center justify-center gap-x-9 gap-y-3 px-6 py-4">
-          {proof.map((p) => (
-            <span
-              key={p}
-              className="inline-flex items-center gap-2 text-[0.72rem] font-medium uppercase tracking-[0.1em] text-fg-soft"
-            >
-              <svg width="11" height="11" viewBox="0 0 12 12" className="flex-none">
-                <path
-                  d="M2 6.5 L5 9.5 L10 3"
-                  fill="none"
-                  stroke="var(--metal)"
-                  strokeWidth="1.6"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-              {p}
-            </span>
-          ))}
+      <div className="border-y border-border bg-bg-raised">
+        <div className="mx-auto max-w-[1160px] px-6">
+          <StaggerGroup className="grid grid-cols-1 divide-y divide-border sm:grid-cols-2 sm:divide-x sm:divide-y-0 lg:grid-cols-4">
+            {proof.map((p) => (
+              <StaggerItem key={p} className="flex items-start gap-3 px-6 py-8 first:pl-0 last:pr-0 sm:px-8">
+                <svg width="15" height="15" viewBox="0 0 12 12" className="mt-0.5 flex-none">
+                  <path
+                    d="M2 6.5 L5 9.5 L10 3"
+                    fill="none"
+                    stroke="var(--metal)"
+                    strokeWidth="1.6"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
+                <span className="text-[0.85rem] leading-[1.4] text-fg-soft">{p}</span>
+              </StaggerItem>
+            ))}
+          </StaggerGroup>
         </div>
       </div>
 
@@ -172,51 +169,49 @@ export default function Home() {
               sub="Post a role and you get the people actively looking, which is not the same set as the people who'd actually move the needle. The best hire for a Sales Engineer seat is usually not job-hunting. Someone has to go get them a conversation."
             />
           </Reveal>
-          <Reveal delay={0.1}>
-            <div className="mx-auto mt-14 grid max-w-3xl gap-4 sm:grid-cols-2">
-              <div className="h-full rounded-sm border border-border bg-bg-raised p-7">
-                <p className="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-fg-soft">
-                  Contingency search
-                </p>
-                <ul className="mt-5 flex flex-col gap-3.5">
-                  {oldWay.map((t) => (
-                    <li
-                      key={t}
-                      className="flex items-start gap-2.5 text-[0.9rem] leading-[1.5] text-fg-soft"
-                    >
-                      <span className="mt-1.5 size-1 flex-none rounded-full bg-fg-soft" />
-                      <span>{t}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-              <div className="h-full rounded-sm border border-fg bg-fg p-7 text-bg">
-                <p className="text-[0.7rem] font-semibold uppercase tracking-[0.16em] opacity-60">
-                  With Cayus
-                </p>
-                <ul className="mt-5 flex flex-col gap-3.5">
-                  {withCayus.map((t) => (
-                    <li
-                      key={t}
-                      className="flex items-start gap-2.5 text-[0.9rem] leading-[1.5]"
-                    >
-                      <svg width="13" height="13" viewBox="0 0 12 12" className="mt-0.5 flex-none">
-                        <path
-                          d="M2 6.5 L5 9.5 L10 3"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="1.6"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        />
-                      </svg>
-                      <span>{t}</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </div>
-          </Reveal>
+          <StaggerGroup className="mx-auto mt-14 grid max-w-3xl gap-4 sm:grid-cols-2">
+            <StaggerItem className="h-full rounded-sm border border-border bg-bg-raised p-7">
+              <p className="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-fg-soft">
+                Contingency search
+              </p>
+              <ul className="mt-5 flex flex-col gap-3.5">
+                {oldWay.map((t) => (
+                  <li
+                    key={t}
+                    className="flex items-start gap-2.5 text-[0.9rem] leading-[1.5] text-fg-soft"
+                  >
+                    <span className="mt-1.5 size-1 flex-none rounded-full bg-fg-soft" />
+                    <span>{t}</span>
+                  </li>
+                ))}
+              </ul>
+            </StaggerItem>
+            <StaggerItem className="h-full rounded-sm border border-fg bg-fg p-7 text-bg">
+              <p className="text-[0.7rem] font-semibold uppercase tracking-[0.16em] opacity-60">
+                With Cayus
+              </p>
+              <ul className="mt-5 flex flex-col gap-3.5">
+                {withCayus.map((t) => (
+                  <li
+                    key={t}
+                    className="flex items-start gap-2.5 text-[0.9rem] leading-[1.5]"
+                  >
+                    <svg width="13" height="13" viewBox="0 0 12 12" className="mt-0.5 flex-none">
+                      <path
+                        d="M2 6.5 L5 9.5 L10 3"
+                        fill="none"
+                        stroke="currentColor"
+                        strokeWidth="1.6"
+                        strokeLinecap="round"
+                        strokeLinejoin="round"
+                      />
+                    </svg>
+                    <span>{t}</span>
+                  </li>
+                ))}
+              </ul>
+            </StaggerItem>
+          </StaggerGroup>
         </div>
       </section>
 
@@ -230,32 +225,30 @@ export default function Home() {
               title="Three steps, nothing improvised."
             />
           </Reveal>
-          <Reveal delay={0.1}>
-            <div className="mt-14 grid grid-cols-1 gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-3">
-              {steps.map((step) => (
-                <div
-                  key={step.glyph}
-                  className="group flex h-full flex-col bg-bg p-8 transition-colors duration-300 hover:bg-bg-raised"
-                >
-                  <div className="flex items-center justify-between">
-                    <span className="font-serif-display text-[2.6rem] leading-none text-border transition-colors duration-300 group-hover:text-metal">
-                      {step.glyph}
-                    </span>
-                    <span className="h-px w-8 bg-border transition-all duration-300 group-hover:w-14 group-hover:bg-metal" />
-                  </div>
-                  <div className="mt-7">
-                    <StepVisual step={step.glyph} />
-                  </div>
-                  <h3 className="mt-7 text-[1.06rem] font-semibold">
-                    {step.title}
-                  </h3>
-                  <p className="mt-2.5 max-w-[32ch] text-[0.92rem] leading-[1.58] text-fg-soft">
-                    {step.body}
-                  </p>
+          <StaggerGroup className="mt-14 grid grid-cols-1 gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-3">
+            {steps.map((step) => (
+              <StaggerItem
+                key={step.glyph}
+                className="group flex h-full flex-col bg-bg p-8 transition-colors duration-300 hover:bg-bg-raised"
+              >
+                <div className="flex items-center justify-between">
+                  <span className="font-serif-display text-[2.6rem] leading-none text-border transition-colors duration-300 group-hover:text-metal">
+                    {step.glyph}
+                  </span>
+                  <span className="h-px w-8 bg-border transition-all duration-300 group-hover:w-14 group-hover:bg-metal" />
                 </div>
-              ))}
-            </div>
-          </Reveal>
+                <div className="mt-7">
+                  <StepVisual step={step.glyph} />
+                </div>
+                <h3 className="mt-7 text-[1.06rem] font-semibold">
+                  {step.title}
+                </h3>
+                <p className="mt-2.5 max-w-[32ch] text-[0.92rem] leading-[1.58] text-fg-soft">
+                  {step.body}
+                </p>
+              </StaggerItem>
+            ))}
+          </StaggerGroup>
         </div>
       </section>
 
@@ -328,39 +321,37 @@ export default function Home() {
               title="We stop at the interview. On purpose."
             />
           </Reveal>
-          <Reveal delay={0.1}>
-            <div className="mt-14 grid grid-cols-1 gap-px border border-border bg-border md:grid-cols-3">
-              {[
-                {
-                  tag: "Not a candidate list",
-                  title: "No names before you sign",
-                  body: "You see an anonymized profile first. Names are released only once terms are agreed — the same rule for every client.",
-                },
-                {
-                  tag: "Not a placement guarantee",
-                  title: "The hiring call is yours",
-                  body: "We don't negotiate offers or manage counter-offers. Fit and final judgment stay with you, every time.",
-                },
-                {
-                  tag: "Not volume outreach",
-                  title: "Every line is written for one person",
-                  body: "No mail-merge. Each message is grounded in something real about that candidate's work, or it doesn't go out.",
-                },
-              ].map((cell) => (
-                <div key={cell.tag} className="bg-bg-raised px-7 py-8">
-                  <div className="mb-2.5 text-[0.85rem] text-fg-soft">
-                    {cell.tag}
-                  </div>
-                  <h4 className="mb-2 text-[1.02rem] font-semibold">
-                    {cell.title}
-                  </h4>
-                  <p className="text-[0.92rem] leading-[1.5] text-fg-soft">
-                    {cell.body}
-                  </p>
+          <StaggerGroup className="mt-14 grid grid-cols-1 gap-px border border-border bg-border md:grid-cols-3">
+            {[
+              {
+                tag: "Not a candidate list",
+                title: "No names before you sign",
+                body: "You see an anonymized profile first. Names are released only once terms are agreed — the same rule for every client.",
+              },
+              {
+                tag: "Not a placement guarantee",
+                title: "The hiring call is yours",
+                body: "We don't negotiate offers or manage counter-offers. Fit and final judgment stay with you, every time.",
+              },
+              {
+                tag: "Not volume outreach",
+                title: "Every line is written for one person",
+                body: "No mail-merge. Each message is grounded in something real about that candidate's work, or it doesn't go out.",
+              },
+            ].map((cell) => (
+              <StaggerItem key={cell.tag} className="bg-bg-raised px-7 py-8">
+                <div className="mb-2.5 text-[0.85rem] text-fg-soft">
+                  {cell.tag}
                 </div>
-              ))}
-            </div>
-          </Reveal>
+                <h4 className="mb-2 text-[1.02rem] font-semibold">
+                  {cell.title}
+                </h4>
+                <p className="text-[0.92rem] leading-[1.5] text-fg-soft">
+                  {cell.body}
+                </p>
+              </StaggerItem>
+            ))}
+          </StaggerGroup>
         </div>
       </section>
 
@@ -374,45 +365,43 @@ export default function Home() {
               sub="One interview, one line item. No setup fee, no retainer you can't cancel."
             />
           </Reveal>
-          <Reveal delay={0.1}>
-            <div className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3">
-              {pricing.map((p) => (
-                <div
-                  key={p.label}
-                  className={`rounded-sm border px-7 py-8 transition-all hover:-translate-y-1 ${
-                    p.featured
-                      ? "border-fg bg-fg text-bg"
-                      : "border-border hover:border-metal"
+          <StaggerGroup className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3">
+            {pricing.map((p) => (
+              <StaggerItem
+                key={p.label}
+                className={`rounded-sm border px-7 py-8 transition-all hover:-translate-y-1 ${
+                  p.featured
+                    ? "border-fg bg-fg text-bg"
+                    : "border-border hover:border-metal"
+                }`}
+              >
+                <p
+                  className={`mb-5 text-[0.7rem] font-semibold uppercase tracking-[0.18em] ${
+                    p.featured ? "opacity-60" : "text-fg-soft"
                   }`}
                 >
-                  <p
-                    className={`mb-5 text-[0.7rem] font-semibold uppercase tracking-[0.18em] ${
+                  {p.label}
+                </p>
+                <div className="font-serif-display text-[2.2rem]">
+                  {p.amount}
+                  <small
+                    className={`font-sans text-[0.95rem] ${
                       p.featured ? "opacity-60" : "text-fg-soft"
                     }`}
                   >
-                    {p.label}
-                  </p>
-                  <div className="font-serif-display text-[2.2rem]">
-                    {p.amount}
-                    <small
-                      className={`font-sans text-[0.95rem] ${
-                        p.featured ? "opacity-60" : "text-fg-soft"
-                      }`}
-                    >
-                      {p.suffix}
-                    </small>
-                  </div>
-                  <p
-                    className={`mt-3.5 text-[0.92rem] leading-[1.55] ${
-                      p.featured ? "opacity-80" : "text-fg-soft"
-                    }`}
-                  >
-                    {p.body}
-                  </p>
+                    {p.suffix}
+                  </small>
                 </div>
-              ))}
-            </div>
-          </Reveal>
+                <p
+                  className={`mt-3.5 text-[0.92rem] leading-[1.55] ${
+                    p.featured ? "opacity-80" : "text-fg-soft"
+                  }`}
+                >
+                  {p.body}
+                </p>
+              </StaggerItem>
+            ))}
+          </StaggerGroup>
         </div>
       </section>
 
@@ -438,13 +427,13 @@ export default function Home() {
             One thing we don&rsquo;t do: decide who you hire.
           </h2>
           <div className="mt-8 flex justify-center">
-            <Link
-              href="/#pricing"
-              className="inline-flex items-center gap-2 rounded-sm px-6 py-3.5 text-[0.92rem] font-semibold transition-all hover:-translate-y-0.5 hover:opacity-90"
+            <CTA
+              href={BOOK_A_CALL_HREF}
+              variant="invert"
               style={{ background: "#faf8f4", color: "#0d0d0c" }}
             >
               Book a call
-            </Link>
+            </CTA>
           </div>
         </Reveal>
       </section>
