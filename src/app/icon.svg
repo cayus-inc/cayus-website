@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="200" height="200">
+  <defs>
+    <radialGradient id="sealGradientFav" cx="35%" cy="30%" r="75%">
+      <stop offset="0%" stop-color="#C7C0B2"/>
+      <stop offset="55%" stop-color="#9A9488"/>
+      <stop offset="100%" stop-color="#6B6559"/>
+    </radialGradient>
+  </defs>
+  <rect width="200" height="200" rx="28" fill="#0D0D0C"/>
+  <path fill="url(#sealGradientFav)" d="M100 30
+    C 126 30 145 44 152 66
+    C 159 86 151 100 159 116
+    C 167 134 157 152 137 159
+    C 118 166 111 152 100 152
+    C 89 152 82 166 63 159
+    C 43 152 33 134 41 116
+    C 49 100 41 86 48 66
+    C 55 44 74 30 100 30 Z"/>
+  <text x="100" y="122" font-size="72" text-anchor="middle" fill="#0D0D0C" font-family="Georgia, serif">C</text>
+</svg>

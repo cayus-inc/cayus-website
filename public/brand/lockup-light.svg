@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 560 140" width="560" height="140">
+  <defs>
+    <radialGradient id="sealGradientLL" cx="35%" cy="30%" r="75%">
+      <stop offset="0%" stop-color="#C7C0B2"/>
+      <stop offset="55%" stop-color="#9A9488"/>
+      <stop offset="100%" stop-color="#6B6559"/>
+    </radialGradient>
+  </defs>
+  <g transform="translate(0,0) scale(0.65)">
+    <circle cx="100" cy="100" r="94" fill="none" stroke="#C7C0B2" stroke-width="1" opacity="0.5"/>
+    <path fill="url(#sealGradientLL)" d="M100 18
+      C 130 18 152 34 160 60
+      C 168 84 158 100 168 118
+      C 178 138 166 160 142 168
+      C 120 176 112 160 100 160
+      C 88 160 80 176 58 168
+      C 34 160 22 138 32 118
+      C 42 100 32 84 40 60
+      C 48 34 70 18 100 18 Z"/>
+    <text x="100" y="116" font-size="64" text-anchor="middle" fill="#0D0D0C" font-family="Georgia, 'Source Serif 4', serif">C</text>
+  </g>
+  <text x="150" y="86" font-size="58" letter-spacing="4" fill="#FAF8F4" font-family="Georgia, 'Source Serif 4', serif">CAYUS</text>
+</svg>
