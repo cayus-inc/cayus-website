@@ -39,7 +39,7 @@ export default function WorkPage() {
     <>
       <Header />
       <div className="mx-auto max-w-[900px] px-6 pb-16 pt-24 md:pt-32">
-        <Reveal>
+        <Reveal direction="left">
           <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-fg-soft">
             How we work
           </p>
@@ -58,14 +58,14 @@ export default function WorkPage() {
 
       {/* Case 1: layered read, approach in a highlighted block */}
       <div className="mx-auto max-w-[900px] px-6">
-        <Reveal>
+        <Reveal direction="left">
           <CaseTag>Depth over pedigree</CaseTag>
           <h2 className="mt-5 font-serif-display text-[1.7rem] font-medium leading-[1.15] text-balance md:text-[2.1rem]">
             Qualifying for technical depth, not a title
           </h2>
 
-          <div className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2">
-            <div>
+          <StaggerGroup className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2">
+            <StaggerItem direction="left">
               <Label>The situation</Label>
               <p className="mt-2.5 text-[0.95rem] leading-[1.6] text-fg-soft">
                 A Series A company building developer tooling for AI
@@ -73,8 +73,8 @@ export default function WorkPage() {
                 genuinely technical demo in front of skeptical ML engineers,
                 not walk a prospect through a slide deck.
               </p>
-            </div>
-            <div>
+            </StaggerItem>
+            <StaggerItem direction="right">
               <Label>The problem</Label>
               <p className="mt-2.5 text-[0.95rem] leading-[1.6] text-fg-soft">
                 Most inbound-looking candidates read well on paper: strong
@@ -82,8 +82,8 @@ export default function WorkPage() {
                 hands-on technical demos against a buyer who could ask a
                 hard follow-up question.
               </p>
-            </div>
-          </div>
+            </StaggerItem>
+          </StaggerGroup>
 
           <div className="mt-6 rounded-sm border border-border bg-bg-raised p-6">
             <Label>The approach</Label>
@@ -119,7 +119,7 @@ export default function WorkPage() {
 
       {/* Case 2: resume vs. reality contrast, same pattern as the homepage's problem/solution block */}
       <div className="mx-auto mt-14 max-w-[900px] border-t border-border px-6 pt-14">
-        <Reveal>
+        <Reveal direction="right">
           <CaseTag>Motivation, verified</CaseTag>
           <h2 className="mt-5 font-serif-display text-[1.7rem] font-medium leading-[1.15] text-balance md:text-[2.1rem]">
             Catching the wrong reason to move
@@ -135,7 +135,7 @@ export default function WorkPage() {
           </p>
         </Reveal>
         <StaggerGroup className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
-          <StaggerItem className="rounded-sm border border-border bg-bg-raised p-7">
+          <StaggerItem direction="left" className="rounded-sm border border-border bg-bg-raised p-7">
             <Label>What the resume said</Label>
             <ul className="mt-4 flex flex-col gap-3">
               {[
@@ -153,7 +153,7 @@ export default function WorkPage() {
               ))}
             </ul>
           </StaggerItem>
-          <StaggerItem className="rounded-sm border border-fg bg-fg p-7 text-bg">
+          <StaggerItem direction="right" className="rounded-sm border border-fg bg-fg p-7 text-bg">
             <p className="text-[0.7rem] font-semibold uppercase tracking-[0.16em] opacity-60">
               What qualification found
             </p>
@@ -196,7 +196,7 @@ export default function WorkPage() {
 
       {/* Case 3: the bar held constant across an expanding map */}
       <div className="mx-auto mt-14 max-w-[900px] border-t border-border px-6 pb-28 pt-14">
-        <Reveal>
+        <Reveal direction="left">
           <CaseTag>Constant bar, wider net</CaseTag>
           <h2 className="mt-5 font-serif-display text-[1.7rem] font-medium leading-[1.15] text-balance md:text-[2.1rem]">
             Staying narrow while the geography widened

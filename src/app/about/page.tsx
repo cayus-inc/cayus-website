@@ -34,27 +34,34 @@ export default function AboutPage() {
     <>
       <Header />
       <div className="mx-auto max-w-[840px] px-6 pb-28 pt-24 md:pt-32">
-        <Reveal>
-          <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-fg-soft">
-            About
-          </p>
-          <h1 className="mt-4 font-serif-display text-[2.4rem] font-medium leading-[1.05] text-balance md:text-[3.4rem]">
-            Companies grow stronger by who they hire, not by how many they
-            hire.
-          </h1>
-          <p className="mt-7 max-w-[62ch] text-[1.05rem] leading-[1.65] text-fg-soft">
-            Most companies get weaker as they get bigger: more people, more
-            meetings, more coordination, without a matching gain in what any
-            one person in the room can actually do. The fix isn&rsquo;t
-            hiring more. It&rsquo;s hiring someone genuinely better at the
-            job than the team already is. That kind of hire doesn&rsquo;t
-            add headcount. It changes what the company is capable of.
-          </p>
-        </Reveal>
+        <div className="relative">
+          <div
+            aria-hidden
+            className="pointer-events-none absolute -right-24 -top-16 hidden size-[340px] rounded-full border border-border opacity-40 motion-safe:animate-[spin_140s_linear_infinite] md:block"
+          />
+          <Reveal direction="left">
+            <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-fg-soft">
+              About
+            </p>
+            <h1 className="mt-4 font-serif-display text-[2.4rem] font-medium leading-[1.05] text-balance md:text-[3.4rem]">
+              Companies grow stronger by who they hire, not by how many they
+              hire.
+            </h1>
+            <p className="mt-7 max-w-[62ch] text-[1.05rem] leading-[1.65] text-fg-soft">
+              Most companies get weaker as they get bigger: more people, more
+              meetings, more coordination, without a matching gain in what
+              any one person in the room can actually do. The fix
+              isn&rsquo;t hiring more. It&rsquo;s hiring someone genuinely
+              better at the job than the team already is. That kind of hire
+              doesn&rsquo;t add headcount. It changes what the company is
+              capable of.
+            </p>
+          </Reveal>
+        </div>
 
-        <Reveal delay={0.1}>
-          <div className="mt-14 grid grid-cols-1 gap-4 sm:grid-cols-2">
-            <div className="rounded-sm border border-border bg-bg-raised p-7">
+        <div className="mt-14 grid grid-cols-1 gap-4 sm:grid-cols-2">
+          <Reveal direction="left">
+            <div className="h-full rounded-sm border border-border bg-bg-raised p-7">
               <p className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-fg-soft">
                 What we sell the candidate
               </p>
@@ -67,7 +74,9 @@ export default function AboutPage() {
                 impact is the pitch.
               </p>
             </div>
-            <div className="rounded-sm border border-border bg-bg-raised p-7">
+          </Reveal>
+          <Reveal delay={0.06} direction="right">
+            <div className="h-full rounded-sm border border-border bg-bg-raised p-7">
               <p className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-fg-soft">
                 Why that&rsquo;s the actual differentiator
               </p>
@@ -80,8 +89,8 @@ export default function AboutPage() {
                 that has to actually land.
               </p>
             </div>
-          </div>
-        </Reveal>
+          </Reveal>
+        </div>
 
         <Reveal delay={0.12}>
           <div className="mt-6 rounded-sm border border-border bg-bg-raised p-7">
@@ -104,8 +113,12 @@ export default function AboutPage() {
           </p>
         </Reveal>
         <StaggerGroup className="mt-6 grid grid-cols-1 gap-px border border-border bg-border sm:grid-cols-2">
-          {commitments.map((c) => (
-            <StaggerItem key={c.title} className="bg-bg px-7 py-8">
+          {commitments.map((c, i) => (
+            <StaggerItem
+              key={c.title}
+              direction={i % 2 === 0 ? "left" : "right"}
+              className="bg-bg px-7 py-8"
+            >
               <h3 className="text-[1.02rem] font-semibold">{c.title}</h3>
               <p className="mt-2.5 text-[0.92rem] leading-[1.55] text-fg-soft">
                 {c.body}

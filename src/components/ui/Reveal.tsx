@@ -3,22 +3,33 @@
 import { motion } from "framer-motion";
 import type { ReactNode } from "react";
 
+export type RevealDirection = "up" | "left" | "right";
+
+function offset(direction: RevealDirection) {
+  if (direction === "left") return { x: -44, y: 0 };
+  if (direction === "right") return { x: 44, y: 0 };
+  return { x: 0, y: 22 };
+}
+
 export function Reveal({
   children,
   delay = 0,
+  direction = "up",
   className,
 }: {
   children: ReactNode;
   delay?: number;
+  direction?: RevealDirection;
   className?: string;
 }) {
+  const { x, y } = offset(direction);
   return (
     <motion.div
       className={className}
-      initial={{ opacity: 0, y: 20, filter: "blur(6px)" }}
-      whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+      initial={{ opacity: 0, x, y, filter: "blur(6px)" }}
+      whileInView={{ opacity: 1, x: 0, y: 0, filter: "blur(0px)" }}
       viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.75, delay, ease: [0.16, 1, 0.3, 1] }}
+      transition={{ duration: 0.8, delay, ease: [0.16, 1, 0.3, 1] }}
     >
       {children}
     </motion.div>
@@ -28,16 +39,6 @@ export function Reveal({
 const staggerContainer = {
   hidden: { opacity: 1 },
   show: { opacity: 1, transition: { staggerChildren: 0.09 } },
-};
-
-const staggerChild = {
-  hidden: { opacity: 0, y: 20, filter: "blur(6px)" },
-  show: {
-    opacity: 1,
-    y: 0,
-    filter: "blur(0px)",
-    transition: { duration: 0.65, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] },
-  },
 };
 
 export function StaggerGroup({
@@ -63,12 +64,25 @@ export function StaggerGroup({
 export function StaggerItem({
   children,
   className,
+  direction = "up",
 }: {
   children: ReactNode;
   className?: string;
+  direction?: RevealDirection;
 }) {
+  const { x, y } = offset(direction);
+  const variants = {
+    hidden: { opacity: 0, x, y, filter: "blur(6px)" },
+    show: {
+      opacity: 1,
+      x: 0,
+      y: 0,
+      filter: "blur(0px)",
+      transition: { duration: 0.7, ease: [0.16, 1, 0.3, 1] as [number, number, number, number] },
+    },
+  };
   return (
-    <motion.div variants={staggerChild} className={className}>
+    <motion.div variants={variants} className={className}>
       {children}
     </motion.div>
   );

@@ -90,7 +90,7 @@ export default function Home() {
 
       {/* Hero */}
       <div className="mx-auto grid max-w-[1280px] grid-cols-1 items-center gap-20 px-6 pb-32 pt-20 md:grid-cols-[1.1fr_0.9fr] md:pb-44 md:pt-44">
-        <Reveal>
+        <Reveal direction="left">
           <span className="mb-8 inline-flex items-center gap-2.5 text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-fg-soft">
             <span className="h-px w-6 bg-border" />
             Qualified interviews, on your calendar
@@ -117,7 +117,7 @@ export default function Home() {
             </Link>
           </div>
         </Reveal>
-        <Reveal delay={0.12} className="order-first md:order-last">
+        <Reveal delay={0.12} direction="right" className="order-first md:order-last">
           <HeroStage />
         </Reveal>
       </div>
@@ -132,7 +132,7 @@ export default function Home() {
         }}
       >
         <div className="mx-auto max-w-[1160px]">
-          <Reveal>
+          <Reveal direction="left">
             <SectionHead
               align="left"
               eyebrow="How it actually works"
@@ -141,7 +141,7 @@ export default function Home() {
               invert
             />
           </Reveal>
-          <Reveal delay={0.12}>
+          <Reveal delay={0.12} direction="right">
             <div
               className="mt-14 overflow-hidden rounded-sm border"
               style={{ borderColor: "rgba(250,248,244,0.14)", background: "rgba(250,248,244,0.02)" }}
@@ -163,7 +163,7 @@ export default function Home() {
             />
           </Reveal>
           <StaggerGroup className="mx-auto mt-14 grid max-w-3xl gap-4 sm:grid-cols-2">
-            <StaggerItem className="h-full rounded-sm border border-border bg-bg-raised p-7">
+            <StaggerItem direction="left" className="h-full rounded-sm border border-border bg-bg-raised p-7">
               <p className="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-fg-soft">
                 Contingency search
               </p>
@@ -179,7 +179,7 @@ export default function Home() {
                 ))}
               </ul>
             </StaggerItem>
-            <StaggerItem className="h-full rounded-sm border border-fg bg-fg p-7 text-bg">
+            <StaggerItem direction="right" className="h-full rounded-sm border border-fg bg-fg p-7 text-bg">
               <p className="text-[0.7rem] font-semibold uppercase tracking-[0.16em] opacity-60">
                 With Cayus
               </p>
@@ -263,8 +263,8 @@ export default function Home() {
               invert
             />
           </Reveal>
-          <Reveal delay={0.12}>
-            <div className="mx-auto mt-12 max-w-3xl space-y-6">
+          <div className="mx-auto mt-12 max-w-3xl space-y-6">
+            <Reveal delay={0.12} direction="left">
               <div>
                 <p className="mb-3 text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-[#9c968a]">
                   A generalist agency: everything, spread thin
@@ -285,6 +285,8 @@ export default function Home() {
                   ))}
                 </div>
               </div>
+            </Reveal>
+            <Reveal delay={0.18} direction="right">
               <div>
                 <p className="mb-3 text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-[#faf8f4]">
                   Cayus: one thing, at the highest level
@@ -299,8 +301,8 @@ export default function Home() {
                   <div className="ml-auto h-1.5 flex-1 rounded-full" style={{ background: "#faf8f4" }} />
                 </div>
               </div>
-            </div>
-          </Reveal>
+            </Reveal>
+          </div>
         </div>
       </section>
 
@@ -331,8 +333,12 @@ export default function Home() {
                 title: "Every line is written for one person",
                 body: "No mail-merge. Each message is grounded in something real about that candidate's work, or it doesn't go out.",
               },
-            ].map((cell) => (
-              <StaggerItem key={cell.tag} className="bg-bg-raised px-7 py-8">
+            ].map((cell, i) => (
+              <StaggerItem
+                key={cell.tag}
+                direction={i === 0 ? "left" : i === 2 ? "right" : "up"}
+                className="bg-bg-raised px-7 py-8"
+              >
                 <div className="mb-2.5 text-[0.85rem] text-fg-soft">
                   {cell.tag}
                 </div>
@@ -362,6 +368,7 @@ export default function Home() {
             {pricing.map((p) => (
               <StaggerItem
                 key={p.name}
+                direction={p.featured ? "right" : "left"}
                 className={`rounded-sm border px-7 py-8 transition-all hover:-translate-y-1 ${
                   p.featured
                     ? "border-fg bg-fg text-bg"
