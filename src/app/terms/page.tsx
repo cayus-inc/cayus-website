@@ -28,9 +28,9 @@ export default function TermsPage() {
       <h2>2. Engagement</h2>
       <p>
         Each engagement begins with a written agreement covering the role,
-        the qualification scorecard, and the pricing structure (per-interview
+        the qualification criteria, and the pricing structure (per-interview
         or monthly pipeline, see Section 5). No candidate is contacted before
-        the scorecard is agreed in writing.
+        the criteria are agreed in writing.
       </p>
 
       <h2>3. Acceptable Use</h2>
@@ -55,7 +55,7 @@ export default function TermsPage() {
         Cayus is billed either per interview held (a fixed range agreed in
         the engagement letter) or as a monthly pipeline with an agreed
         interview quota. An interview is billable only if it takes place and
-        the client does not reject it as outside the agreed scorecard within
+        the client does not reject it as outside the agreed criteria within
         the contestation window stated in the engagement letter. An optional,
         reduced success fee may apply on hire, as agreed per engagement.
         Prices are in USD. Payment terms are set in the engagement letter.
@@ -85,7 +85,7 @@ export default function TermsPage() {
         The Service is provided &quot;as is.&quot; Cayus does not warrant
         that any candidate will accept an offer, remain available through
         the hiring process, or perform in the role. Cayus warrants only that
-        interviews billed met the agreed scorecard at the time of contact.
+        interviews billed met the agreed criteria at the time of contact.
       </p>
 
       <h2>9. Limitation of Liability</h2>

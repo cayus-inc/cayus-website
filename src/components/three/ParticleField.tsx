@@ -43,7 +43,7 @@ function Field({
 
   useFrame((_, delta) => {
     if (!group.current) return;
-    if (!reduceMotion) autoRotation.current += delta * 0.05;
+    if (!reduceMotion) autoRotation.current += delta * 0.09;
     const tiltX = pointer.y * 0.14;
     const tiltY = autoRotation.current + pointer.x * 0.22;
     group.current.rotation.x += (tiltX - group.current.rotation.x) * 0.03;
@@ -64,7 +64,7 @@ function Field({
           size={size}
           sizeAttenuation
           transparent
-          opacity={0.55}
+          opacity={0.85}
           depthWrite={false}
           map={circleTexture()}
           alphaTest={0.01}
@@ -77,8 +77,8 @@ function Field({
 export function ParticleField({
   count = 420,
   spread = 3.4,
-  color = "#c7c0b2",
-  size = 0.035,
+  color = "#8f8875",
+  size = 0.05,
   className = "",
 }: {
   count?: number;

@@ -31,7 +31,7 @@ const steps = [
   },
   {
     glyph: "II",
-    title: "Checked against your scorecard",
+    title: "Checked against your criteria",
     body: "Hard requirements, comp range, availability, and a real reason they'd move, verified before you ever see a name.",
   },
   {
@@ -94,10 +94,6 @@ export default function Home() {
           <span className="mb-8 inline-flex items-center gap-2.5 text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-fg-soft">
             <span className="h-px w-6 bg-border" />
             Qualified interviews, on your calendar
-            <span className="relative ml-0.5 flex size-1.5">
-              <span className="absolute inline-flex size-full animate-ping rounded-full bg-metal/50" />
-              <span className="relative inline-flex size-1.5 rounded-full bg-metal" />
-            </span>
           </span>
           <h1 className="font-serif-display text-[3.4rem] font-medium leading-[0.95] tracking-[-0.02em] text-balance md:text-[6.8rem]">
             We book the
@@ -108,8 +104,8 @@ export default function Home() {
           </h1>
           <p className="mt-8 max-w-[46ch] text-[1.15rem] leading-[1.6] text-fg-soft">
             We source, contact, and qualify candidates who already said yes
-            to a conversation with you, against a scorecard you approve
-            before we start. The hiring decision stays entirely yours.
+            to a conversation with you, against criteria you approve before
+            we start. The hiring decision stays entirely yours.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <CTA href={BOOK_A_CALL_HREF}>Book a call</CTA>
@@ -141,7 +137,7 @@ export default function Home() {
               align="left"
               eyebrow="How it actually works"
               title="The web doesn't stop moving. So the search doesn't either."
-              sub="Every profile that could fit your role is watched against your scorecard continuously, not in a weekly batch. A resume update, a new post, a role change: each one is a signal. When enough of them line up, that's the moment we reach out, not before, and not after the person has already gone cold."
+              sub="Every profile that could fit your role is watched against your criteria continuously, not in a weekly batch. A resume update, a new post, a role change: each one is a signal. When enough of them line up, that's the moment we reach out, not before, and not after the person has already gone cold."
               invert
             />
           </Reveal>
@@ -437,7 +433,8 @@ export default function Home() {
       >
         <Reveal>
           <h2 className="mx-auto max-w-[22ch] font-serif-display text-[2rem] font-medium text-balance md:text-[2.9rem]">
-            One thing we don&rsquo;t do: decide who you hire.
+            Your next great hire is already employed, and not looking.
+            Let&rsquo;s go start the conversation.
           </h2>
           <div className="mt-8 flex justify-center">
             <CTA

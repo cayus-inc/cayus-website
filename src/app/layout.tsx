@@ -13,7 +13,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://cayus.io"),
   title: "Cayus: We book the interview. You decide who you hire.",
   description:
-    "We source, contact, and qualify candidates who already said yes to a conversation with you, against a scorecard you approve before we start.",
+    "We source, contact, and qualify candidates who already said yes to a conversation with you, against criteria you approve before we start.",
 };
 
 export default function RootLayout({

@@ -82,10 +82,10 @@ function Scene() {
         </bufferGeometry>
         <pointsMaterial
           color="#c7c0b2"
-          size={0.05}
+          size={0.06}
           sizeAttenuation
           transparent
-          opacity={0.45}
+          opacity={0.6}
           depthWrite={false}
           map={circleTexture()}
           alphaTest={0.01}

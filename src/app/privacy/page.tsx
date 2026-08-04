@@ -34,7 +34,7 @@ export default function PrivacyPage() {
       <h2>3. Client Data We Collect</h2>
       <ul>
         <li>Contact information: name, work email, company, role</li>
-        <li>Engagement details: role requirements, qualification scorecard, compensation range shared for a search</li>
+        <li>Engagement details: role requirements, qualification criteria, compensation range shared for a search</li>
         <li>Payment information: processed securely through Stripe. We do not store card numbers.</li>
         <li>Communications between Cayus and the client</li>
       </ul>
@@ -50,7 +50,7 @@ export default function PrivacyPage() {
       <ul>
         <li>Their reply and stated reason for being open to a conversation</li>
         <li>Self-reported availability and compensation expectations, if shared</li>
-        <li>Whether they were qualified against the client&apos;s scorecard</li>
+        <li>Whether they were qualified against the client&apos;s criteria</li>
       </ul>
       <p>
         Candidate names and identifying details are not shared with the
@@ -84,7 +84,7 @@ export default function PrivacyPage() {
       <h2>6. How We Use This Data</h2>
       <ul>
         <li>To identify and contact candidates who may be a fit for a specific client role</li>
-        <li>To verify and record a candidate&apos;s qualification against the client&apos;s agreed scorecard</li>
+        <li>To verify and record a candidate&apos;s qualification against the client&apos;s agreed criteria</li>
         <li>To coordinate and schedule interviews</li>
         <li>To invoice clients based on interviews held</li>
         <li>To comply with legal obligations</li>

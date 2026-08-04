@@ -120,8 +120,8 @@ export default function AboutPage() {
               How we take on a search
             </p>
             <p className="mt-4 max-w-[62ch] text-[0.98rem] leading-[1.65] text-fg-soft">
-              One search at a time, run against a scorecard specific to
-              that role, not a template reused across clients. We&rsquo;d
+              One search at a time, run against criteria specific to that
+              role, not a template reused across clients. We&rsquo;d
               rather run fewer searches well than spread the same attention
               across many at once. Which roles that means depends on where
               the hire genuinely changes what a company can do, not on a

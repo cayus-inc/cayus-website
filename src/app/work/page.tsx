@@ -88,9 +88,9 @@ export default function WorkPage() {
           <div className="mt-6 rounded-sm border border-border bg-bg-raised p-6">
             <Label>The approach</Label>
             <p className="mt-2.5 text-[0.95rem] leading-[1.6] text-fg-soft">
-              The scorecard&rsquo;s hard requirement wasn&rsquo;t a title or
-              a company name, it was recent, hands-on work against a
-              comparable technical stack. Qualification conversations probed
+              The hard requirement wasn&rsquo;t a title or a company name,
+              it was recent, hands-on work against a comparable technical
+              stack. Qualification conversations probed
               for one thing: could this person answer an unscripted
               technical question, not just deliver a rehearsed one.
             </p>
@@ -212,7 +212,7 @@ export default function WorkPage() {
         </Reveal>
         <Reveal delay={0.08}>
           <div className="mt-8 rounded-sm border border-border bg-bg-raised p-6">
-            <Label>Same scorecard, six markets</Label>
+            <Label>Same criteria, six markets</Label>
             <StaggerGroup className="mt-4 grid grid-cols-2 gap-2.5 sm:grid-cols-3">
               {REGIONS.map((r) => (
                 <StaggerItem

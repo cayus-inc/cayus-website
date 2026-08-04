@@ -26,8 +26,8 @@ export function Footer() {
   return (
     <footer className="border-t border-border">
       <div className="mx-auto max-w-[1160px] px-6 py-16">
-        <div className="grid grid-cols-2 gap-10 sm:grid-cols-4">
-          <div className="col-span-2">
+        <div className="grid grid-cols-1 gap-10 sm:grid-cols-3">
+          <div>
             <Link href="/" className="flex items-center gap-2.5">
               <Image
                 src="/brand/mark.png"
@@ -41,9 +41,9 @@ export function Footer() {
                 CAYUS
               </span>
             </Link>
-            <p className="mt-3 max-w-[30ch] text-[0.85rem] leading-[1.6] text-fg-soft">
-              The hire that makes a team stronger, not just bigger. Found
-              before they start looking.
+            <p className="mt-3 max-w-[28ch] text-[0.85rem] leading-[1.6] text-fg-soft">
+              The hire that makes a team stronger and smarter, not just
+              bigger.
             </p>
           </div>
 
@@ -69,7 +69,7 @@ export function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-border pt-6 text-[0.78rem] text-fg-soft sm:flex-row sm:items-center">
-          <p>&copy; {new Date().getFullYear()} Cayus</p>
+          <p>&copy; {new Date().getFullYear()} Cayus. All rights reserved.</p>
           <a href="mailto:contact@cayus.io" className="hover:text-fg">
             contact@cayus.io
           </a>

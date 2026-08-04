@@ -17,13 +17,13 @@ export function Header() {
       <div className="mx-auto flex max-w-[1160px] items-center justify-between px-6 py-5">
         <Link
           href="/"
-          className="flex items-center gap-2.5 font-serif-display text-[1.05rem] tracking-wide text-fg"
+          className="flex items-center gap-2.5 font-serif-display text-[1.1rem] tracking-wide text-fg"
         >
           <Image
             src="/brand/mark.png"
             alt=""
-            width={18}
-            height={22}
+            width={22}
+            height={27}
             className="mark-auto"
             aria-hidden="true"
           />
@@ -45,7 +45,7 @@ export function Header() {
           href={BOOK_A_CALL_HREF}
           variant="ghost"
           arrow={false}
-          className="!px-4 !py-2 !text-[0.82rem]"
+          className="!px-5 !py-2.5 !text-[0.84rem]"
         >
           Book a call
         </CTA>
