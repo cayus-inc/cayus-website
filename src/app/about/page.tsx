@@ -39,16 +39,63 @@ export default function AboutPage() {
             About
           </p>
           <h1 className="mt-4 font-serif-display text-[2.4rem] font-medium leading-[1.05] text-balance md:text-[3.4rem]">
-            A narrow bet on one thing: getting the right person into the
-            room.
+            Companies grow stronger by who they hire, not by how many they
+            hire.
           </h1>
           <p className="mt-7 max-w-[62ch] text-[1.05rem] leading-[1.65] text-fg-soft">
-            Cayus runs one search at a time, on Sales Engineer and Solutions
-            Engineer roles at funded AI companies in the US. Not because the
-            method doesn&rsquo;t generalize, but because a narrow, well-run
-            search beats a broad, thin one, for the candidates we contact
-            and for the clients we work with.
+            Most companies get weaker as they get bigger: more people, more
+            meetings, more coordination, without a matching gain in what any
+            one person in the room can actually do. The fix isn&rsquo;t
+            hiring more. It&rsquo;s hiring someone genuinely better at the
+            job than the team already is. That kind of hire doesn&rsquo;t
+            add headcount. It changes what the company is capable of.
           </p>
+        </Reveal>
+
+        <Reveal delay={0.1}>
+          <div className="mt-14 grid grid-cols-1 gap-4 sm:grid-cols-2">
+            <div className="rounded-sm border border-border bg-bg-raised p-7">
+              <p className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-fg-soft">
+                What we sell the candidate
+              </p>
+              <p className="mt-3 text-[0.95rem] leading-[1.65] text-fg-soft">
+                Not an opening. A seat on a specific mission: what the
+                company is building, who it&rsquo;s for, and what changes,
+                for the product and the customers who use it, because this
+                one person is in the room. Comp and the practical terms are
+                part of that, stated plainly. They are not the pitch. The
+                impact is the pitch.
+              </p>
+            </div>
+            <div className="rounded-sm border border-border bg-bg-raised p-7">
+              <p className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-fg-soft">
+                Why that&rsquo;s the actual differentiator
+              </p>
+              <p className="mt-3 text-[0.95rem] leading-[1.65] text-fg-soft">
+                Finding a name is close to free now. Getting a strong,
+                currently-employed candidate to take the call isn&rsquo;t a
+                search problem, it&rsquo;s a persuasion problem: does the
+                offer read as a real opportunity or a form letter. We keep
+                AI where it belongs, doing the finding, never the writing
+                that has to actually land.
+              </p>
+            </div>
+          </div>
+        </Reveal>
+
+        <Reveal delay={0.12}>
+          <div className="mt-6 rounded-sm border border-border bg-bg-raised p-7">
+            <p className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-fg-soft">
+              Why the price is what it is
+            </p>
+            <p className="mt-3 max-w-[62ch] text-[0.95rem] leading-[1.65] text-fg-soft">
+              One hire like this changes what a team can ship. Against that,
+              the cost of getting the conversation in front of you, once,
+              done properly, is small. That&rsquo;s the actual basis for
+              what we charge, not a percentage borrowed from how staffing
+              has always been priced.
+            </p>
+          </div>
         </Reveal>
 
         <Reveal delay={0.1}>

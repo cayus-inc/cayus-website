@@ -5,6 +5,7 @@ import { Reveal, StaggerGroup, StaggerItem } from "@/components/ui/Reveal";
 import { HeroStage } from "@/components/ui/HeroStage";
 import { SectionHead } from "@/components/ui/SectionHead";
 import { StepVisual } from "@/components/ui/StepVisual";
+import { ScanField } from "@/components/ui/ScanField";
 import { FAQ } from "@/components/ui/FAQ";
 import { CTA } from "@/components/ui/CTA";
 
@@ -131,28 +132,60 @@ export default function Home() {
         </Reveal>
       </div>
 
-      {/* Proof strip */}
+      {/* Status bar */}
       <div className="border-y border-border bg-bg-raised">
-        <div className="mx-auto max-w-[1160px] px-6 py-6">
-          <StaggerGroup className="flex flex-wrap items-center justify-center gap-x-10 gap-y-4">
+        <div className="mx-auto flex max-w-[1160px] flex-wrap items-center justify-center gap-x-8 gap-y-3 px-6 py-5 sm:justify-between">
+          <span className="flex items-center gap-2.5 whitespace-nowrap pr-2">
+            <span className="relative flex size-1.5">
+              <span className="absolute inline-flex size-full animate-ping rounded-full bg-metal/50" />
+              <span className="relative inline-flex size-1.5 rounded-full bg-metal" />
+            </span>
+            <span className="font-mono text-[0.72rem] uppercase tracking-[0.1em] text-fg">
+              Scanning continuously
+            </span>
+          </span>
+          <StaggerGroup className="flex flex-wrap items-center divide-x divide-border">
             {proof.map((p) => (
-              <StaggerItem key={p} className="flex items-center gap-2.5 whitespace-nowrap">
-                <svg width="14" height="14" viewBox="0 0 12 12" className="flex-none">
-                  <path
-                    d="M2 6.5 L5 9.5 L10 3"
-                    fill="none"
-                    stroke="var(--metal)"
-                    strokeWidth="1.6"
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                  />
-                </svg>
-                <span className="text-[0.85rem] text-fg-soft">{p}</span>
+              <StaggerItem
+                key={p}
+                className="whitespace-nowrap px-5 text-[0.82rem] text-fg-soft first:pl-0 last:pr-0"
+              >
+                {p}
               </StaggerItem>
             ))}
           </StaggerGroup>
         </div>
       </div>
+
+      {/* The mechanism */}
+      <section
+        className="border-b border-border px-6 py-28 md:py-40"
+        style={{
+          background: "#0d0d0c",
+          color: "#faf8f4",
+          borderColor: "rgba(250,248,244,0.12)",
+        }}
+      >
+        <div className="mx-auto max-w-[1160px]">
+          <Reveal>
+            <SectionHead
+              align="left"
+              eyebrow="How it actually works"
+              title="The web doesn't stop moving. So the search doesn't either."
+              sub="Every profile that could fit your role is watched against your scorecard continuously, not in a weekly batch. A resume update, a new post, a role change: each one is a signal. When enough of them line up, that's the moment we reach out, not before, and not after the person has already gone cold."
+              invert
+            />
+          </Reveal>
+          <Reveal delay={0.12}>
+            <div
+              className="mt-14 overflow-hidden rounded-sm border"
+              style={{ borderColor: "rgba(250,248,244,0.14)", background: "rgba(250,248,244,0.02)" }}
+            >
+              <ScanField />
+            </div>
+          </Reveal>
+        </div>
+      </section>
 
       {/* Who this is for */}
       <div className="border-b border-border px-6 py-10 text-center">
