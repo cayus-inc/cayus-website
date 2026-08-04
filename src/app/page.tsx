@@ -90,7 +90,7 @@ export default function Home() {
       <Header />
 
       {/* Hero */}
-      <div className="mx-auto grid max-w-[1280px] grid-cols-1 items-center gap-20 overflow-x-hidden px-6 pb-32 pt-20 md:grid-cols-[1.1fr_0.9fr] md:pb-44 md:pt-44">
+      <div className="mx-auto grid max-w-[1280px] grid-cols-1 items-center gap-20 overflow-x-hidden px-6 pb-32 pt-12 md:grid-cols-[1.1fr_0.9fr] md:pb-44 md:pt-20">
         <Reveal direction="left">
           <span className="mb-8 inline-flex items-center gap-2.5 text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-fg-soft">
             <span className="h-px w-6 bg-border" />
@@ -148,6 +148,22 @@ export default function Home() {
               style={{ borderColor: "rgba(250,248,244,0.14)", background: "rgba(250,248,244,0.02)" }}
             >
               <ScanField />
+              <div
+                className="grid grid-cols-1 gap-6 border-t px-8 py-7 sm:grid-cols-3"
+                style={{ borderColor: "rgba(250,248,244,0.14)" }}
+              >
+                {[
+                  { n: "1", label: "Signal detected", body: "A resume update, a new post, a role change on a profile that fits." },
+                  { n: "2", label: "Checked against criteria", body: "Verified current, verified qualified, before anyone is contacted." },
+                  { n: "3", label: "Interview booked", body: "Reached out at the right moment, not before, not after." },
+                ].map((s) => (
+                  <div key={s.n}>
+                    <span className="text-[0.72rem] font-semibold text-[#9c968a]">{s.n}</span>
+                    <p className="mt-1 text-[0.9rem] font-semibold text-[#faf8f4]">{s.label}</p>
+                    <p className="mt-1 text-[0.85rem] leading-[1.5] text-[#9c968a]">{s.body}</p>
+                  </div>
+                ))}
+              </div>
             </div>
           </Reveal>
         </div>

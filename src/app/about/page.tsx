@@ -34,7 +34,7 @@ export default function AboutPage() {
   return (
     <>
       <Header />
-      <div className="mx-auto max-w-[840px] overflow-x-hidden px-6 pb-28 pt-24 md:pt-32">
+      <div className="mx-auto max-w-[840px] overflow-x-hidden px-6 pb-28 pt-14 md:pt-20">
         <div className="relative">
           <div
             aria-hidden
