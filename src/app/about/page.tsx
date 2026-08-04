@@ -46,7 +46,7 @@ export default function AboutPage() {
             Cayus runs one search at a time, on Sales Engineer and Solutions
             Engineer roles at funded AI companies in the US. Not because the
             method doesn&rsquo;t generalize, but because a narrow, well-run
-            search beats a broad, thin one — for the candidates we contact
+            search beats a broad, thin one, for the candidates we contact
             and for the clients we work with.
           </p>
         </Reveal>
@@ -74,7 +74,7 @@ export default function AboutPage() {
             </p>
             <p className="mt-4 max-w-[62ch] text-[0.98rem] leading-[1.65] text-fg-soft">
               Depth on one role, in one market, beats a wide net every
-              time — the sourcing gets sharper, the qualification bar gets
+              time. The sourcing gets sharper, the qualification bar gets
               clearer, and the candidates we&rsquo;ve already talked to
               compound into the next search instead of starting from zero.
               That focus is deliberate, and it stays until it stops being

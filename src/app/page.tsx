@@ -38,7 +38,7 @@ const steps = [
   {
     glyph: "II",
     title: "Checked against your scorecard",
-    body: "Hard requirements, comp range, availability, and a real reason they'd move — verified before you ever see a name.",
+    body: "Hard requirements, comp range, availability, and a real reason they'd move, verified before you ever see a name.",
   },
   {
     glyph: "III",
@@ -52,7 +52,7 @@ const pricing = [
     label: "To start",
     name: "Per interview",
     amount: "$800",
-    suffix: "–1,500",
+    suffix: "-1,500",
     body: "Billed only when the interview happens and you don't reject it as off-brief. Nothing owed otherwise. How every engagement begins.",
     featured: false,
   },
@@ -259,7 +259,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* One thing, done well — forced-dark band regardless of theme */}
+      {/* One thing, done well: forced-dark band regardless of theme */}
       <section
         className="border-t border-border px-6 py-28 md:py-40"
         style={{
@@ -333,7 +333,7 @@ export default function Home() {
               {
                 tag: "Not a candidate list",
                 title: "No names before you sign",
-                body: "You see an anonymized profile first. Names are released only once terms are agreed — the same rule for every client.",
+                body: "You see an anonymized profile first. Names are released only once terms are agreed, the same rule for every client.",
               },
               {
                 tag: "Not a placement guarantee",
@@ -416,9 +416,9 @@ export default function Home() {
                 Optional add-on
               </span>
               <span>
-                A reduced placement success fee (5–8%) is available on either
+                A reduced placement success fee (5-8%) is available on either
                 plan, on hire. It exists to align incentives, not to be the
-                revenue model — most clients don&rsquo;t need it.
+                revenue model. Most clients don&rsquo;t need it.
               </span>
             </div>
           </Reveal>

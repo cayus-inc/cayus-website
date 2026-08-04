@@ -25,6 +25,9 @@ export function Header() {
         <Link href="/#pricing" className="transition-colors hover:text-fg">
           Pricing
         </Link>
+        <Link href="/work" className="transition-colors hover:text-fg">
+          How we work
+        </Link>
         <Link href="/about" className="transition-colors hover:text-fg">
           About
         </Link>
