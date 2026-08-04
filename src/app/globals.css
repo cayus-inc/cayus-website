@@ -1,7 +1,9 @@
 @import "tailwindcss";
 
 /* Design tokens — validated direction, see docs/naming.md and the approved hero mockup.
-   Monochrome ink/paper base, one desaturated pewter accent. No saturated hues. */
+   Monochrome ink/paper base, one desaturated pewter accent. No saturated hues.
+   Light theme only, deliberately: the site does not follow the visitor's OS
+   dark-mode preference, it should look the same at all times. */
 :root {
   --ink: #0d0d0c;
   --ink-raised: #181614;
@@ -12,32 +14,12 @@
   --pewter-dim: #6b6559;
   --line: rgba(250, 248, 244, 0.12);
 
-  --bg: var(--ink);
-  --bg-raised: var(--ink-raised);
-  --fg: var(--paper);
-  --fg-soft: #9c968a;
-  --metal: var(--pewter-bright);
-  --border: var(--line);
-}
-
-:root[data-theme="light"] {
   --bg: var(--paper);
   --bg-raised: var(--paper-dim);
   --fg: var(--ink);
   --fg-soft: #6b6559;
   --metal: var(--pewter-dim);
   --border: rgba(13, 13, 12, 0.12);
-}
-
-@media (prefers-color-scheme: light) {
-  :root:not([data-theme="dark"]) {
-    --bg: var(--paper);
-    --bg-raised: var(--paper-dim);
-    --fg: var(--ink);
-    --fg-soft: #6b6559;
-    --metal: var(--pewter-dim);
-    --border: rgba(13, 13, 12, 0.12);
-  }
 }
 
 @theme inline {
@@ -53,6 +35,7 @@
 
 html {
   scroll-behavior: smooth;
+  color-scheme: light;
 }
 
 body {
@@ -61,30 +44,14 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
-/* Brand mark asset is authored black-on-transparent; inverted to white for the dark
-   theme (the default), restored to black under the light theme. */
+/* Brand mark asset is authored black-on-transparent, correct as-is on the
+   permanent light theme. */
 .mark-auto {
-  filter: invert(1);
-}
-:root[data-theme="light"] .mark-auto {
   filter: none;
-}
-@media (prefers-color-scheme: light) {
-  :root:not([data-theme="dark"]) .mark-auto {
-    filter: none;
-  }
 }
 
 .seal-mark {
-  filter: invert(1) drop-shadow(0 10px 16px rgba(0, 0, 0, 0.35));
-}
-:root[data-theme="light"] .seal-mark {
   filter: drop-shadow(0 10px 16px rgba(0, 0, 0, 0.2));
-}
-@media (prefers-color-scheme: light) {
-  :root:not([data-theme="dark"]) .seal-mark {
-    filter: drop-shadow(0 10px 16px rgba(0, 0, 0, 0.2));
-  }
 }
 
 @media (prefers-reduced-motion: reduce) {

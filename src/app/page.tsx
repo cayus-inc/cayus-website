@@ -7,7 +7,6 @@ import { SectionHead } from "@/components/ui/SectionHead";
 import { StepVisual } from "@/components/ui/StepVisual";
 import { ScanField } from "@/components/ui/ScanField";
 import { ParticleField } from "@/components/three/ParticleField";
-import { PinScroll } from "@/components/ui/PinScroll";
 import { FAQ } from "@/components/ui/FAQ";
 import { CTA } from "@/components/ui/CTA";
 
@@ -211,7 +210,7 @@ export default function Home() {
       </section>
 
       {/* How it works */}
-      <section id="how" className="overflow-x-hidden border-t border-border px-6 pt-28 md:pt-40">
+      <section id="how" className="overflow-x-hidden border-t border-border px-6 py-28 md:py-40">
         <div className="mx-auto max-w-[1160px]">
           <Reveal>
             <SectionHead
@@ -220,47 +219,32 @@ export default function Home() {
               title="Three steps, nothing improvised."
             />
           </Reveal>
+          <StaggerGroup className="mt-14 grid grid-cols-1 gap-px overflow-hidden rounded-sm border border-border bg-border md:grid-cols-3">
+            {steps.map((step) => (
+              <StaggerItem
+                key={step.glyph}
+                className="group flex h-full flex-col bg-bg p-8 transition-colors duration-300 hover:bg-bg-raised"
+              >
+                <div className="flex items-center justify-between">
+                  <span className="font-serif-display text-[2.6rem] leading-none text-border transition-colors duration-300 group-hover:text-metal">
+                    {step.glyph}
+                  </span>
+                  <span className="h-px w-8 bg-border transition-all duration-300 group-hover:w-14 group-hover:bg-metal" />
+                </div>
+                <div className="mt-7">
+                  <StepVisual step={step.glyph} />
+                </div>
+                <h3 className="mt-7 text-[1.06rem] font-semibold">
+                  {step.title}
+                </h3>
+                <p className="mt-2.5 max-w-[32ch] text-[0.92rem] leading-[1.58] text-fg-soft">
+                  {step.body}
+                </p>
+              </StaggerItem>
+            ))}
+          </StaggerGroup>
         </div>
       </section>
-      <PinScroll
-        fallbackClassName="mx-auto mt-14 grid max-w-[1160px] grid-cols-1 gap-px overflow-hidden rounded-sm border border-border bg-border px-6 md:grid-cols-3"
-        items={steps.map((step, i) => (
-          <div
-            key={step.glyph}
-            className="relative flex w-full max-w-[440px] flex-col overflow-hidden rounded-sm border border-border bg-bg-raised p-9"
-            style={{ minHeight: "380px" }}
-          >
-            <ParticleField
-              className="absolute inset-0"
-              count={140}
-              spread={2.2}
-              color="#8f8875"
-              size={0.045}
-              style={{
-                maskImage: "radial-gradient(ellipse 90% 70% at 75% 20%, black 25%, transparent 82%)",
-                WebkitMaskImage: "radial-gradient(ellipse 90% 70% at 75% 20%, black 25%, transparent 82%)",
-              }}
-            />
-            <div className="relative flex items-center justify-between">
-              <span className="font-serif-display text-[2.6rem] leading-none text-metal">
-                {step.glyph}
-              </span>
-              <span className="text-[0.72rem] uppercase tracking-[0.1em] text-fg-soft">
-                Step {i + 1} of {steps.length}
-              </span>
-            </div>
-            <div className="relative mt-7">
-              <StepVisual step={step.glyph} />
-            </div>
-            <h3 className="relative mt-7 text-[1.2rem] font-semibold">
-              {step.title}
-            </h3>
-            <p className="relative mt-2.5 max-w-[36ch] text-[0.95rem] leading-[1.6] text-fg-soft">
-              {step.body}
-            </p>
-          </div>
-        ))}
-      />
 
       {/* One thing, done well: forced-dark band regardless of theme */}
       <section
@@ -353,7 +337,7 @@ export default function Home() {
       </section>
 
       {/* What this isn't */}
-      <section className="overflow-x-hidden border-t border-border bg-bg-raised px-6 pt-28 md:pt-40">
+      <section className="overflow-x-hidden border-t border-border bg-bg-raised px-6 py-28 md:py-40">
         <div className="mx-auto max-w-[1160px]">
           <Reveal>
             <SectionHead
@@ -362,42 +346,43 @@ export default function Home() {
               title="We stop at the interview. On purpose."
             />
           </Reveal>
+          <StaggerGroup className="mt-14 grid grid-cols-1 gap-px border border-border bg-border md:grid-cols-3">
+            {[
+              {
+                tag: "Not a candidate list",
+                title: "No names before you sign",
+                body: "You see an anonymized profile first. Names are released only once terms are agreed, the same rule for every client.",
+              },
+              {
+                tag: "Not a placement guarantee",
+                title: "The hiring call is yours",
+                body: "We don't negotiate offers or manage counter-offers. Fit and final judgment stay with you, every time.",
+              },
+              {
+                tag: "Not volume outreach",
+                title: "Every line is written for one person",
+                body: "No mail-merge. Each message is grounded in something real about that candidate's work, or it doesn't go out.",
+              },
+            ].map((cell, i) => (
+              <StaggerItem
+                key={cell.tag}
+                direction={i === 0 ? "left" : i === 2 ? "right" : "up"}
+                className="bg-bg-raised px-7 py-8"
+              >
+                <div className="mb-2.5 text-[0.85rem] text-fg-soft">
+                  {cell.tag}
+                </div>
+                <h4 className="mb-2 text-[1.02rem] font-semibold">
+                  {cell.title}
+                </h4>
+                <p className="text-[0.92rem] leading-[1.5] text-fg-soft">
+                  {cell.body}
+                </p>
+              </StaggerItem>
+            ))}
+          </StaggerGroup>
         </div>
       </section>
-      <PinScroll
-        fallbackClassName="mx-auto mt-14 grid max-w-[1160px] grid-cols-1 gap-px border border-border bg-border px-6 md:grid-cols-3"
-        items={[
-          {
-            tag: "Not a candidate list",
-            title: "No names before you sign",
-            body: "You see an anonymized profile first. Names are released only once terms are agreed, the same rule for every client.",
-          },
-          {
-            tag: "Not a placement guarantee",
-            title: "The hiring call is yours",
-            body: "We don't negotiate offers or manage counter-offers. Fit and final judgment stay with you, every time.",
-          },
-          {
-            tag: "Not volume outreach",
-            title: "Every line is written for one person",
-            body: "No mail-merge. Each message is grounded in something real about that candidate's work, or it doesn't go out.",
-          },
-        ].map((cell) => (
-          <div
-            key={cell.tag}
-            className="flex w-full max-w-[440px] flex-col rounded-sm border border-border bg-bg p-9"
-            style={{ minHeight: "300px" }}
-          >
-            <div className="text-[0.85rem] text-fg-soft">{cell.tag}</div>
-            <h4 className="mt-3 font-serif-display text-[1.4rem] font-medium leading-[1.2]">
-              {cell.title}
-            </h4>
-            <p className="mt-3 text-[0.95rem] leading-[1.6] text-fg-soft">
-              {cell.body}
-            </p>
-          </div>
-        ))}
-      />
 
       {/* Pricing */}
       <section id="pricing" className="overflow-x-hidden border-t border-border px-6 py-28 md:py-40">
