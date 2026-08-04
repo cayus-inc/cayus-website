@@ -41,9 +41,9 @@ export function Footer() {
                 CAYUS
               </span>
             </Link>
-            <p className="mt-3 max-w-[32ch] text-[0.85rem] leading-[1.6] text-fg-soft">
-              Qualified candidate interviews, booked on your calendar. Sales
-              Engineers and Solutions Engineers, funded AI startups, US.
+            <p className="mt-3 max-w-[30ch] text-[0.85rem] leading-[1.6] text-fg-soft">
+              The hire that makes a team stronger, not just bigger. Found
+              before they start looking.
             </p>
           </div>
 

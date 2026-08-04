@@ -117,15 +117,15 @@ export default function AboutPage() {
         <Reveal delay={0.1}>
           <div className="mt-16 rounded-sm border border-border bg-bg-raised p-8">
             <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-fg-soft">
-              Why one segment, not a broad practice
+              How we take on a search
             </p>
             <p className="mt-4 max-w-[62ch] text-[0.98rem] leading-[1.65] text-fg-soft">
-              Depth on one role, in one market, beats a wide net every
-              time. The sourcing gets sharper, the qualification bar gets
-              clearer, and the candidates we&rsquo;ve already talked to
-              compound into the next search instead of starting from zero.
-              That focus is deliberate, and it stays until it stops being
-              the right call.
+              One search at a time, run against a scorecard specific to
+              that role, not a template reused across clients. We&rsquo;d
+              rather run fewer searches well than spread the same attention
+              across many at once. Which roles that means depends on where
+              the hire genuinely changes what a company can do, not on a
+              fixed list of titles.
             </p>
           </div>
         </Reveal>

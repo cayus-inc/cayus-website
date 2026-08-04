@@ -11,13 +11,6 @@ import { CTA } from "@/components/ui/CTA";
 
 const BOOK_A_CALL_HREF = "mailto:contact@cayus.io?subject=Booking%20a%20call";
 
-const proof = [
-  "Verified before every contact",
-  "Anonymized until you sign",
-  "Billed only if the interview is held",
-  "No mail-merge, ever",
-];
-
 const oldWay = [
   "A cut of first-year salary, due only if it works out",
   "You find out if it worked after the hire is made",
@@ -82,7 +75,7 @@ const faqs = [
   },
   {
     q: "Isn't this expensive per interview?",
-    a: "Compare it to a contingency search: a percentage of a year-one salary, due only after a hire is made, with no visibility until then. Here you pay per conversation that actually happens, and you decide who you hire from there.",
+    a: "Compare it to a contingency search: 20-30% of first-year salary for a technical role, due only after a hire is made, with no visibility until then. A handful of interviews at our rate is a fraction of that, and you're paying for conversations that happen, not a percentage owed on the back end.",
   },
   {
     q: "What if none of them get hired?",
@@ -98,12 +91,13 @@ export default function Home() {
       {/* Hero */}
       <div className="mx-auto grid max-w-[1280px] grid-cols-1 items-center gap-20 px-6 pb-32 pt-20 md:grid-cols-[1.1fr_0.9fr] md:pb-44 md:pt-44">
         <Reveal>
-          <span className="mb-8 inline-flex items-center gap-2 rounded-full border border-border px-3 py-1.5 text-[0.72rem] font-medium text-fg-soft">
-            <span className="relative flex size-1.5">
+          <span className="mb-8 inline-flex items-center gap-2.5 text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-fg-soft">
+            <span className="h-px w-6 bg-border" />
+            Qualified interviews, on your calendar
+            <span className="relative ml-0.5 flex size-1.5">
               <span className="absolute inline-flex size-full animate-ping rounded-full bg-metal/50" />
               <span className="relative inline-flex size-1.5 rounded-full bg-metal" />
             </span>
-            Qualified interviews, on your calendar
           </span>
           <h1 className="font-serif-display text-[3.4rem] font-medium leading-[0.95] tracking-[-0.02em] text-balance md:text-[6.8rem]">
             We book the
@@ -130,31 +124,6 @@ export default function Home() {
         <Reveal delay={0.12} className="order-first md:order-last">
           <HeroStage />
         </Reveal>
-      </div>
-
-      {/* Status bar */}
-      <div className="border-y border-border bg-bg-raised">
-        <div className="mx-auto flex max-w-[1160px] flex-wrap items-center justify-center gap-x-8 gap-y-3 px-6 py-5 sm:justify-between">
-          <span className="flex items-center gap-2.5 whitespace-nowrap pr-2">
-            <span className="relative flex size-1.5">
-              <span className="absolute inline-flex size-full animate-ping rounded-full bg-metal/50" />
-              <span className="relative inline-flex size-1.5 rounded-full bg-metal" />
-            </span>
-            <span className="font-mono text-[0.72rem] uppercase tracking-[0.1em] text-fg">
-              Scanning continuously
-            </span>
-          </span>
-          <StaggerGroup className="flex flex-wrap items-center divide-x divide-border">
-            {proof.map((p) => (
-              <StaggerItem
-                key={p}
-                className="whitespace-nowrap px-5 text-[0.82rem] text-fg-soft first:pl-0 last:pr-0"
-              >
-                {p}
-              </StaggerItem>
-            ))}
-          </StaggerGroup>
-        </div>
       </div>
 
       {/* The mechanism */}
@@ -187,18 +156,6 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Who this is for */}
-      <div className="border-b border-border px-6 py-10 text-center">
-        <Reveal>
-          <p className="mx-auto max-w-[62ch] text-[0.98rem] leading-[1.6] text-fg-soft">
-            Built for one search: <span className="text-fg">Sales Engineers and Solutions
-            Engineers at funded AI startups in the US</span>, the GTM role
-            that stays open longest and costs the most to leave empty. If
-            that&rsquo;s your req, this is built for exactly that.
-          </p>
-        </Reveal>
-      </div>
-
       {/* Problem / solution contrast */}
       <section className="px-6 py-28 md:py-40">
         <div className="mx-auto max-w-[1160px]">
@@ -206,7 +163,7 @@ export default function Home() {
             <SectionHead
               eyebrow="The bottleneck"
               title="Great candidates don't apply. They have to be found."
-              sub="Post a role and you get the people actively looking, which is not the same set as the people who'd actually move the needle. The best hire for a Sales Engineer seat is usually not job-hunting. Someone has to go get them a conversation."
+              sub="Post a role and you get the people actively looking, which is not the same set as the people who'd actually move the needle. Your best hire is usually not job-hunting. Someone has to go get them a conversation."
             />
           </Reveal>
           <StaggerGroup className="mx-auto mt-14 grid max-w-3xl gap-4 sm:grid-cols-2">
@@ -449,9 +406,12 @@ export default function Home() {
                 Optional add-on
               </span>
               <span>
-                A reduced placement success fee (5-8%) is available on either
-                plan, on hire. It exists to align incentives, not to be the
-                revenue model. Most clients don&rsquo;t need it.
+                A success fee (5-8% of first-year salary, paid only on hire)
+                is available on either plan. It&rsquo;s well below the
+                20-30% a contingency search typically runs, since you&rsquo;re
+                already paying per interview by the time it applies. It
+                exists to sharpen incentives on harder searches, not to
+                replace the base price.
               </span>
             </div>
           </Reveal>

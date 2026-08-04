@@ -10,7 +10,7 @@ export function StepVisual({ step }: { step: "I" | "II" | "III" }) {
           <span className="relative inline-flex size-1.5 rounded-full bg-metal" />
         </span>
         <span className="min-w-0 flex-1 truncate font-mono text-[11px] text-fg-soft">
-          Sourcing against open Sales Engineer role…
+          Sourcing against open role…
         </span>
       </div>
     );
