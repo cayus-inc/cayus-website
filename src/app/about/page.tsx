@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
-import { Reveal, StaggerGroup, StaggerItem } from "@/components/ui/Reveal";
+import { Reveal } from "@/components/ui/Reveal";
 import { CTA } from "@/components/ui/CTA";
 import { ParticleField } from "@/components/three/ParticleField";
+import { PinScroll } from "@/components/ui/PinScroll";
 
 export const metadata: Metadata = {
   title: "About",
@@ -132,23 +133,27 @@ export default function AboutPage() {
             What we operate under
           </p>
         </Reveal>
-        <StaggerGroup className="mt-6 grid grid-cols-1 gap-px border border-border bg-border sm:grid-cols-2">
-          {commitments.map((c, i) => (
-            <StaggerItem
-              key={c.title}
-              direction={i % 2 === 0 ? "left" : "right"}
-              className="bg-bg px-7 py-8"
-            >
-              <h3 className="text-[1.02rem] font-semibold">{c.title}</h3>
-              <p className="mt-2.5 text-[0.92rem] leading-[1.55] text-fg-soft">
-                {c.body}
-              </p>
-            </StaggerItem>
-          ))}
-        </StaggerGroup>
-
+      </div>
+      <PinScroll
+        fallbackClassName="mx-auto mt-6 grid max-w-[840px] grid-cols-1 gap-px border border-border bg-border px-6 sm:grid-cols-2"
+        items={commitments.map((c) => (
+          <div
+            key={c.title}
+            className="flex w-full max-w-[420px] flex-col rounded-sm border border-border bg-bg p-9"
+            style={{ minHeight: "280px" }}
+          >
+            <h3 className="font-serif-display text-[1.35rem] font-medium leading-[1.2]">
+              {c.title}
+            </h3>
+            <p className="mt-3 text-[0.95rem] leading-[1.6] text-fg-soft">
+              {c.body}
+            </p>
+          </div>
+        ))}
+      />
+      <div className="mx-auto max-w-[840px] overflow-x-hidden px-6 pb-28">
         <Reveal delay={0.1}>
-          <div className="mt-16 rounded-sm border border-border bg-bg-raised p-8">
+          <div className="mt-6 rounded-sm border border-border bg-bg-raised p-8">
             <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-fg-soft">
               How we take on a search
             </p>
