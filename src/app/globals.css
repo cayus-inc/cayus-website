@@ -61,6 +61,32 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Brand mark asset is authored black-on-transparent; inverted to white for the dark
+   theme (the default), restored to black under the light theme. */
+.mark-auto {
+  filter: invert(1);
+}
+:root[data-theme="light"] .mark-auto {
+  filter: none;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) .mark-auto {
+    filter: none;
+  }
+}
+
+.seal-mark {
+  filter: invert(1) drop-shadow(0 10px 16px rgba(0, 0, 0, 0.35));
+}
+:root[data-theme="light"] .seal-mark {
+  filter: drop-shadow(0 10px 16px rgba(0, 0, 0, 0.2));
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) .seal-mark {
+    filter: drop-shadow(0 10px 16px rgba(0, 0, 0, 0.2));
+  }
+}
+
 @media (prefers-reduced-motion: reduce) {
   * {
     animation-duration: 0.01ms !important;

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 
 export function Header() {
   return (
@@ -7,10 +8,14 @@ export function Header() {
         href="/"
         className="flex items-center gap-2.5 font-serif-display text-[1.05rem] tracking-wide text-fg"
       >
-        <svg width="20" height="20" viewBox="0 0 20 20" aria-hidden="true">
-          <circle cx="10" cy="10" r="9" fill="none" stroke="var(--metal)" strokeWidth="1" />
-          <circle cx="10" cy="10" r="3.2" fill="var(--fg)" />
-        </svg>
+        <Image
+          src="/brand/mark.png"
+          alt=""
+          width={18}
+          height={22}
+          className="mark-auto"
+          aria-hidden="true"
+        />
         CAYUS
       </Link>
       <div className="flex items-center gap-8 text-[0.86rem] text-fg-soft">
