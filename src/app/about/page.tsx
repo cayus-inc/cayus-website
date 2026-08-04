@@ -33,12 +33,29 @@ export default function AboutPage() {
   return (
     <>
       <Header />
-      <div className="mx-auto max-w-[840px] px-6 pb-28 pt-24 md:pt-32">
+      <div className="mx-auto max-w-[840px] overflow-x-hidden px-6 pb-28 pt-24 md:pt-32">
         <div className="relative">
           <div
             aria-hidden
-            className="pointer-events-none absolute -right-24 -top-16 hidden size-[340px] rounded-full border border-border opacity-40 motion-safe:animate-[spin_140s_linear_infinite] md:block"
-          />
+            className="pointer-events-none absolute -right-20 -top-14 hidden size-[400px] md:block"
+          >
+            <div
+              className="absolute inset-0 rounded-full motion-safe:animate-[spin_140s_linear_infinite]"
+              style={{ border: "1.5px solid var(--metal)", opacity: 0.55 }}
+            />
+            <div
+              className="absolute inset-12 rounded-full"
+              style={{ border: "1px solid var(--border)" }}
+            />
+            <div
+              className="absolute inset-0 rounded-full"
+              style={{
+                background: "radial-gradient(circle, var(--metal) 0%, transparent 72%)",
+                opacity: 0.14,
+                filter: "blur(28px)",
+              }}
+            />
+          </div>
           <Reveal direction="left">
             <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-fg-soft">
               About
@@ -144,9 +161,7 @@ export default function AboutPage() {
         </Reveal>
 
         <Reveal delay={0.15} className="mt-16">
-          <CTA href="mailto:contact@cayus.io?subject=About%20Cayus">
-            Talk to us
-          </CTA>
+          <CTA href="/contact">Book a call</CTA>
           <Link
             href="/#how"
             className="ml-6 border-b border-border pb-0.5 text-[0.92rem] transition-colors hover:border-fg"

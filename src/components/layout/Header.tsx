@@ -2,7 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { CTA } from "@/components/ui/CTA";
 
-const BOOK_A_CALL_HREF = "mailto:contact@cayus.io?subject=Booking%20a%20call";
+const BOOK_A_CALL_HREF = "/contact";
 
 const NAV = [
   { href: "/#how", label: "How it works" },

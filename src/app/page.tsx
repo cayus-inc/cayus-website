@@ -6,10 +6,11 @@ import { HeroStage } from "@/components/ui/HeroStage";
 import { SectionHead } from "@/components/ui/SectionHead";
 import { StepVisual } from "@/components/ui/StepVisual";
 import { ScanField } from "@/components/ui/ScanField";
+import { ParticleField } from "@/components/three/ParticleField";
 import { FAQ } from "@/components/ui/FAQ";
 import { CTA } from "@/components/ui/CTA";
 
-const BOOK_A_CALL_HREF = "mailto:contact@cayus.io?subject=Booking%20a%20call";
+const BOOK_A_CALL_HREF = "/contact";
 
 const oldWay = [
   "A cut of first-year salary, due only if it works out",
@@ -63,11 +64,11 @@ const pricing = [
 const faqs = [
   {
     q: "We already have a recruiter, why do we need this?",
-    a: "Good, keep them close for the close and the culture fit, that's their strength. What we do is get you three conversations with people who already said yes and were not on the market yesterday. Ask your recruiter how many passive candidates they got to reply to a cold message this month. If the number is good, you don't need us.",
+    a: "Good, keep them close for the close and the culture fit, that's their strength. What we do is get you conversations with people who already said yes and were not on the market yesterday. Ask your recruiter how many passive candidates they got to reply to a cold message this month. If the number is good, you don't need us.",
   },
   {
     q: "Can't we just source candidates ourselves?",
-    a: "You could, the tools are public. What takes the time is not finding fifty profiles, it's getting three of them to say yes to a conversation with a company they weren't looking at. That's the part that doesn't scale with a subscription.",
+    a: "You could, the tools are public. What takes the time is not finding fifty profiles, it's getting even one of them to say yes to a conversation with a company they weren't looking at. That's the part that doesn't scale with a subscription.",
   },
   {
     q: "How do I know these candidates are real and actually interested?",
@@ -89,7 +90,7 @@ export default function Home() {
       <Header />
 
       {/* Hero */}
-      <div className="mx-auto grid max-w-[1280px] grid-cols-1 items-center gap-20 px-6 pb-32 pt-20 md:grid-cols-[1.1fr_0.9fr] md:pb-44 md:pt-44">
+      <div className="mx-auto grid max-w-[1280px] grid-cols-1 items-center gap-20 overflow-x-hidden px-6 pb-32 pt-20 md:grid-cols-[1.1fr_0.9fr] md:pb-44 md:pt-44">
         <Reveal direction="left">
           <span className="mb-8 inline-flex items-center gap-2.5 text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-fg-soft">
             <span className="h-px w-6 bg-border" />
@@ -124,7 +125,7 @@ export default function Home() {
 
       {/* The mechanism */}
       <section
-        className="border-b border-border px-6 py-28 md:py-40"
+        className="overflow-x-hidden border-b border-border px-6 py-28 md:py-40"
         style={{
           background: "#0d0d0c",
           color: "#faf8f4",
@@ -153,7 +154,7 @@ export default function Home() {
       </section>
 
       {/* Problem / solution contrast */}
-      <section className="px-6 py-28 md:py-40">
+      <section className="overflow-x-hidden px-6 py-28 md:py-40">
         <div className="mx-auto max-w-[1160px]">
           <Reveal>
             <SectionHead
@@ -209,7 +210,7 @@ export default function Home() {
       </section>
 
       {/* How it works */}
-      <section id="how" className="border-t border-border px-6 py-28 md:py-40">
+      <section id="how" className="overflow-x-hidden border-t border-border px-6 py-28 md:py-40">
         <div className="mx-auto max-w-[1160px]">
           <Reveal>
             <SectionHead
@@ -247,7 +248,7 @@ export default function Home() {
 
       {/* One thing, done well: forced-dark band regardless of theme */}
       <section
-        className="border-t border-border px-6 py-28 md:py-40"
+        className="overflow-x-hidden border-t border-border px-6 py-28 md:py-40"
         style={{
           background: "#0d0d0c",
           color: "#faf8f4",
@@ -307,7 +308,7 @@ export default function Home() {
       </section>
 
       {/* What this isn't */}
-      <section className="border-t border-border bg-bg-raised px-6 py-28 md:py-40">
+      <section className="overflow-x-hidden border-t border-border bg-bg-raised px-6 py-28 md:py-40">
         <div className="mx-auto max-w-[1160px]">
           <Reveal>
             <SectionHead
@@ -355,7 +356,7 @@ export default function Home() {
       </section>
 
       {/* Pricing */}
-      <section id="pricing" className="border-t border-border px-6 py-28 md:py-40">
+      <section id="pricing" className="overflow-x-hidden border-t border-border px-6 py-28 md:py-40">
         <div className="mx-auto max-w-[1160px]">
           <Reveal>
             <SectionHead
@@ -422,7 +423,7 @@ export default function Home() {
       </section>
 
       {/* FAQ */}
-      <section className="border-t border-border bg-bg-raised px-6 py-28 md:py-40">
+      <section className="overflow-x-hidden border-t border-border bg-bg-raised px-6 py-28 md:py-40">
         <div className="mx-auto max-w-[1160px]">
           <Reveal>
             <SectionHead eyebrow="Questions" title="Answered plainly." />
@@ -435,24 +436,32 @@ export default function Home() {
 
       {/* Final CTA */}
       <section
-        className="relative overflow-hidden border-t px-6 py-28 text-center"
+        className="relative overflow-hidden border-t px-6 py-32 text-center"
         style={{ background: "#0d0d0c", color: "#faf8f4", borderColor: "rgba(250,248,244,0.12)" }}
       >
-        <Reveal>
-          <h2 className="mx-auto max-w-[22ch] font-serif-display text-[2rem] font-medium text-balance md:text-[2.9rem]">
-            Your next great hire is already employed, and not looking.
-            Let&rsquo;s go start the conversation.
-          </h2>
-          <div className="mt-8 flex justify-center">
-            <CTA
-              href={BOOK_A_CALL_HREF}
-              variant="invert"
-              style={{ background: "#faf8f4", color: "#0d0d0c" }}
-            >
-              Book a call
-            </CTA>
-          </div>
-        </Reveal>
+        <ParticleField
+          className="absolute inset-0 opacity-70"
+          count={260}
+          spread={4.2}
+          color="#8a8375"
+          size={0.045}
+        />
+        <div className="relative">
+          <Reveal>
+            <h2 className="mx-auto max-w-[18ch] font-serif-display text-[2.1rem] font-medium text-balance md:text-[3.1rem]">
+              Your best hire isn&rsquo;t looking. Let&rsquo;s change that.
+            </h2>
+            <div className="mt-9 flex justify-center">
+              <CTA
+                href={BOOK_A_CALL_HREF}
+                variant="invert"
+                style={{ background: "#faf8f4", color: "#0d0d0c" }}
+              >
+                Book a call
+              </CTA>
+            </div>
+          </Reveal>
+        </div>
       </section>
 
       <Footer />

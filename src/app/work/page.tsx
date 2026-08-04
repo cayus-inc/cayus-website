@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Reveal, StaggerGroup, StaggerItem } from "@/components/ui/Reveal";
+import { CaseGallery } from "@/components/ui/CaseGallery";
 
 export const metadata: Metadata = {
   title: "How we work",
@@ -38,7 +39,7 @@ export default function WorkPage() {
   return (
     <>
       <Header />
-      <div className="mx-auto max-w-[900px] px-6 pb-16 pt-24 md:pt-32">
+      <div className="mx-auto max-w-[900px] overflow-x-hidden px-6 pb-16 pt-24 md:pt-32">
         <Reveal direction="left">
           <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-fg-soft">
             How we work
@@ -53,11 +54,16 @@ export default function WorkPage() {
             we don&rsquo;t show is the exact mechanics. The tools and the
             playbook stay ours.
           </p>
+          <p className="mt-6 text-[0.78rem] uppercase tracking-[0.1em] text-fg-soft/70">
+            Scroll to browse, click a case for the full reasoning
+          </p>
         </Reveal>
       </div>
 
+      <CaseGallery />
+
       {/* Case 1: layered read, approach in a highlighted block */}
-      <div className="mx-auto max-w-[900px] px-6">
+      <div id="depth-over-pedigree" className="mx-auto max-w-[900px] scroll-mt-24 overflow-x-hidden px-6 pt-20">
         <Reveal direction="left">
           <CaseTag>Depth over pedigree</CaseTag>
           <h2 className="mt-5 font-serif-display text-[1.7rem] font-medium leading-[1.15] text-balance md:text-[2.1rem]">
@@ -118,7 +124,7 @@ export default function WorkPage() {
       </div>
 
       {/* Case 2: resume vs. reality contrast, same pattern as the homepage's problem/solution block */}
-      <div className="mx-auto mt-14 max-w-[900px] border-t border-border px-6 pt-14">
+      <div id="motivation-verified" className="mx-auto mt-14 max-w-[900px] scroll-mt-24 overflow-x-hidden border-t border-border px-6 pt-14">
         <Reveal direction="right">
           <CaseTag>Motivation, verified</CaseTag>
           <h2 className="mt-5 font-serif-display text-[1.7rem] font-medium leading-[1.15] text-balance md:text-[2.1rem]">
@@ -195,7 +201,7 @@ export default function WorkPage() {
       </div>
 
       {/* Case 3: the bar held constant across an expanding map */}
-      <div className="mx-auto mt-14 max-w-[900px] border-t border-border px-6 pb-28 pt-14">
+      <div id="constant-bar" className="mx-auto mt-14 max-w-[900px] scroll-mt-24 overflow-x-hidden border-t border-border px-6 pb-28 pt-14">
         <Reveal direction="left">
           <CaseTag>Constant bar, wider net</CaseTag>
           <h2 className="mt-5 font-serif-display text-[1.7rem] font-medium leading-[1.15] text-balance md:text-[2.1rem]">
