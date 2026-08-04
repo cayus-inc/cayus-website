@@ -39,14 +39,19 @@ function Scene() {
     return arr;
   }, []);
 
-  const positions = useMemo(() => {
-    const arr = new Float32Array(points.length * 3);
-    points.forEach((p, i) => {
-      arr[i * 3] = p.x;
-      arr[i * 3 + 1] = p.y;
-      arr[i * 3 + 2] = p.z;
-    });
-    return arr;
+  // Split into a bright near layer and a dim far layer by depth (z), a
+  // cheap depth cue instead of one flat, evenly-lit cloud.
+  const { nearPositions, farPositions } = useMemo(() => {
+    const near: number[] = [];
+    const far: number[] = [];
+    for (const p of points) {
+      const bucket = p.z > 0 ? near : far;
+      bucket.push(p.x, p.y, p.z);
+    }
+    return {
+      nearPositions: new Float32Array(near),
+      farPositions: new Float32Array(far),
+    };
   }, [points]);
 
   const [activations, setActivations] = useState<Activation[]>([]);
@@ -78,14 +83,29 @@ function Scene() {
     <group ref={group}>
       <points>
         <bufferGeometry>
-          <bufferAttribute attach="attributes-position" args={[positions, 3]} />
+          <bufferAttribute attach="attributes-position" args={[farPositions, 3]} />
         </bufferGeometry>
         <pointsMaterial
           color="#c7c0b2"
-          size={0.06}
+          size={0.04}
           sizeAttenuation
           transparent
-          opacity={0.6}
+          opacity={0.35}
+          depthWrite={false}
+          map={circleTexture()}
+          alphaTest={0.01}
+        />
+      </points>
+      <points>
+        <bufferGeometry>
+          <bufferAttribute attach="attributes-position" args={[nearPositions, 3]} />
+        </bufferGeometry>
+        <pointsMaterial
+          color="#c7c0b2"
+          size={0.075}
+          sizeAttenuation
+          transparent
+          opacity={0.75}
           depthWrite={false}
           map={circleTexture()}
           alphaTest={0.01}
@@ -96,6 +116,15 @@ function Scene() {
         <ActivationTrace key={a.id} activation={a} />
       ))}
 
+      <sprite position={TARGET} scale={[0.55, 0.55, 0.55]}>
+        <spriteMaterial
+          map={circleTexture()}
+          color="#faf8f4"
+          transparent
+          opacity={0.35}
+          depthWrite={false}
+        />
+      </sprite>
       <mesh position={TARGET}>
         <sphereGeometry args={[0.05, 16, 16]} />
         <meshBasicMaterial color="#faf8f4" />

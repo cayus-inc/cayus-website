@@ -109,7 +109,7 @@ export default function Home() {
             we start. The hiring decision stays entirely yours.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
-            <CTA href={BOOK_A_CALL_HREF}>Book a call</CTA>
+            <CTA href={BOOK_A_CALL_HREF}>Request a call</CTA>
             <Link
               href="/#how"
               className="border-b border-border pb-0.5 text-[0.92rem] transition-colors hover:border-fg"
@@ -293,13 +293,27 @@ export default function Home() {
                   Cayus: one thing, at the highest level
                 </p>
                 <div
-                  className="flex items-center gap-4 rounded-sm border p-4"
-                  style={{ borderColor: "rgba(250,248,244,0.28)", background: "rgba(250,248,244,0.07)" }}
+                  className="relative flex items-center gap-4 overflow-hidden rounded-sm border p-6"
+                  style={{
+                    borderColor: "rgba(250,248,244,0.32)",
+                    background: "rgba(250,248,244,0.06)",
+                    boxShadow: "0 0 60px -12px rgba(199,192,178,0.35)",
+                  }}
                 >
-                  <span className="text-[0.9rem] font-semibold">
+                  <ParticleField
+                    className="absolute inset-0"
+                    count={140}
+                    spread={2.2}
+                    color="#c7c0b2"
+                    size={0.05}
+                    style={{
+                      maskImage: "radial-gradient(ellipse 90% 100% at center, black 30%, transparent 90%)",
+                      WebkitMaskImage: "radial-gradient(ellipse 90% 100% at center, black 30%, transparent 90%)",
+                    }}
+                  />
+                  <span className="relative font-serif-display text-[1.3rem] font-medium">
                     The qualified interview
                   </span>
-                  <div className="ml-auto h-1.5 flex-1 rounded-full" style={{ background: "#faf8f4" }} />
                 </div>
               </div>
             </Reveal>
@@ -440,15 +454,19 @@ export default function Home() {
         style={{ background: "#0d0d0c", color: "#faf8f4", borderColor: "rgba(250,248,244,0.12)" }}
       >
         <ParticleField
-          className="absolute inset-0 opacity-70"
-          count={260}
-          spread={4.2}
+          className="absolute inset-0 opacity-60"
+          count={220}
+          spread={3.6}
           color="#8a8375"
           size={0.045}
+          style={{
+            maskImage: "radial-gradient(ellipse 60% 55% at center, black 40%, transparent 92%)",
+            WebkitMaskImage: "radial-gradient(ellipse 60% 55% at center, black 40%, transparent 92%)",
+          }}
         />
         <div className="relative">
           <Reveal>
-            <h2 className="mx-auto max-w-[18ch] font-serif-display text-[2.1rem] font-medium text-balance md:text-[3.1rem]">
+            <h2 className="mx-auto max-w-[30ch] font-serif-display text-[2.1rem] font-medium text-balance md:text-[3.1rem]">
               Your best hire isn&rsquo;t looking. Let&rsquo;s change that.
             </h2>
             <div className="mt-9 flex justify-center">
@@ -457,7 +475,7 @@ export default function Home() {
                 variant="invert"
                 style={{ background: "#faf8f4", color: "#0d0d0c" }}
               >
-                Book a call
+                Request a call
               </CTA>
             </div>
           </Reveal>

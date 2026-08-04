@@ -47,7 +47,7 @@ export function Header() {
           arrow={false}
           className="!px-5 !py-2.5 !text-[0.84rem]"
         >
-          Book a call
+          Request a call
         </CTA>
       </div>
     </nav>

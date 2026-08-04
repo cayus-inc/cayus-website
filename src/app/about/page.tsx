@@ -4,6 +4,7 @@ import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Reveal, StaggerGroup, StaggerItem } from "@/components/ui/Reveal";
 import { CTA } from "@/components/ui/CTA";
+import { ParticleField } from "@/components/three/ParticleField";
 
 export const metadata: Metadata = {
   title: "About",
@@ -37,22 +38,24 @@ export default function AboutPage() {
         <div className="relative">
           <div
             aria-hidden
-            className="pointer-events-none absolute -right-20 -top-14 hidden size-[400px] md:block"
+            className="pointer-events-none absolute -right-16 -top-20 hidden size-[460px] md:block"
           >
-            <div
-              className="absolute inset-0 rounded-full motion-safe:animate-[spin_140s_linear_infinite]"
-              style={{ border: "1.5px solid var(--metal)", opacity: 0.55 }}
-            />
-            <div
-              className="absolute inset-12 rounded-full"
-              style={{ border: "1px solid var(--border)" }}
-            />
-            <div
-              className="absolute inset-0 rounded-full"
+            <ParticleField
+              className="absolute inset-0"
+              count={260}
+              spread={2.6}
+              color="#8f8875"
+              size={0.05}
               style={{
-                background: "radial-gradient(circle, var(--metal) 0%, transparent 72%)",
-                opacity: 0.14,
-                filter: "blur(28px)",
+                maskImage: "radial-gradient(circle at center, black 45%, transparent 78%)",
+                WebkitMaskImage: "radial-gradient(circle at center, black 45%, transparent 78%)",
+              }}
+            />
+            <span
+              className="absolute left-1/2 top-1/2 size-2 -translate-x-1/2 -translate-y-1/2 rounded-full"
+              style={{
+                background: "var(--metal)",
+                boxShadow: "0 0 24px 6px var(--metal), 0 0 60px 16px rgba(143,136,117,0.35)",
               }}
             />
           </div>
@@ -161,7 +164,7 @@ export default function AboutPage() {
         </Reveal>
 
         <Reveal delay={0.15} className="mt-16">
-          <CTA href="/contact">Book a call</CTA>
+          <CTA href="/contact">Request a call</CTA>
           <Link
             href="/#how"
             className="ml-6 border-b border-border pb-0.5 text-[0.92rem] transition-colors hover:border-fg"

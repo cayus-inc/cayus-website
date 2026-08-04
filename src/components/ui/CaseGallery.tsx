@@ -2,6 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useScroll, useTransform, useReducedMotion } from "framer-motion";
+import { ParticleField } from "@/components/three/ParticleField";
 
 interface CaseCard {
   id: string;
@@ -27,52 +28,11 @@ const CARDS: CaseCard[] = [
     id: "constant-bar",
     tag: "Constant bar, wider net",
     title: "Staying narrow while the geography widened",
-    hook: "Six markets, one scorecard. Convenient location never substituted for the bar.",
+    hook: "Six markets, one criteria. Convenient location never substituted for the bar.",
   },
 ];
 
-function CardVisual({ index }: { index: number }) {
-  if (index === 0) {
-    return (
-      <div className="grid grid-cols-6 gap-1.5">
-        {Array.from({ length: 18 }).map((_, i) => (
-          <span
-            key={i}
-            className="size-1.5 rounded-full"
-            style={{ background: i === 13 ? "var(--metal)" : "var(--border)" }}
-          />
-        ))}
-      </div>
-    );
-  }
-  if (index === 1) {
-    return (
-      <div className="flex items-end gap-1.5">
-        {[0.4, 0.7, 0.5, 1, 0.35].map((h, i) => (
-          <span
-            key={i}
-            className="w-3 rounded-t-sm"
-            style={{
-              height: `${h * 40}px`,
-              background: i === 3 ? "var(--metal)" : "var(--border)",
-            }}
-          />
-        ))}
-      </div>
-    );
-  }
-  return (
-    <div className="grid grid-cols-3 gap-1.5">
-      {Array.from({ length: 6 }).map((_, i) => (
-        <span
-          key={i}
-          className="h-2.5 w-6 rounded-full"
-          style={{ background: i === 2 || i === 5 ? "var(--border)" : "var(--metal)" }}
-        />
-      ))}
-    </div>
-  );
-}
+const CARD_ACCENT = ["#8f8875", "#a89f8c", "#7d7666"];
 
 export function CaseGallery() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -90,26 +50,21 @@ export function CaseGallery() {
   if (reduceMotion) {
     return (
       <div className="grid grid-cols-1 gap-4 px-6 sm:grid-cols-3">
-        {CARDS.map((c, i) => (
+        {CARDS.map((c) => (
           <a
             key={c.id}
             href={`#${c.id}`}
             className="flex flex-col justify-between rounded-sm border border-border bg-bg-raised p-7"
           >
-            <div>
-              <span className="text-[0.68rem] font-semibold uppercase tracking-[0.1em] text-fg-soft">
-                Concept: {c.tag}
-              </span>
-              <h3 className="mt-3 font-serif-display text-[1.3rem] font-medium leading-[1.2]">
-                {c.title}
-              </h3>
-              <p className="mt-3 text-[0.88rem] leading-[1.55] text-fg-soft">
-                {c.hook}
-              </p>
-            </div>
-            <div className="mt-6">
-              <CardVisual index={i} />
-            </div>
+            <span className="text-[0.68rem] font-semibold uppercase tracking-[0.1em] text-fg-soft">
+              Concept: {c.tag}
+            </span>
+            <h3 className="mt-3 font-serif-display text-[1.3rem] font-medium leading-[1.2]">
+              {c.title}
+            </h3>
+            <p className="mt-3 text-[0.88rem] leading-[1.55] text-fg-soft">
+              {c.hook}
+            </p>
           </a>
         ))}
       </div>
@@ -127,10 +82,24 @@ export function CaseGallery() {
             >
               <a
                 href={`#${c.id}`}
-                className="flex w-full max-w-[560px] flex-col justify-between rounded-sm border border-border bg-bg-raised p-10 transition-colors hover:border-metal"
+                className="group relative flex w-full max-w-[600px] flex-col justify-between overflow-hidden rounded-sm border border-border bg-bg-raised p-10 transition-colors hover:border-metal"
+                style={{ minHeight: "420px" }}
               >
-                <div>
-                  <span className="inline-flex items-center gap-2 rounded-full border border-border px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.1em] text-fg-soft">
+                <ParticleField
+                  className="absolute inset-0"
+                  count={180}
+                  spread={2.4}
+                  color={CARD_ACCENT[i % CARD_ACCENT.length]}
+                  size={0.045}
+                  style={{
+                    maskImage:
+                      "radial-gradient(ellipse 90% 80% at 70% 30%, black 30%, transparent 85%)",
+                    WebkitMaskImage:
+                      "radial-gradient(ellipse 90% 80% at 70% 30%, black 30%, transparent 85%)",
+                  }}
+                />
+                <div className="relative">
+                  <span className="inline-flex items-center gap-2 rounded-full border border-border bg-bg-raised px-3 py-1 text-[0.68rem] font-semibold uppercase tracking-[0.1em] text-fg-soft">
                     Concept: {c.tag}
                   </span>
                   <h3 className="mt-6 font-serif-display text-[1.9rem] font-medium leading-[1.15] text-balance md:text-[2.3rem]">
@@ -140,9 +109,8 @@ export function CaseGallery() {
                     {c.hook}
                   </p>
                 </div>
-                <div className="mt-10 flex items-center justify-between">
-                  <CardVisual index={i} />
-                  <span className="text-[0.85rem] font-medium text-fg">
+                <div className="relative mt-10 flex items-center justify-end">
+                  <span className="inline-flex items-center gap-1.5 text-[0.85rem] font-medium text-fg transition-transform duration-200 group-hover:translate-x-1">
                     Read the case &rarr;
                   </span>
                 </div>
