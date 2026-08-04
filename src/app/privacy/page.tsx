@@ -166,9 +166,9 @@ export default function PrivacyPage() {
 
       <h2>13. Cookies</h2>
       <p>
-        The Cayus website uses only essential cookies required for the site
-        to function. No advertising or cross-site tracking cookies are set.
-        See our <a href="/cookies">Cookie Policy</a> for detail.
+        The Cayus website does not set cookies. No advertising, analytics,
+        or cross-site tracking. See our{" "}
+        <a href="/cookies">Cookie Policy</a> for detail.
       </p>
 
       <h2>14. Children&apos;s Privacy</h2>

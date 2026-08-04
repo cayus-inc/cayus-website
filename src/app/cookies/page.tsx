@@ -10,14 +10,10 @@ export default function CookiesPage() {
   return (
     <LegalLayout title="Cookie Policy" updated="August 2026">
       <p>
-        The Cayus website (cayus.io) uses only essential cookies required
-        for the site to function correctly. We do not use advertising
-        cookies, cross-site tracking, or marketing pixels.
-      </p>
-      <h2>Essential cookies</h2>
-      <p>
-        Used for basic site functionality (such as remembering your theme
-        preference). These cannot be disabled without breaking the site.
+        The Cayus website (cayus.io) does not set cookies. No essential
+        cookies, no advertising cookies, no cross-site tracking, no
+        marketing pixels. That&rsquo;s also why there&rsquo;s no cookie
+        consent banner: there&rsquo;s nothing to ask consent for.
       </p>
       <h2>Changes</h2>
       <p>

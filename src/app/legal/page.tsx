@@ -53,7 +53,7 @@ export default function LegalNoticePage() {
 
       <h2>6. Cookies</h2>
       <p>
-        cayus.io uses only essential cookies. See our{" "}
+        cayus.io does not set cookies. See our{" "}
         <a href="/cookies">Cookie Policy</a>.
       </p>
 

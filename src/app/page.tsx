@@ -308,20 +308,8 @@ export default function Home() {
                 <p className="mb-3 text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-[#faf8f4]">
                   Cayus: one search, taken all the way
                 </p>
-                <div className="grid grid-cols-2 gap-2.5 sm:grid-cols-4">
-                  {["Source", "Qualify", "Verify", "Match"].map((x) => (
-                    <div
-                      key={x}
-                      className="rounded-sm border p-4"
-                      style={{ borderColor: "rgba(250,248,244,0.28)", background: "rgba(250,248,244,0.06)" }}
-                    >
-                      <span className="text-[0.78rem] text-[#faf8f4]">{x}</span>
-                      <div className="mt-3 h-1 w-full rounded-full" style={{ background: "#faf8f4" }} />
-                    </div>
-                  ))}
-                </div>
                 <div
-                  className="relative mt-2.5 flex items-center gap-4 overflow-hidden rounded-sm border p-6"
+                  className="relative flex items-center gap-4 overflow-hidden rounded-sm border p-6"
                   style={{
                     borderColor: "rgba(250,248,244,0.32)",
                     background: "rgba(250,248,244,0.06)",
