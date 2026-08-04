@@ -44,15 +44,12 @@ export default function LegalNoticePage() {
 
       <h2>5. Data Processing Sub-processors</h2>
       <p>
-        Cayus uses the following processors, each operating under a Data
-        Processing Agreement in compliance with GDPR (EU) 2016/679:
+        Cayus uses a small number of processors, each operating under a Data
+        Processing Agreement in compliance with GDPR (EU) 2016/679. See our{" "}
+        <a href="/privacy">Privacy Policy</a> §8 for the categories of
+        processors used; identities are disclosed on request under the
+        rights described there.
       </p>
-      <ul>
-        <li><strong>Origami</strong> — candidate and company sourcing, outreach</li>
-        <li><strong>Vercel</strong> — website hosting</li>
-        <li><strong>Anthropic</strong> — AI-assisted drafting and qualification support</li>
-        <li><strong>Stripe</strong> — payment processing</li>
-      </ul>
 
       <h2>6. Cookies</h2>
       <p>

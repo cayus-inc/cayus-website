@@ -102,16 +102,21 @@ export default function PrivacyPage() {
       </p>
 
       <h2>8. Sub-processors</h2>
-      <p>We share data with the following processors:</p>
+      <p>
+        We share data with a small number of vetted service providers acting
+        as processors on our behalf, each bound by a data processing
+        agreement:
+      </p>
       <ul>
-        <li><strong>Origami</strong> — candidate and company sourcing, enrichment, and outreach sequencing (DPA available)</li>
-        <li><strong>Vercel</strong> — website hosting (DPA available)</li>
-        <li><strong>Anthropic</strong> — AI-assisted drafting and qualification support (DPA available)</li>
-        <li><strong>Stripe</strong> — payment processing, client billing only (DPA available)</li>
+        <li>A professional-network sourcing and enrichment platform, used for candidate and company sourcing and outreach sequencing</li>
+        <li>A cloud hosting provider, used for this website</li>
+        <li>An AI-assisted drafting and qualification support tool</li>
+        <li>A payment processor, used for client billing only</li>
       </ul>
       <p>
-        This list reflects the tools in active use and will be updated as
-        the underlying stack changes.
+        We describe these by function rather than by brand for competitive
+        reasons; the identity of each provider is available on request to
+        clients and candidates exercising their data rights under Section 12.
       </p>
 
       <h2>9. International Data Transfers</h2>

@@ -2,7 +2,7 @@ import Link from "next/link";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
 import { Reveal, StaggerGroup, StaggerItem } from "@/components/ui/Reveal";
-import { Seal } from "@/components/ui/Seal";
+import { HeroStage } from "@/components/ui/HeroStage";
 import { SectionHead } from "@/components/ui/SectionHead";
 import { StepVisual } from "@/components/ui/StepVisual";
 import { FAQ } from "@/components/ui/FAQ";
@@ -49,25 +49,20 @@ const steps = [
 
 const pricing = [
   {
-    label: "Per interview",
+    label: "To start",
+    name: "Per interview",
     amount: "$800",
     suffix: "–1,500",
-    body: "Billed only when the interview happens and you don't reject it as off-brief. Nothing owed otherwise.",
+    body: "Billed only when the interview happens and you don't reject it as off-brief. Nothing owed otherwise. How every engagement begins.",
     featured: false,
   },
   {
-    label: "Monthly pipeline",
+    label: "Once it's working",
+    name: "Monthly pipeline",
     amount: "$10k",
     suffix: "/mo",
-    body: "Twelve interviews a month, one active search. The counter is visible to you at every point.",
+    body: "The same unit, packaged at volume: twelve interviews a month, one active search. The counter is visible to you at every point.",
     featured: true,
-  },
-  {
-    label: "Placement success fee",
-    amount: "5",
-    suffix: "–8%",
-    body: "Optional, reduced. It exists to align incentives, not to be the revenue model.",
-    featured: false,
   },
 ];
 
@@ -132,7 +127,7 @@ export default function Home() {
           </div>
         </Reveal>
         <Reveal delay={0.12} className="order-first md:order-last">
-          <Seal />
+          <HeroStage />
         </Reveal>
       </div>
 
@@ -373,14 +368,14 @@ export default function Home() {
           <Reveal>
             <SectionHead
               eyebrow="Pricing"
-              title="You see the counter, not our hours."
-              sub="One interview, one line item. No setup fee, no retainer you can't cancel."
+              title="One unit. Two ways to pay for it."
+              sub="Every engagement bills the same thing, a qualified interview held. You start per interview; once the search is proven, most clients move to the monthly version of the same unit. No setup fee, no retainer you can't cancel."
             />
           </Reveal>
-          <StaggerGroup className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-3">
+          <StaggerGroup className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2">
             {pricing.map((p) => (
               <StaggerItem
-                key={p.label}
+                key={p.name}
                 className={`rounded-sm border px-7 py-8 transition-all hover:-translate-y-1 ${
                   p.featured
                     ? "border-fg bg-fg text-bg"
@@ -388,12 +383,13 @@ export default function Home() {
                 }`}
               >
                 <p
-                  className={`mb-5 text-[0.7rem] font-semibold uppercase tracking-[0.18em] ${
+                  className={`mb-2 text-[0.7rem] font-semibold uppercase tracking-[0.18em] ${
                     p.featured ? "opacity-60" : "text-fg-soft"
                   }`}
                 >
                   {p.label}
                 </p>
+                <p className="mb-5 text-[1.02rem] font-semibold">{p.name}</p>
                 <div className="font-serif-display text-[2.2rem]">
                   {p.amount}
                   <small
@@ -414,6 +410,18 @@ export default function Home() {
               </StaggerItem>
             ))}
           </StaggerGroup>
+          <Reveal delay={0.15}>
+            <div className="mt-6 flex flex-wrap items-center gap-3 rounded-sm border border-dashed border-border px-6 py-5 text-[0.9rem] text-fg-soft">
+              <span className="rounded-full border border-border px-2.5 py-0.5 text-[0.7rem] font-semibold uppercase tracking-[0.1em] text-fg">
+                Optional add-on
+              </span>
+              <span>
+                A reduced placement success fee (5–8%) is available on either
+                plan, on hire. It exists to align incentives, not to be the
+                revenue model — most clients don&rsquo;t need it.
+              </span>
+            </div>
+          </Reveal>
         </div>
       </section>
 
