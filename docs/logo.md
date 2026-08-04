@@ -82,3 +82,23 @@ epais (rayon 62, epaisseur de trait 26, extremites arrondies), meme registre que
 Softriver. Propage partout. Un vrai bug trouve au passage : le filtre `drop-shadow` du
 composant React debordait le viewport SVG et se faisait tronquer net a droite — corrige
 avec `overflow: visible` sur le SVG et un flou reduit.
+
+## Decision finale, 2026-08-04 : le mark reel vient de ChatGPT, pas de moi
+
+Apres la 3e tentative maison rejetee, Enzo est passe par `docs/logo-brief/` (BRIEF.md +
+PROMPT.txt + les 8 references) directement dans ChatGPT et Grok. **ChatGPT a produit le
+meilleur resultat**, valide par Enzo : un "C" forme de deux quartiers decales (grand
+quartier arrondi en haut avec coupe angulaire, segment d'anneau net en bas), avec un
+concept ecrit ("precision cuts and balance... selection, clarity and access to the right
+talent") qui colle au positionnement Cayus. Grok a produit 3 variantes (croissants
+concentriques, chevron anguleux, cercle spirale) toutes ecartees, moins lisibles ou moins
+premium.
+
+**Fichier source** : pas de SVG (compte ChatGPT non premium), seulement des PNG —
+`~/Downloads/logo_cayus-removebg-preview.png` (detoure, 500x500). Traite avec Pillow
+(pas de reconstruction manuelle a la main cette fois, pour eviter un 4e echec) : crop au
+bounding box, version blanche generee par inversion RGB (alpha preserve), favicon/apple-
+icon/image OG et lockups PNG generes par composition directe. Integre au site via
+`next/image` + une classe CSS `.mark-auto`/`.seal-mark` qui inverse noir/blanc selon le
+theme clair/sombre. Fichiers finaux dans `public/brand/` : `mark.png`, `mark-dark.png`,
+`mark-light.png`, `lockup-dark.png`, `lockup-light.png`.
