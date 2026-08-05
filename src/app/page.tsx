@@ -124,7 +124,7 @@ export default function Home() {
       </div>
 
       {/* Problem / solution contrast */}
-      <section className="overflow-clip border-t border-border px-6 py-28 md:py-40">
+      <section className="overflow-clip border-t border-border bg-bg-raised px-6 pb-28 pt-20 md:pb-40 md:pt-28">
         <div className="mx-auto max-w-[1160px]">
           <Reveal>
             <SectionHead
