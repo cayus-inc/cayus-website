@@ -46,8 +46,8 @@ const pricing = [
   {
     label: "To start",
     name: "Per interview",
-    amount: "$800",
-    suffix: "-1,500",
+    amount: "$1,000",
+    suffix: "",
     body: "Billed only when the interview happens and you don't reject it as off-brief. Nothing owed otherwise. How every engagement begins.",
     featured: false,
   },
@@ -362,15 +362,14 @@ export default function Home() {
           <Reveal delay={0.15}>
             <div className="mt-6 flex flex-wrap items-center gap-3 rounded-sm border border-dashed border-border px-6 py-5 text-[0.9rem] text-fg-soft">
               <span className="rounded-full border border-border px-2.5 py-0.5 text-[0.7rem] font-semibold uppercase tracking-[0.1em] text-fg">
-                Optional add-on
+                On hire
               </span>
               <span>
-                A success fee (5-8% of first-year salary, paid only on hire)
-                is available on either plan. It&rsquo;s well below the
-                20-30% a contingency search typically runs, since you&rsquo;re
-                already paying per interview by the time it applies. It
-                exists to sharpen incentives on harder searches, not to
-                replace the base price.
+                A one-time success fee, 7% of first-year salary, applies
+                when a candidate we sent you is hired. It&rsquo;s billed
+                once, at the hire, well below the 20-30% a contingency
+                search typically runs, since the interview fee already
+                covers the sourcing and qualification work.
               </span>
             </div>
           </Reveal>
