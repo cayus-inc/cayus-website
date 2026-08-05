@@ -90,7 +90,7 @@ export default function Home() {
       <Header />
 
       {/* Hero */}
-      <div className="mx-auto grid max-w-[1280px] grid-cols-1 items-center gap-20 overflow-clip px-6 pb-32 pt-12 md:grid-cols-[1.1fr_0.9fr] md:pb-44 md:pt-20">
+      <div className="mx-auto grid max-w-[1280px] grid-cols-1 items-center gap-20 overflow-clip px-6 pb-20 pt-12 md:grid-cols-[1.1fr_0.9fr] md:pb-28 md:pt-20">
         <Reveal direction="left">
           <span className="mb-8 inline-flex items-center gap-2.5 text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-fg-soft">
             <span className="h-px w-6 bg-border" />
@@ -124,7 +124,7 @@ export default function Home() {
       </div>
 
       {/* Problem / solution contrast */}
-      <section className="overflow-clip px-6 py-28 md:py-40">
+      <section className="overflow-clip border-t border-border px-6 py-28 md:py-40">
         <div className="mx-auto max-w-[1160px]">
           <Reveal>
             <SectionHead
