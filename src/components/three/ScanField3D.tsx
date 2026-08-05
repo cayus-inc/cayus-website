@@ -39,6 +39,37 @@ function Scene() {
     return arr;
   }, []);
 
+  // Faint static links between nearby points: a constellation/network
+  // read, not a claim about literal connections, just enough structure
+  // that the field doesn't look like scattered noise.
+  const connections = useMemo(() => {
+    const maxDist = 1.05;
+    const maxPerPoint = 2;
+    const segments: number[] = [];
+    for (let i = 0; i < points.length; i++) {
+      const candidates: { j: number; d: number }[] = [];
+      for (let j = 0; j < points.length; j++) {
+        if (i === j) continue;
+        const d = points[i].distanceTo(points[j]);
+        if (d < maxDist) candidates.push({ j, d });
+      }
+      candidates.sort((a, b) => a.d - b.d);
+      for (const { j } of candidates.slice(0, maxPerPoint)) {
+        if (j > i) {
+          segments.push(
+            points[i].x,
+            points[i].y,
+            points[i].z,
+            points[j].x,
+            points[j].y,
+            points[j].z
+          );
+        }
+      }
+    }
+    return new Float32Array(segments);
+  }, [points]);
+
   // Split into a bright near layer and a dim far layer by depth (z), a
   // cheap depth cue instead of one flat, evenly-lit cloud.
   const { nearPositions, farPositions } = useMemo(() => {
@@ -81,6 +112,12 @@ function Scene() {
 
   return (
     <group ref={group}>
+      <lineSegments>
+        <bufferGeometry>
+          <bufferAttribute attach="attributes-position" args={[connections, 3]} />
+        </bufferGeometry>
+        <lineBasicMaterial color="#c7c0b2" transparent opacity={0.1} />
+      </lineSegments>
       <points>
         <bufferGeometry>
           <bufferAttribute attach="attributes-position" args={[farPositions, 3]} />

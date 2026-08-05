@@ -308,6 +308,11 @@ export default function Home() {
                 <p className="mb-3 text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-[#faf8f4]">
                   Cayus: one search, taken all the way
                 </p>
+                <p className="mb-3 text-[0.85rem] leading-[1.5] text-[#9c968a]">
+                  Sourced, qualified, verified, matched, all the way
+                  through, on one search at a time instead of a dozen at
+                  once. Nothing about it gets rushed.
+                </p>
                 <div
                   className="relative flex items-center gap-4 overflow-hidden rounded-sm border p-6"
                   style={{
