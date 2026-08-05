@@ -90,7 +90,7 @@ export default function Home() {
       <Header />
 
       {/* Hero */}
-      <div className="mx-auto grid max-w-[1280px] grid-cols-1 items-center gap-20 overflow-x-hidden px-6 pb-32 pt-12 md:grid-cols-[1.1fr_0.9fr] md:pb-44 md:pt-20">
+      <div className="mx-auto grid max-w-[1280px] grid-cols-1 items-center gap-20 overflow-clip px-6 pb-32 pt-12 md:grid-cols-[1.1fr_0.9fr] md:pb-44 md:pt-20">
         <Reveal direction="left">
           <span className="mb-8 inline-flex items-center gap-2.5 text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-fg-soft">
             <span className="h-px w-6 bg-border" />
@@ -125,7 +125,7 @@ export default function Home() {
 
       {/* The mechanism */}
       <section
-        className="overflow-x-hidden border-b border-border px-6 py-28 md:py-40"
+        className="overflow-clip border-b border-border px-6 py-28 md:py-40"
         style={{
           background: "#0d0d0c",
           color: "#faf8f4",
@@ -170,7 +170,7 @@ export default function Home() {
       </section>
 
       {/* Problem / solution contrast */}
-      <section className="overflow-x-hidden px-6 py-28 md:py-40">
+      <section className="overflow-clip px-6 py-28 md:py-40">
         <div className="mx-auto max-w-[1160px]">
           <Reveal>
             <SectionHead
@@ -226,7 +226,7 @@ export default function Home() {
       </section>
 
       {/* How it works */}
-      <section id="how" className="overflow-x-hidden border-t border-border px-6 py-28 md:py-40">
+      <section id="how" className="overflow-clip border-t border-border px-6 py-28 md:py-40">
         <div className="mx-auto max-w-[1160px]">
           <Reveal>
             <SectionHead
@@ -264,7 +264,7 @@ export default function Home() {
 
       {/* One thing, done well: forced-dark band regardless of theme */}
       <section
-        className="overflow-x-hidden border-t border-border px-6 py-28 md:py-40"
+        className="overflow-clip border-t border-border px-6 py-28 md:py-40"
         style={{
           background: "#0d0d0c",
           color: "#faf8f4",
@@ -341,7 +341,7 @@ export default function Home() {
       </section>
 
       {/* What this isn't */}
-      <section className="overflow-x-hidden border-t border-border bg-bg-raised px-6 py-28 md:py-40">
+      <section className="overflow-clip border-t border-border bg-bg-raised px-6 py-28 md:py-40">
         <div className="mx-auto max-w-[1160px]">
           <Reveal>
             <SectionHead
@@ -389,7 +389,7 @@ export default function Home() {
       </section>
 
       {/* Pricing */}
-      <section id="pricing" className="overflow-x-hidden border-t border-border px-6 py-28 md:py-40">
+      <section id="pricing" className="overflow-clip border-t border-border px-6 py-28 md:py-40">
         <div className="mx-auto max-w-[1160px]">
           <Reveal>
             <SectionHead
@@ -456,7 +456,7 @@ export default function Home() {
       </section>
 
       {/* FAQ */}
-      <section className="overflow-x-hidden border-t border-border bg-bg-raised px-6 py-28 md:py-40">
+      <section className="overflow-clip border-t border-border bg-bg-raised px-6 py-28 md:py-40">
         <div className="mx-auto max-w-[1160px]">
           <Reveal>
             <SectionHead eyebrow="Questions" title="Answered plainly." />

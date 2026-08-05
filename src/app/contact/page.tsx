@@ -21,7 +21,7 @@ export default function ContactPage() {
   return (
     <>
       <Header />
-      <div className="mx-auto grid max-w-[1000px] grid-cols-1 gap-16 overflow-x-hidden px-6 pb-28 pt-14 md:grid-cols-[0.9fr_1.1fr] md:pt-20">
+      <div className="mx-auto grid max-w-[1000px] grid-cols-1 gap-16 overflow-clip px-6 pb-28 pt-14 md:grid-cols-[0.9fr_1.1fr] md:pt-20">
         <div className="relative">
           <div
             aria-hidden

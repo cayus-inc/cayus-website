@@ -45,7 +45,7 @@ export default function WorkPage() {
   return (
     <>
       <Header />
-      <div className="mx-auto max-w-[1160px] overflow-x-hidden px-6 pb-16 pt-14 md:pt-20">
+      <div className="mx-auto max-w-[1160px] overflow-clip px-6 pb-16 pt-14 md:pt-20">
         <Reveal direction="left">
           <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-fg-soft">
             How we work
@@ -70,7 +70,7 @@ export default function WorkPage() {
 
         <div className="min-w-0 max-w-[720px]">
           {/* Case 1: layered read, approach in a highlighted block */}
-          <div id="depth-over-pedigree" className="overflow-x-hidden scroll-mt-28">
+          <div id="depth-over-pedigree" className="overflow-clip scroll-mt-28">
             <Reveal direction="left">
               <CaseTag>Depth over pedigree</CaseTag>
               <h2 className="mt-5 font-serif-display text-[1.7rem] font-medium leading-[1.15] text-balance md:text-[2.1rem]">
@@ -133,7 +133,7 @@ export default function WorkPage() {
           {/* Case 2: resume vs. reality contrast, same pattern as the homepage's problem/solution block */}
           <div
             id="motivation-verified"
-            className="mt-14 overflow-x-hidden scroll-mt-28 border-t border-border pt-14"
+            className="mt-14 overflow-clip scroll-mt-28 border-t border-border pt-14"
           >
             <Reveal direction="right">
               <CaseTag>Motivation, verified</CaseTag>
@@ -224,7 +224,7 @@ export default function WorkPage() {
           {/* Case 3: the bar held constant across an expanding map */}
           <div
             id="constant-bar"
-            className="mt-14 overflow-x-hidden scroll-mt-28 border-t border-border pt-14"
+            className="mt-14 overflow-clip scroll-mt-28 border-t border-border pt-14"
           >
             <Reveal direction="left">
               <CaseTag>Constant bar, wider net</CaseTag>
