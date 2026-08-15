@@ -130,7 +130,7 @@ export default function Home() {
             <SectionHead
               eyebrow="The bottleneck"
               title="A buyer who can't reach you calls the next name on the list."
-              sub="You're on a showing, on a plane, or it's 9pm on a Sunday. The lead doesn't wait for a convenient time to call. Every minute a call goes unanswered is a minute closer to them dialing someone else."
+              sub="You're at an open house, showing another property, or it's 9pm on a Sunday. The number on your For Sale sign doesn't stop ringing just because you're busy. Every minute a call goes unanswered is a minute closer to them dialing someone else."
             />
           </Reveal>
           <StaggerGroup className="mx-auto mt-14 grid max-w-3xl gap-4 sm:grid-cols-2">
