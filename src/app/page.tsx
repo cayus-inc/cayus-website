@@ -97,11 +97,11 @@ export default function Home() {
             Never miss another lead
           </span>
           <h1 className="font-serif-display text-[3.4rem] font-medium leading-[0.95] tracking-[-0.02em] text-balance md:text-[6.8rem]">
-            We catch the
+            We catch the <span style={{ color: "var(--metal)" }}>lead.</span>
             <br />
-            <span style={{ color: "var(--metal)" }}>lead.</span>
+            You close
             <br />
-            You close the sale.
+            the sale.
           </h1>
           <p className="mt-8 max-w-[46ch] text-[1.15rem] leading-[1.6] text-fg-soft">
             An AI assistant answers every missed call within seconds, in
