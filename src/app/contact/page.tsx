@@ -6,15 +6,15 @@ import { ContactForm } from "@/components/ui/ContactForm";
 import { ParticleField } from "@/components/three/ParticleField";
 
 export const metadata: Metadata = {
-  title: "Request a call",
+  title: "Get started",
   description:
-    "Tell us about the role. We'll get back to you within one business day.",
+    "Tell us where to send your assistant. We'll get back to you within one business day.",
 };
 
 const STEPS = [
-  { title: "You send the basics", body: "The role, the company, what you need." },
+  { title: "You send the basics", body: "Your brokerage and the phone number on your listings." },
   { title: "We reply directly", body: "Usually within one business day, no ticket queue." },
-  { title: "We set up a short call", body: "To scope the search and agree the criteria." },
+  { title: "You're live in 48 hours", body: "Call forwarding configured, calendar synced, your assistant ready." },
 ];
 
 export default function ContactPage() {
@@ -41,15 +41,15 @@ export default function ContactPage() {
           </div>
           <Reveal direction="left">
             <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-fg-soft">
-              Request a call
+              Get started
             </p>
             <h1 className="mt-4 font-serif-display text-[2.2rem] font-medium leading-[1.08] text-balance md:text-[2.7rem]">
-              Tell us about the role.
+              Tell us where to send your assistant.
             </h1>
             <p className="mt-6 max-w-[42ch] text-[1rem] leading-[1.65] text-fg-soft">
               No scheduling link, no calendar dance. Give us the basics and
               we&rsquo;ll reply directly, usually within one business day, to
-              set up a short call.
+              get you set up.
             </p>
           </Reveal>
           <StaggerGroup className="relative mt-12 flex flex-col gap-5 border-t border-border pt-8">

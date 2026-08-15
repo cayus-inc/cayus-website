@@ -11,7 +11,7 @@ export function ScanField() {
     <div className="relative h-[280px] w-full md:h-[360px]">
       <ScanField3D className="h-full w-full" />
       <span className="pointer-events-none absolute left-[71%] top-1/2 -translate-y-1/2 whitespace-nowrap pl-4 text-[0.7rem] font-medium text-[#faf8f4]">
-        Interview booked
+        Showing booked
       </span>
     </div>
   );

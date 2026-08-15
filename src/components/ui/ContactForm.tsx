@@ -76,13 +76,13 @@ export function ContactForm() {
         />
       </div>
       <div className="grid grid-cols-1 gap-5 sm:grid-cols-2">
-        <Field label="Company" name="company" type="text" required autoComplete="organization" />
+        <Field label="Brokerage" name="company" type="text" required autoComplete="organization" />
         <Field
-          label="Role you're hiring for"
+          label="Your listed phone number"
           name="role"
-          type="text"
+          type="tel"
           required
-          placeholder="e.g. Solutions Engineer"
+          placeholder="The one on your sign and your listings"
         />
       </div>
       <label className="block">

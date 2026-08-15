@@ -50,7 +50,7 @@ export function Header() {
             arrow={false}
             className="!px-5 !py-2.5 !text-[0.84rem]"
           >
-            Request a call
+            Get started
           </CTA>
         </div>
       </div>

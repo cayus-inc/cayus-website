@@ -11,9 +11,9 @@ const sourceSerif = Source_Serif_4({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://cayus.io"),
-  title: "Cayus: We book the interview. You decide who you hire.",
+  title: "Cayus: We catch the lead. You close the sale.",
   description:
-    "We source, contact, and qualify candidates who already said yes to a conversation with you, against criteria you approve before we start.",
+    "An AI assistant answers every missed call within seconds, in your name, qualifies the buyer, and books the showing straight into your calendar.",
 };
 
 export default function RootLayout({

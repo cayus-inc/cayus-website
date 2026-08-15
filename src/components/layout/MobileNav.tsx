@@ -83,7 +83,7 @@ export function MobileNav() {
               arrow={false}
               className="mt-7 w-full"
             >
-              Request a call
+              Get started
             </CTA>
           </motion.div>
         )}

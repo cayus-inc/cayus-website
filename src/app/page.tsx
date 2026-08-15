@@ -13,74 +13,74 @@ import { CTA } from "@/components/ui/CTA";
 const BOOK_A_CALL_HREF = "/contact";
 
 const oldWay = [
-  "A cut of first-year salary, due only if it works out",
-  "You find out if it worked after the hire is made",
-  "The incentive is to close fast, not to get the fit right",
+  "A missed call is a lead calling the next agent on the list",
+  "You find out you lost the lead after they've already signed with someone else",
+  "Every after-hours call is unanswered ambition",
 ];
 
 const withCayus = [
-  "A fixed price per interview that actually happens",
-  "You see who you're meeting before you commit to anything",
-  "We're paid to get you a conversation, not to talk you into a hire",
+  "Every missed call gets an instant response, day or night",
+  "The lead is qualified and the showing is booked before you pick your phone back up",
+  "Your number stays the same, nothing to configure",
 ];
 
 const steps = [
   {
     glyph: "I",
-    title: "Sourced and qualified",
-    body: "We source against your open role, verify the profile is current, and contact candidates directly. Only the ones who agree to talk move forward.",
+    title: "Answered instantly",
+    body: "Every missed call triggers a response within seconds, in your name. The caller never knows you weren't the one who picked up first.",
   },
   {
     glyph: "II",
-    title: "Checked against your criteria",
-    body: "Hard requirements, comp range, availability, and a real reason they'd move, verified before you ever see a name.",
+    title: "Qualified automatically",
+    body: "Budget, timeline, financing, and whether they're already working with another agent, checked before you ever see the lead.",
   },
   {
     glyph: "III",
     title: "On your calendar",
-    body: "You get the interview, coordinated on both sides. You run the conversation and make the call.",
+    body: "The showing goes straight into your schedule. You just show up.",
   },
 ] as const;
 
 const pricing = [
   {
     label: "To start",
-    name: "Per interview",
-    amount: "$1,000",
+    name: "Setup",
+    amount: "$299",
     suffix: "",
-    body: "Billed only when the interview happens and you don't reject it as off-brief. Nothing owed otherwise. How every engagement begins.",
+    body: "One-time, live within 48 hours. Call forwarding, calendar sync, and your assistant configured on your listings. Your number doesn't change.",
     featured: false,
   },
   {
-    label: "Once it's working",
-    name: "Monthly pipeline",
-    amount: "$10k",
+    label: "Once it's live",
+    name: "Monthly",
+    amount: "$149",
     suffix: "/mo",
-    body: "The same unit, packaged at volume: twelve interviews a month, one active search. The counter is visible to you at every point.",
+    body: "Unlimited missed-call coverage, ongoing qualification, and a dashboard showing every lead captured. Cancel anytime.",
     featured: true,
   },
 ];
 
 const faqs = [
   {
-    q: "We already have a recruiter, why do we need this?",
-    a: "Good, keep them close for the close and the culture fit, that's their strength. What we do is get you conversations with people who already said yes and were not on the market yesterday. Ask your recruiter how many passive candidates they got to reply to a cold message this month. If the number is good, you don't need us.",
+    q: "I already use BoomTown or Follow Up Boss, why do I need this?",
+    a: "Those tools give you a place to log a lead after you've already talked to them. They don't answer the call for you. We do, in seconds, day or night, and you're not the one configuring workflows and templates to make it happen.",
   },
   {
-    q: "Can't we just source candidates ourselves?",
-    a: "You could, the tools are public. What takes the time is not finding fifty profiles, it's getting even one of them to say yes to a conversation with a company they weren't looking at. That's the part that doesn't scale with a subscription.",
+    q: "What if it gets a question wrong?",
+    a: "You see every conversation as it happens, and you can jump in by text anytime. The assistant handles the first response and basic qualification, budget, timeline, financing, current representation, it doesn't negotiate or make promises on price.",
   },
   {
-    q: "How do I know these candidates are real and actually interested?",
-    a: "You get a verbatim quote from each one, in their own words, about why they'd move. And you only pay if the interview actually happens. There's no incentive for us to send you someone who isn't serious.",
+    q: "Do I have to change my number?",
+    a: "No. The forwarding is invisible to whoever's calling. Your number stays exactly what's on your sign, your card, your listings.",
   },
   {
-    q: "Isn't this expensive per interview?",
-    a: "Compare it to a contingency search: 20-30% of first-year salary for a technical role, due only after a hire is made, with no visibility until then. A handful of interviews at our rate is a fraction of that, and you're paying for conversations that happen, not a percentage owed on the back end.",
+    q: "What if two calls come in at once?",
+    a: "Both get answered. It's built to handle simultaneous leads, not a queue.",
   },
   {
-    q: "What if none of them get hired?",
-    a: "That happens, and it isn't on us to fix, the same way a great first date isn't the matchmaker's job to guarantee a marriage. What we control is that the conversation happens and that the person was real, qualified, and interested. The hire is yours to make.",
+    q: "Isn't this expensive?",
+    a: "Compare it to what you're already paying for lead software that still requires you to do the answering. We're a fraction of that, and we're the ones who actually respond.",
   },
 ];
 
@@ -94,22 +94,22 @@ export default function Home() {
         <Reveal direction="left">
           <span className="mb-8 inline-flex items-center gap-2.5 text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-fg-soft">
             <span className="h-px w-6 bg-border" />
-            Qualified interviews, on your calendar
+            Never miss another lead
           </span>
           <h1 className="font-serif-display text-[3.4rem] font-medium leading-[0.95] tracking-[-0.02em] text-balance md:text-[6.8rem]">
-            We book the
+            We catch the
             <br />
-            <span style={{ color: "var(--metal)" }}>interview.</span>
+            <span style={{ color: "var(--metal)" }}>lead.</span>
             <br />
-            You decide who you hire.
+            You close the sale.
           </h1>
           <p className="mt-8 max-w-[46ch] text-[1.15rem] leading-[1.6] text-fg-soft">
-            We source, contact, and qualify candidates who already said yes
-            to a conversation with you, against criteria you approve before
-            we start. The hiring decision stays entirely yours.
+            An AI assistant answers every missed call within seconds, in
+            your name, qualifies the buyer, and books the showing straight
+            into your calendar. Nothing to configure, nothing to learn.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
-            <CTA href={BOOK_A_CALL_HREF}>Request a call</CTA>
+            <CTA href={BOOK_A_CALL_HREF}>Get started</CTA>
             <Link
               href="/#how"
               className="border-b border-border pb-0.5 text-[0.92rem] transition-colors hover:border-fg"
@@ -129,8 +129,8 @@ export default function Home() {
           <Reveal>
             <SectionHead
               eyebrow="The bottleneck"
-              title="Great candidates don't apply. They have to be found."
-              sub="Post a role and you get the people actively looking, which is not the same set as the people who'd actually move the needle. Your best hire is usually not job-hunting. Someone has to go get them a conversation."
+              title="A buyer who can't reach you calls the next name on the list."
+              sub="You're on a showing, on a plane, or it's 9pm on a Sunday. The lead doesn't wait for a convenient time to call. Every minute a call goes unanswered is a minute closer to them dialing someone else."
             />
           </Reveal>
           <StaggerGroup className="mx-auto mt-14 grid max-w-3xl gap-4 sm:grid-cols-2">
@@ -193,8 +193,8 @@ export default function Home() {
             <SectionHead
               align="left"
               eyebrow="How it actually works"
-              title="The web doesn't stop moving. So the search doesn't either."
-              sub="Every profile that could fit your role is watched against your criteria continuously, not in a weekly batch. A resume update, a new post, a role change: each one is a signal. When enough of them line up, that's the moment we reach out, not before, and not after the person has already gone cold."
+              title="The moment doesn't wait. So we don't either."
+              sub="Answer within the first minute and most buyers still want to talk. Wait past that and they've already called the next agent. Your assistant is built to never miss that window, at 2pm or 2am."
               invert
             />
           </Reveal>
@@ -209,9 +209,9 @@ export default function Home() {
                 style={{ borderColor: "rgba(250,248,244,0.14)" }}
               >
                 {[
-                  { n: "1", label: "Signal detected", body: "A resume update, a new post, a role change on a profile that fits." },
-                  { n: "2", label: "Checked against criteria", body: "Verified current, verified qualified, before anyone is contacted." },
-                  { n: "3", label: "Interview booked", body: "Reached out at the right moment, not before, not after." },
+                  { n: "1", label: "Call missed", body: "Your existing number, forwarded to your assistant only when you don't pick up." },
+                  { n: "2", label: "Answered in seconds", body: "A text goes out immediately, in your name, before the caller tries someone else." },
+                  { n: "3", label: "Showing booked", body: "Qualified and scheduled straight into your calendar." },
                 ].map((s) => (
                   <div key={s.n}>
                     <span className="text-[0.72rem] font-semibold text-[#9c968a]">{s.n}</span>
@@ -269,25 +269,25 @@ export default function Home() {
             <SectionHead
               align="left"
               eyebrow="What this isn't"
-              title="We stop at the interview. On purpose."
+              title="Done for you, on purpose."
             />
           </Reveal>
           <StaggerGroup className="mt-14 grid grid-cols-1 gap-px border border-border bg-border md:grid-cols-3">
             {[
               {
-                tag: "Not a candidate list",
-                title: "No names before you sign",
-                body: "You see an anonymized profile first. Names are released only once terms are agreed, the same rule for every client.",
+                tag: "Not a CRM",
+                title: "Nothing for you to configure",
+                body: "We set it up, host it, and maintain it. You don't log into a dashboard to make it work, you just see the leads it caught.",
               },
               {
-                tag: "Not a placement guarantee",
-                title: "The hiring call is yours",
-                body: "We don't negotiate offers or manage counter-offers. Fit and final judgment stay with you, every time.",
+                tag: "Not a negotiation",
+                title: "The sale is yours",
+                body: "We answer, qualify, and book the showing. What happens once you're in the room is entirely your call.",
               },
               {
-                tag: "Not volume outreach",
-                title: "Every line is written for one person",
-                body: "No mail-merge. Each message is grounded in something real about that candidate's work, or it doesn't go out.",
+                tag: "Not a new number",
+                title: "Your number stays yours",
+                body: "The forwarding is invisible to the caller. Nothing changes on your sign, your card, or your listings.",
               },
             ].map((cell, i) => (
               <StaggerItem
@@ -316,8 +316,8 @@ export default function Home() {
           <Reveal>
             <SectionHead
               eyebrow="Pricing"
-              title="One unit. Two ways to pay for it."
-              sub="Every engagement bills the same thing, a qualified interview held. You start per interview; once the search is proven, most clients move to the monthly version of the same unit. No setup fee, no retainer you can't cancel."
+              title="Set up once. Covered every day after."
+              sub="A fraction of what a real estate CRM costs, and unlike a CRM, we're the ones answering. Live in 48 hours. Cancel the monthly whenever you want."
             />
           </Reveal>
           <StaggerGroup className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2">
@@ -359,20 +359,6 @@ export default function Home() {
               </StaggerItem>
             ))}
           </StaggerGroup>
-          <Reveal delay={0.15}>
-            <div className="mt-6 flex flex-wrap items-center gap-3 rounded-sm border border-dashed border-border px-6 py-5 text-[0.9rem] text-fg-soft">
-              <span className="rounded-full border border-border px-2.5 py-0.5 text-[0.7rem] font-semibold uppercase tracking-[0.1em] text-fg">
-                On hire
-              </span>
-              <span>
-                A one-time success fee, 7% of first-year salary, applies
-                when a candidate we sent you is hired. It&rsquo;s billed
-                once, at the hire, well below the 20-30% a contingency
-                search typically runs, since the interview fee already
-                covers the sourcing and qualification work.
-              </span>
-            </div>
-          </Reveal>
         </div>
       </section>
 
@@ -407,7 +393,7 @@ export default function Home() {
         <div className="relative">
           <Reveal>
             <h2 className="mx-auto max-w-[30ch] font-serif-display text-[2.1rem] font-medium text-balance md:text-[3.1rem]">
-              Your best hire isn&rsquo;t looking. Let&rsquo;s change that.
+              Your next lead is calling right now. Let&rsquo;s make sure someone answers.
             </h2>
             <div className="mt-9 flex justify-center">
               <CTA
@@ -415,7 +401,7 @@ export default function Home() {
                 variant="invert"
                 style={{ background: "#faf8f4", color: "#0d0d0c" }}
               >
-                Request a call
+                Get started
               </CTA>
             </div>
           </Reveal>
