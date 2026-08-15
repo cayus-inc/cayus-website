@@ -10,13 +10,13 @@ export function StepVisual({ step }: { step: "I" | "II" | "III" }) {
           <span className="relative inline-flex size-1.5 rounded-full bg-metal" />
         </span>
         <span className="min-w-0 flex-1 truncate font-mono text-[11px] text-fg-soft">
-          Sourcing against open role…
+          Missed call, texting now…
         </span>
       </div>
     );
   }
   if (step === "II") {
-    const rows = ["Hard requirements", "Comp range", "Availability", "Reason to move"];
+    const rows = ["Budget", "Timeline", "Financing", "Current agent"];
     return (
       <div className={`space-y-2 ${shell}`}>
         {rows.map((r) => (

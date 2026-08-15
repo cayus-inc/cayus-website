@@ -42,8 +42,7 @@ export function Footer() {
               </span>
             </Link>
             <p className="mt-3 max-w-[28ch] text-[0.85rem] leading-[1.6] text-fg-soft">
-              The hire that makes a team stronger and smarter, not just
-              bigger.
+              The assistant that answers when you can&rsquo;t.
             </p>
           </div>
 

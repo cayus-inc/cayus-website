@@ -136,7 +136,7 @@ export default function Home() {
           <StaggerGroup className="mx-auto mt-14 grid max-w-3xl gap-4 sm:grid-cols-2">
             <StaggerItem direction="left" className="h-full rounded-sm border border-border bg-bg-raised p-7">
               <p className="text-[0.7rem] font-semibold uppercase tracking-[0.16em] text-fg-soft">
-                Contingency search
+Without an assistant
               </p>
               <ul className="mt-5 flex flex-col gap-3.5">
                 {oldWay.map((t) => (

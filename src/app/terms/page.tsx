@@ -17,101 +17,101 @@ export default function TermsPage() {
 
       <h2>1. Description of Service</h2>
       <p>
-        Cayus sources, contacts, and qualifies job candidates on behalf of
-        hiring companies, and schedules qualified interviews on the client&apos;s
-        calendar. Cayus does not make hiring decisions, negotiate offers, or
-        guarantee that any interview results in a hire. The client&apos;s
-        responsibility ends at deciding whether to hire; Cayus&apos;s
-        responsibility ends at the interview.
+        Cayus provides an AI assistant that answers a real estate
+        agent&apos;s missed calls, qualifies the caller, and books a
+        showing on the client&apos;s calendar. The client&apos;s public
+        phone number is unchanged; unanswered calls are forwarded to the
+        Service. Cayus does not negotiate offers, close sales, or guarantee
+        that any lead results in a transaction. The client&apos;s
+        responsibility is the sale; Cayus&apos;s responsibility is the
+        response and the booking.
       </p>
 
       <h2>2. Engagement</h2>
       <p>
-        Each engagement begins with a written agreement covering the role,
-        the qualification criteria, and the pricing structure (per-interview
-        or monthly pipeline, see Section 5). No candidate is contacted before
-        the criteria are agreed in writing.
+        Setup begins once the client provides the required details
+        (brokerage, listed phone number, calendar access) and configures
+        call forwarding, a one-time step on the client&apos;s side. The
+        Service is billed as a one-time setup fee plus a monthly
+        subscription (Section 5).
       </p>
 
       <h2>3. Acceptable Use</h2>
       <p>You agree not to:</p>
       <ul>
-        <li>Use candidate information shared by Cayus for any purpose other than evaluating that candidate for the agreed role</li>
-        <li>Contact a candidate directly before their name is released under Section 4</li>
-        <li>Share anonymized candidate profiles with a third party</li>
-        <li>Use the Service for any illegal or discriminatory hiring purpose</li>
-        <li>Interfere with or attempt to reverse-engineer Cayus&apos;s sourcing or qualification process</li>
+        <li>Use the Service for any purpose other than responding to your own real estate leads</li>
+        <li>Direct the Service to contact anyone who has not first called your number</li>
+        <li>Use the Service for any illegal, discriminatory, or deceptive purpose</li>
+        <li>Interfere with or attempt to reverse-engineer the Service</li>
       </ul>
-
-      <h2>4. Candidate Confidentiality</h2>
       <p>
-        Candidate profiles are shared anonymized until the client has signed
-        the engagement terms. Names and identifying details are released only
-        after signature, and only for the specific role discussed.
+        Cayus only replies to inbound callers; it does not send unsolicited
+        outbound messages to purchased or sourced contact lists. The client
+        remains responsible for complying with applicable telemarketing and
+        messaging law (including the TCPA) in how they use and represent
+        the Service.
       </p>
 
-      <h2>5. Pricing and Payment</h2>
+      <h2>4. Pricing and Payment</h2>
       <p>
-        Cayus is billed either per interview held (a fixed range agreed in
-        the engagement letter) or as a monthly pipeline with an agreed
-        interview quota. An interview is billable only if it takes place and
-        the client does not reject it as outside the agreed criteria within
-        the contestation window stated in the engagement letter. An optional,
-        reduced success fee may apply on hire, as agreed per engagement.
-        Prices are in USD. Payment terms are set in the engagement letter.
+        A one-time setup fee covers configuration and onboarding. The
+        monthly subscription covers ongoing coverage, hosting, and updates,
+        and can be cancelled at any time; cancellation stops the next
+        billing cycle, no refund for the current period. Prices are in
+        USD.
       </p>
 
-      <h2>6. AI-Assisted Work</h2>
+      <h2>5. AI-Assisted Work</h2>
       <p>
-        Cayus uses AI tools internally to help source, draft candidate
-        outreach, and structure qualification notes. Every candidate
-        interaction and every qualification claim is reviewed before it
-        reaches a client. Cayus does not use AI voice screening on candidates
-        it has contacted first (outbound); this does not apply to a
-        candidate who calls in on their own initiative (inbound).
+        The assistant that responds to your leads is an AI system,
+        configured per client and disclosed as such in its first message
+        to any caller. You can review every conversation and take over by
+        text at any time. Cayus does not use an AI voice to make unsolicited
+        outbound calls; any AI voice line offered is inbound only, initiated
+        by the caller, and disclosed as AI.
       </p>
 
-      <h2>7. Data and Privacy</h2>
+      <h2>6. Data and Privacy</h2>
       <p>
-        Cayus processes personal data of both clients and candidates. See
-        our{" "}
-        <a href="/privacy">Privacy Policy</a>, which is incorporated by
-        reference and covers, in particular, how candidate data obtained
-        through sourcing tools is handled.
+        Cayus processes personal data of both clients and the leads who
+        contact them. See our{" "}
+        <a href="/privacy">Privacy Policy</a>, incorporated by reference.
       </p>
 
-      <h2>8. Disclaimer of Warranties</h2>
+      <h2>7. Disclaimer of Warranties</h2>
       <p>
         The Service is provided &quot;as is.&quot; Cayus does not warrant
-        that any candidate will accept an offer, remain available through
-        the hiring process, or perform in the role. Cayus warrants only that
-        interviews billed met the agreed criteria at the time of contact.
+        that any lead will result in a sale, remain responsive, or proceed
+        to a showing. Cayus warrants only that the Service will attempt to
+        respond to a qualifying missed call within the timeframe stated in
+        the client&apos;s onboarding materials.
       </p>
 
-      <h2>9. Limitation of Liability</h2>
+      <h2>8. Limitation of Liability</h2>
       <p>
-        To the maximum extent permitted by applicable law, Cayus shall not be
-        liable for indirect, incidental, or consequential damages, including
-        loss of profits or business opportunities, arising from the
-        engagement. Cayus&apos;s total liability shall not exceed the amount
-        paid by the client in the twelve (12) months preceding the claim.
+        To the maximum extent permitted by applicable law, Cayus shall not
+        be liable for indirect, incidental, or consequential damages,
+        including loss of profits or business opportunities, arising from
+        the engagement. Cayus&apos;s total liability shall not exceed the
+        amount paid by the client in the twelve (12) months preceding the
+        claim.
       </p>
 
-      <h2>10. Governing Law and Dispute Resolution</h2>
+      <h2>9. Governing Law and Dispute Resolution</h2>
       <p>
         These Terms are governed by the laws of France. Disputes are first
-        subject to good-faith negotiation; if unresolved, they are submitted
-        to the competent courts of Paris, France, unless mandatory local law
-        requires otherwise.
+        subject to good-faith negotiation; if unresolved, they are
+        submitted to the competent courts of Paris, France, unless
+        mandatory local law requires otherwise.
       </p>
 
-      <h2>11. Changes to Terms</h2>
+      <h2>10. Changes to Terms</h2>
       <p>
-        We may update these Terms. Material changes are notified by email at
-        least 30 days before taking effect for active engagements.
+        We may update these Terms. Material changes are notified by email
+        at least 30 days before taking effect for active clients.
       </p>
 
-      <h2>12. Contact</h2>
+      <h2>11. Contact</h2>
       <p>
         For questions about these Terms:{" "}
         <a href="mailto:contact@cayus.io">contact@cayus.io</a>

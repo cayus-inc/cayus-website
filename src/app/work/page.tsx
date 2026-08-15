@@ -5,9 +5,9 @@ import { Reveal, StaggerGroup, StaggerItem } from "@/components/ui/Reveal";
 import { WorkSidebar } from "@/components/ui/WorkSidebar";
 
 export const metadata: Metadata = {
-  title: "How we work",
+  title: "How it works",
   description:
-    "Concept walkthroughs of the Cayus method: the problem, the tradeoffs, and what gets screened out and why.",
+    "Concept walkthroughs of the Cayus mechanism: the moment a call is missed, how it's handled, and why.",
 };
 
 function CaseTag({ children }: { children: string }) {
@@ -26,19 +26,19 @@ function Label({ children }: { children: string }) {
   );
 }
 
-const REGIONS = [
-  { city: "Austin, TX", cleared: true },
-  { city: "Denver, CO", cleared: true },
-  { city: "Chicago, IL", cleared: false },
-  { city: "Miami, FL", cleared: true },
-  { city: "Seattle, WA", cleared: false },
-  { city: "Raleigh, NC", cleared: true },
+const CALL_LOG = [
+  { time: "0:00", event: "Call missed", cleared: true },
+  { time: "0:04", event: "Text sent", cleared: true },
+  { time: "0:41", event: "Lead replies", cleared: true },
+  { time: "1:20", event: "Budget confirmed", cleared: true },
+  { time: "2:05", event: "Time slot offered", cleared: true },
+  { time: "2:30", event: "Showing booked", cleared: true },
 ];
 
 const SIDEBAR_ITEMS = [
-  { id: "depth-over-pedigree", num: "01", tag: "Depth over pedigree", title: "Qualifying for technical depth" },
-  { id: "motivation-verified", num: "02", tag: "Motivation, verified", title: "Catching the wrong reason to move" },
-  { id: "constant-bar", num: "03", tag: "Constant bar, wider net", title: "Staying narrow as geography widened" },
+  { id: "the-window", num: "01", tag: "The 90-second window", title: "What happens the moment a call is missed" },
+  { id: "not-every-lead", num: "02", tag: "Not every lead is ready", title: "Catching a lead that isn't qualified yet" },
+  { id: "two-at-once", num: "03", tag: "Two calls, one number", title: "Handling simultaneous leads" },
 ];
 
 export default function WorkPage() {
@@ -48,17 +48,17 @@ export default function WorkPage() {
       <div className="mx-auto max-w-[1160px] overflow-clip px-6 pb-16 pt-14 md:pt-20">
         <Reveal direction="left">
           <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-fg-soft">
-            How we work
+            How it works
           </p>
           <h1 className="mt-4 max-w-[26ch] font-serif-display text-[2.4rem] font-medium leading-[1.05] text-balance md:text-[3.2rem]">
-            The reasoning behind three searches.
+            The reasoning behind the mechanism.
           </h1>
           <p className="mt-7 max-w-[62ch] text-[1.02rem] leading-[1.65] text-fg-soft">
             Three concept walkthroughs, marked as such, not dressed up as
-            client work. Each one shows the actual reasoning we apply on a
-            live search: the problem, what got screened out, and why. What
-            we don&rsquo;t show is the exact mechanics. The tools and the
-            playbook stay ours.
+            client results, we don&rsquo;t have client results yet. Each one
+            shows how the assistant is meant to behave in a specific
+            situation. What we don&rsquo;t show is the exact configuration.
+            That stays ours.
           </p>
         </Reveal>
       </div>
@@ -69,85 +69,74 @@ export default function WorkPage() {
         </aside>
 
         <div className="min-w-0 max-w-[720px]">
-          {/* Case 1: layered read, approach in a highlighted block */}
-          <div id="depth-over-pedigree" className="overflow-clip scroll-mt-28">
+          {/* Case 1: the timeline from missed call to booked showing */}
+          <div id="the-window" className="overflow-clip scroll-mt-28">
             <Reveal direction="left">
-              <CaseTag>Depth over pedigree</CaseTag>
+              <CaseTag>The 90-second window</CaseTag>
               <h2 className="mt-5 font-serif-display text-[1.7rem] font-medium leading-[1.15] text-balance md:text-[2.1rem]">
-                Qualifying for technical depth, not a title
+                What happens the moment a call is missed
               </h2>
 
               <StaggerGroup className="mt-8 grid grid-cols-1 gap-8 sm:grid-cols-2">
                 <StaggerItem direction="left">
                   <Label>The situation</Label>
                   <p className="mt-2.5 text-[0.95rem] leading-[1.6] text-fg-soft">
-                    A Series A company building developer tooling for AI
-                    inference needed a Solutions Engineer who could run a
-                    genuinely technical demo in front of skeptical ML
-                    engineers, not walk a prospect through a slide deck.
+                    An agent is mid-showing with another client. Their phone
+                    rings, a buyer calling about a different listing. They
+                    can&rsquo;t pick up.
                   </p>
                 </StaggerItem>
                 <StaggerItem direction="right">
-                  <Label>The problem</Label>
+                  <Label>What usually happens</Label>
                   <p className="mt-2.5 text-[0.95rem] leading-[1.6] text-fg-soft">
-                    Most inbound-looking candidates read well on paper:
-                    strong titles, recognizable employers. Very few had
-                    actually run hands-on technical demos against a buyer
-                    who could ask a hard follow-up question.
+                    Most buyers don&rsquo;t leave a voicemail. They hang up
+                    and call the next listing on their list. By the time the
+                    agent is free to call back, the lead has often already
+                    talked to someone else.
                   </p>
                 </StaggerItem>
               </StaggerGroup>
 
               <div className="mt-6 rounded-sm border border-border bg-bg-raised p-6">
-                <Label>The approach</Label>
-                <p className="mt-2.5 text-[0.95rem] leading-[1.6] text-fg-soft">
-                  The hard requirement wasn&rsquo;t a title or a company
-                  name, it was recent, hands-on work against a comparable
-                  technical stack. Qualification conversations probed for
-                  one thing: could this person answer an unscripted
-                  technical question, not just deliver a rehearsed one.
-                </p>
-              </div>
-
-              <div className="mt-6">
-                <Label>Who got screened out</Label>
-                <p className="mt-2.5 text-[0.95rem] leading-[1.6] text-fg-soft">
-                  A candidate with an impressive SE title at a well-known
-                  company was screened out. Their actual day-to-day was
-                  demoing a pre-built dashboard, not the product&rsquo;s
-                  technical internals. It surfaced directly when asked what
-                  they&rsquo;d do if the demo broke live.
-                </p>
+                <Label>What the assistant does</Label>
+                <StaggerGroup className="mt-4 flex flex-col gap-2">
+                  {CALL_LOG.map((c) => (
+                    <StaggerItem
+                      key={c.event}
+                      className="flex items-center justify-between gap-3 rounded-sm border border-border bg-bg px-3.5 py-2"
+                    >
+                      <span className="text-[0.85rem] text-fg-soft">{c.event}</span>
+                      <span className="font-mono text-[0.78rem] text-fg-soft">{c.time}</span>
+                    </StaggerItem>
+                  ))}
+                </StaggerGroup>
               </div>
 
               <div className="mt-6 border-l-2 border-metal pl-5">
                 <p className="text-[0.95rem] italic leading-[1.6] text-fg">
-                  The search was built to produce a small number of
-                  technically credible conversations, not a long list of
-                  polished-looking ones.
+                  Built so the window between a missed call and a real reply
+                  is measured in seconds, not the rest of the afternoon.
                 </p>
               </div>
             </Reveal>
           </div>
 
-          {/* Case 2: resume vs. reality contrast, same pattern as the homepage's problem/solution block */}
+          {/* Case 2: qualification screening out a not-yet-ready lead */}
           <div
-            id="motivation-verified"
+            id="not-every-lead"
             className="mt-14 overflow-clip scroll-mt-28 border-t border-border pt-14"
           >
             <Reveal direction="right">
-              <CaseTag>Motivation, verified</CaseTag>
+              <CaseTag>Not every lead is ready</CaseTag>
               <h2 className="mt-5 font-serif-display text-[1.7rem] font-medium leading-[1.15] text-balance md:text-[2.1rem]">
-                Catching the wrong reason to move
+                Catching a lead that isn&rsquo;t qualified yet
               </h2>
               <p className="mt-5 max-w-[62ch] text-[0.95rem] leading-[1.6] text-fg-soft">
-                A Series B company had already run a search through a
-                contingency recruiter before coming to Cayus. The
-                candidates were technically fine. Something else was off:
-                every one of them was comparing three offers on comp
-                alone, and the client&rsquo;s own experience was that
-                hires like that tend to disengage in the first ninety days
-                the moment a bigger number shows up elsewhere.
+                A response alone isn&rsquo;t the goal, a booked showing with
+                someone who&rsquo;s actually ready to move is. A caller who
+                is months from financing or already working with another
+                agent shouldn&rsquo;t take up a showing slot meant for a
+                real buyer.
               </p>
             </Reveal>
             <StaggerGroup className="mt-8 grid grid-cols-1 gap-4 sm:grid-cols-2">
@@ -155,12 +144,12 @@ export default function WorkPage() {
                 direction="left"
                 className="rounded-sm border border-border bg-bg-raised p-7"
               >
-                <Label>What the resume said</Label>
+                <Label>What a simple auto-reply would do</Label>
                 <ul className="mt-4 flex flex-col gap-3">
                   {[
-                    "Strong SE title, recognizable employer",
-                    "Three competing offers already in motion",
-                    "Every answer led back to a number",
+                    "Reply, then book whoever says yes",
+                    "No check on financing or timeline",
+                    "No check on whether they already have an agent",
                   ].map((t) => (
                     <li
                       key={t}
@@ -177,13 +166,13 @@ export default function WorkPage() {
                 className="rounded-sm border border-fg bg-fg p-7 text-bg"
               >
                 <p className="text-[0.7rem] font-semibold uppercase tracking-[0.16em] opacity-60">
-                  What qualification found
+                  What qualification finds
                 </p>
                 <ul className="mt-4 flex flex-col gap-3">
                   {[
-                    "No engagement with the team or the product, when asked directly",
-                    "No reason to move this specific role could actually deliver",
-                    "Screened out before a name was ever shared",
+                    "Budget and timeline confirmed before booking",
+                    "Already represented by another agent, flagged, not booked",
+                    "A showing slot reserved for someone actually ready",
                   ].map((t) => (
                     <li
                       key={t}
@@ -213,66 +202,59 @@ export default function WorkPage() {
             <Reveal delay={0.1}>
               <div className="mt-6 border-l-2 border-metal pl-5">
                 <p className="text-[0.95rem] italic leading-[1.6] text-fg">
-                  Built to surface candidates whose actual reason for
-                  moving is something this specific role can deliver, not
-                  whoever is furthest along comparing offers.
+                  Built to protect your calendar, not just to reply fast.
                 </p>
               </div>
             </Reveal>
           </div>
 
-          {/* Case 3: the bar held constant across an expanding map */}
+          {/* Case 3: concurrency, two calls at once */}
           <div
-            id="constant-bar"
+            id="two-at-once"
             className="mt-14 overflow-clip scroll-mt-28 border-t border-border pt-14"
           >
             <Reveal direction="left">
-              <CaseTag>Constant bar, wider net</CaseTag>
+              <CaseTag>Two calls, one number</CaseTag>
               <h2 className="mt-5 font-serif-display text-[1.7rem] font-medium leading-[1.15] text-balance md:text-[2.1rem]">
-                Staying narrow while the geography widened
+                Handling simultaneous leads
               </h2>
               <p className="mt-5 max-w-[62ch] text-[0.95rem] leading-[1.6] text-fg-soft">
-                A fast-scaling AI startup was expanding sales coverage
-                across US time zones and needed Solutions Engineer coverage
-                beyond a single hub city. Widening a search geographically
-                is the easiest way to quietly lower the bar: more
-                candidates in the pipeline, weaker average fit, and nobody
-                notices until the interviews start.
+                Open house weekends bring bursts of calls, not one at a
+                time. A single voicemail box can only take one caller at a
+                time; it doesn&rsquo;t queue two buyers well.
               </p>
             </Reveal>
             <Reveal delay={0.08}>
               <div className="mt-8 rounded-sm border border-border bg-bg-raised p-6">
-                <Label>Same criteria, six markets</Label>
-                <StaggerGroup className="mt-4 grid grid-cols-2 gap-2.5 sm:grid-cols-3">
-                  {REGIONS.map((r) => (
+                <Label>Both calls, same minute</Label>
+                <StaggerGroup className="mt-4 grid grid-cols-1 gap-2.5 sm:grid-cols-2">
+                  {[
+                    { caller: "Caller A", status: "Answered, qualifying" },
+                    { caller: "Caller B", status: "Answered, qualifying" },
+                  ].map((r) => (
                     <StaggerItem
-                      key={r.city}
+                      key={r.caller}
                       className="flex items-center justify-between gap-2 rounded-sm border border-border bg-bg px-3.5 py-2.5"
                     >
-                      <span className="text-[0.85rem] text-fg">{r.city}</span>
-                      <span
-                        className="size-1.5 flex-none rounded-full"
-                        style={{
-                          background: r.cleared ? "var(--metal)" : "var(--border)",
-                        }}
-                      />
+                      <span className="text-[0.85rem] text-fg">{r.caller}</span>
+                      <span className="flex items-center gap-2 text-[0.8rem] text-fg-soft">
+                        <span className="size-1.5 flex-none rounded-full" style={{ background: "var(--metal)" }} />
+                        {r.status}
+                      </span>
                     </StaggerItem>
                   ))}
                 </StaggerGroup>
                 <p className="mt-4 text-[0.82rem] leading-[1.5] text-fg-soft">
-                  Geography changed the sourcing radius. It didn&rsquo;t
-                  change what counted as qualified: candidates in Chicago
-                  and Seattle were geographically convenient but
-                  didn&rsquo;t clear the hard requirements, and were passed
-                  over rather than stretching the bar to fill the map.
+                  Neither caller waits on the other. Both get a reply within
+                  the same few seconds, independently.
                 </p>
               </div>
             </Reveal>
             <Reveal delay={0.12}>
               <div className="mt-6 border-l-2 border-metal pl-5">
                 <p className="text-[0.95rem] italic leading-[1.6] text-fg">
-                  Built to hold quality constant while volume increased
-                  through broader sourcing, not through a quieter bar.
+                  Built to hold up during your busiest hour, not just on a
+                  quiet Tuesday.
                 </p>
               </div>
             </Reveal>

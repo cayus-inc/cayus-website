@@ -13,20 +13,20 @@ export const metadata: Metadata = {
 
 const commitments = [
   {
-    title: "The interview is the unit",
-    body: "Not the profile, not the placement. A candidate sourced, contacted, who said yes, and whose slot is on your calendar.",
+    title: "The response is the unit",
+    body: "Not a lead list, not a login you have to remember to check. A reply actually sent, in seconds, and a showing on your calendar.",
   },
   {
-    title: "No names before you sign",
-    body: "Every candidate is anonymized until the engagement terms are agreed in writing. No exceptions, for any client.",
+    title: "Your number, unchanged",
+    body: "Nothing to reprint, nothing to migrate. The forwarding is invisible to whoever's calling.",
   },
   {
-    title: "Verified, never invented",
-    body: "Every quote in a candidate profile is verbatim, timestamped, and traceable to the source message. Nothing is paraphrased to sound better.",
+    title: "You see everything",
+    body: "Every conversation the assistant has is visible to you, and you can take over by text at any time.",
   },
   {
-    title: "One thing, not everything",
-    body: "We don't negotiate offers, manage counter-offers, or make the hiring call. That decision, and that judgment, stay with you.",
+    title: "Done for you, not by you",
+    body: "We configure it, host it, and keep it running. You don't manage software, you just get the lead.",
   },
 ];
 
@@ -64,17 +64,15 @@ export default function AboutPage() {
               About
             </p>
             <h1 className="mt-4 font-serif-display text-[2.4rem] font-medium leading-[1.05] text-balance md:text-[3.4rem]">
-              Companies grow stronger by who they hire, not by how many they
-              hire.
+              The agent who answers first usually wins the deal.
             </h1>
             <p className="mt-7 max-w-[62ch] text-[1.05rem] leading-[1.65] text-fg-soft">
-              Most companies get weaker as they get bigger: more people, more
-              meetings, more coordination, without a matching gain in what
-              any one person in the room can actually do. The fix
-              isn&rsquo;t hiring more. It&rsquo;s hiring someone genuinely
-              better at the job than the team already is. That kind of hire
-              doesn&rsquo;t add headcount. It changes what the company is
-              capable of.
+              Most agents don&rsquo;t lose leads because they&rsquo;re bad at
+              the job. They lose them because no one can be reachable
+              twenty-four hours a day, and buyers don&rsquo;t wait for a
+              convenient time to call. The fix isn&rsquo;t working more
+              hours. It&rsquo;s making sure the response happens even when
+              you can&rsquo;t be the one sending it.
             </p>
           </Reveal>
         </div>
@@ -83,15 +81,13 @@ export default function AboutPage() {
           <Reveal direction="left">
             <div className="h-full rounded-sm border border-border bg-bg-raised p-7">
               <p className="text-[0.7rem] font-semibold uppercase tracking-[0.14em] text-fg-soft">
-                What we sell the candidate
+                What we actually deliver
               </p>
               <p className="mt-3 text-[0.95rem] leading-[1.65] text-fg-soft">
-                Not an opening. A seat on a specific mission: what the
-                company is building, who it&rsquo;s for, and what changes,
-                for the product and the customers who use it, because this
-                one person is in the room. Comp and the practical terms are
-                part of that, stated plainly. They are not the pitch. The
-                impact is the pitch.
+                Not a CRM you have to configure and remember to check. An
+                assistant that already works the moment it&rsquo;s live,
+                answering in your name, qualifying the lead, and putting the
+                showing on your calendar. You show up, that&rsquo;s it.
               </p>
             </div>
           </Reveal>
@@ -101,12 +97,11 @@ export default function AboutPage() {
                 Why that&rsquo;s the actual differentiator
               </p>
               <p className="mt-3 text-[0.95rem] leading-[1.65] text-fg-soft">
-                Finding a name is close to free now. Getting a strong,
-                currently-employed candidate to take the call isn&rsquo;t a
-                search problem, it&rsquo;s a persuasion problem: does the
-                offer read as a real opportunity or a form letter. We keep
-                AI where it belongs, doing the finding, never the writing
-                that has to actually land.
+                Any agent can buy lead software. Almost none of them
+                actually respond to a lead in the first sixty seconds,
+                because that requires being awake and available around the
+                clock, which no person can do alone. That gap is what we
+                close.
               </p>
             </div>
           </Reveal>
@@ -118,11 +113,11 @@ export default function AboutPage() {
               Why the price is what it is
             </p>
             <p className="mt-3 max-w-[62ch] text-[0.95rem] leading-[1.65] text-fg-soft">
-              One hire like this changes what a team can ship. Against that,
-              the cost of getting the conversation in front of you, once,
-              done properly, is small. That&rsquo;s the actual basis for
-              what we charge, not a percentage borrowed from how staffing
-              has always been priced.
+              A CRM that logs your leads costs hundreds a month and still
+              leaves the answering to you. We charge a fraction of that,
+              because the assistant does the answering itself. That&rsquo;s
+              the basis for what we charge, not a number borrowed from
+              software that does less.
             </p>
           </div>
         </Reveal>
@@ -150,21 +145,19 @@ export default function AboutPage() {
         <Reveal delay={0.1}>
           <div className="mt-16 rounded-sm border border-border bg-bg-raised p-8">
             <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-fg-soft">
-              How we take on a search
+              How we set up a new agent
             </p>
             <p className="mt-4 max-w-[62ch] text-[0.98rem] leading-[1.65] text-fg-soft">
-              One search at a time, run against criteria specific to that
-              role, not a template reused across clients. We&rsquo;d
-              rather run fewer searches well than spread the same attention
-              across many at once. Which roles that means depends on where
-              the hire genuinely changes what a company can do, not on a
-              fixed list of titles.
+              One assistant per agent, configured on your listings, your
+              areas, and how you actually talk to a lead, not a generic bot
+              reused across every client. Live within 48 hours of setup,
+              and adjusted as your listings change.
             </p>
           </div>
         </Reveal>
 
         <Reveal delay={0.15} className="mt-16">
-          <CTA href="/contact">Request a call</CTA>
+          <CTA href="/contact">Get started</CTA>
           <Link
             href="/#how"
             className="ml-6 border-b border-border pb-0.5 text-[0.92rem] transition-colors hover:border-fg"
