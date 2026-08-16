@@ -13,8 +13,8 @@ import { CTA } from "@/components/ui/CTA";
 const BOOK_A_CALL_HREF = "/contact";
 
 const oldWay = [
-  "A missed call is a lead calling the next agent on the list",
-  "You find out you lost the lead after they've already signed with someone else",
+  "An unanswered call rarely gets a callback, most buyers just move on",
+  "Whoever answers next becomes their agent, not just for that house, for the whole search",
   "Every after-hours call is unanswered ambition",
 ];
 

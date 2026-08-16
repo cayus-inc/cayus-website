@@ -56,9 +56,12 @@ export default function TermsPage() {
       <p>
         A one-time setup fee covers configuration and onboarding. The
         monthly subscription covers ongoing coverage, hosting, and updates,
-        and can be cancelled at any time; cancellation stops the next
-        billing cycle, no refund for the current period. Prices are in
-        USD.
+        and can be cancelled at any time by emailing{" "}
+        <a href="mailto:contact@cayus.io">contact@cayus.io</a>; cancellation
+        stops the next billing cycle, no refund for the current period.
+        Prices are in USD. Payments are processed by Stripe; Cayus does not
+        store card details. Cayus may suspend the Service for non-payment or
+        for use that violates Section 3.
       </p>
 
       <h2>5. AI-Assisted Work</h2>
@@ -84,7 +87,10 @@ export default function TermsPage() {
         that any lead will result in a sale, remain responsive, or proceed
         to a showing. Cayus warrants only that the Service will attempt to
         respond to a qualifying missed call within the timeframe stated in
-        the client&apos;s onboarding materials.
+        the client&apos;s onboarding materials. The Service depends on
+        third-party providers (telephony, calendar, AI infrastructure);
+        Cayus is not liable for an outage or limitation originating from a
+        third-party provider outside its control.
       </p>
 
       <h2>8. Limitation of Liability</h2>
