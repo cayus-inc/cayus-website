@@ -15,11 +15,11 @@ const BOOK_A_CALL_HREF = "/contact";
 const oldWay = [
   "An unanswered call rarely gets a callback, most buyers just move on",
   "Whoever answers next becomes their agent, not just for that house, for the whole search",
-  "Every after-hours call is unanswered ambition",
+  "Nights, weekends, a showing, a client dinner, a flight, an East Coast buyer calling a West Coast agent at 11pm their time, all of it goes straight to voicemail",
 ];
 
 const withCayus = [
-  "Every missed call gets an instant response, day or night",
+  "Every missed call gets an instant response, day or night, weekday or weekend",
   "The lead is qualified and the showing is booked before you pick your phone back up",
   "Your number stays the same, nothing to configure",
 ];
@@ -130,7 +130,7 @@ export default function Home() {
             <SectionHead
               eyebrow="The bottleneck"
               title="A buyer who can't reach you calls the next name on the list."
-              sub="You're at an open house, showing another property, or it's 9pm on a Sunday. The number on your For Sale sign doesn't stop ringing just because you're busy. Every minute a call goes unanswered is a minute closer to them dialing someone else."
+              sub="You're at an open house, showing another property, or it's 9pm on a Sunday. Add up every hour you're not physically free to answer, evenings, weekends, showings, a lunch, a different time zone entirely, and the honest total isn't a few gaps in your day. It's most of the week. The number on your For Sale sign doesn't stop ringing just because you're busy. Every minute a call goes unanswered is a minute closer to them dialing someone else."
             />
           </Reveal>
           <StaggerGroup className="mx-auto mt-14 grid max-w-3xl gap-4 sm:grid-cols-2">
@@ -194,7 +194,7 @@ Without an assistant
               align="left"
               eyebrow="How it actually works"
               title="The moment doesn't wait. So we don't either."
-              sub="Answer within the first minute and most buyers still want to talk. Wait past that and they've already called the next agent. Your assistant is built to never miss that window, at 2pm or 2am."
+              sub="Answer within the first minute and most buyers still want to talk. Wait past that and they've already called the next agent. Your assistant is built to never miss that window, at 2pm or 2am, on a Tuesday or a Sunday, no matter what time zone the caller is in."
               invert
             />
           </Reveal>
@@ -317,7 +317,7 @@ Without an assistant
             <SectionHead
               eyebrow="Pricing"
               title="Set up once. Covered every day after."
-              sub="A fraction of what a real estate CRM costs, and unlike a CRM, we're the ones answering. Live in 48 hours. Cancel the monthly whenever you want."
+              sub="A fraction of what a real estate CRM costs, and unlike a CRM, we're the ones answering. One closed deal covers 50 to 100 months of the retainer. Live in 48 hours. Cancel the monthly whenever you want."
             />
           </Reveal>
           <StaggerGroup className="mt-14 grid grid-cols-1 gap-6 md:grid-cols-2">
