@@ -5,6 +5,7 @@ import { Reveal, StaggerGroup, StaggerItem } from "@/components/ui/Reveal";
 import { HeroStage } from "@/components/ui/HeroStage";
 import { SectionHead } from "@/components/ui/SectionHead";
 import { StepVisual } from "@/components/ui/StepVisual";
+import { MissedCallCalculator } from "@/components/ui/MissedCallCalculator";
 import { ScanField } from "@/components/ui/ScanField";
 import { ParticleField } from "@/components/three/ParticleField";
 import { FAQ } from "@/components/ui/FAQ";
@@ -180,6 +181,22 @@ Without an assistant
               </ul>
             </StaggerItem>
           </StaggerGroup>
+        </div>
+      </section>
+
+      {/* Missed-call calculator */}
+      <section className="overflow-clip border-t border-border px-6 py-28 md:py-40">
+        <div className="mx-auto max-w-[1160px]">
+          <Reveal>
+            <SectionHead
+              eyebrow="Your numbers, not ours"
+              title="What is it actually costing you?"
+              sub="No signup, no email required. Move the sliders to your own volume and see the number."
+            />
+          </Reveal>
+          <Reveal delay={0.12} className="mt-14">
+            <MissedCallCalculator />
+          </Reveal>
         </div>
       </section>
 
