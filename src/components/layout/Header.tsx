@@ -2,8 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { CTA } from "@/components/ui/CTA";
 import { MobileNav } from "@/components/layout/MobileNav";
-
-const BOOK_A_CALL_HREF = "/contact";
+import { GET_STARTED_HREF } from "@/lib/links";
 
 const NAV = [
   { href: "/#how", label: "How it works" },
@@ -45,7 +44,7 @@ export function Header() {
         <div className="flex items-center gap-3">
           <MobileNav />
           <CTA
-            href={BOOK_A_CALL_HREF}
+            href={GET_STARTED_HREF}
             variant="ghost"
             arrow={false}
             className="!px-5 !py-2.5 !text-[0.84rem]"

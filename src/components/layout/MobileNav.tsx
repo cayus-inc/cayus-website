@@ -4,8 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import { AnimatePresence, motion } from "framer-motion";
 import { CTA } from "@/components/ui/CTA";
-
-const BOOK_A_CALL_HREF = "/contact";
+import { GET_STARTED_HREF } from "@/lib/links";
 
 const NAV = [
   { href: "/#how", label: "How it works" },
@@ -78,7 +77,7 @@ export function MobileNav() {
               ))}
             </div>
             <CTA
-              href={BOOK_A_CALL_HREF}
+              href={GET_STARTED_HREF}
               variant="primary"
               arrow={false}
               className="mt-7 w-full"

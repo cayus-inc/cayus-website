@@ -5,6 +5,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Reveal, StaggerGroup, StaggerItem } from "@/components/ui/Reveal";
 import { CTA } from "@/components/ui/CTA";
 import { ParticleField } from "@/components/three/ParticleField";
+import { GET_STARTED_HREF } from "@/lib/links";
 
 export const metadata: Metadata = {
   title: "About",
@@ -64,13 +65,15 @@ export default function AboutPage() {
               About
             </p>
             <h1 className="mt-4 font-serif-display text-[2.4rem] font-medium leading-[1.05] text-balance md:text-[3.4rem]">
-              The agent who answers first usually wins the deal.
+              The agent who answers first usually keeps the client for good.
             </h1>
             <p className="mt-7 max-w-[62ch] text-[1.05rem] leading-[1.65] text-fg-soft">
               Most agents don&rsquo;t lose leads because they&rsquo;re bad at
               the job. They lose them because no one can be reachable
               twenty-four hours a day, and buyers don&rsquo;t wait for a
-              convenient time to call. The fix isn&rsquo;t working more
+              convenient time to call. It&rsquo;s not just that one house
+              either, whoever answers first usually becomes that buyer&rsquo;s
+              agent for every move after. The fix isn&rsquo;t working more
               hours. It&rsquo;s making sure the response happens even when
               you can&rsquo;t be the one sending it.
             </p>
@@ -157,7 +160,7 @@ export default function AboutPage() {
         </Reveal>
 
         <Reveal delay={0.15} className="mt-16">
-          <CTA href="/contact">Get started</CTA>
+          <CTA href={GET_STARTED_HREF}>Get started</CTA>
           <Link
             href="/#how"
             className="ml-6 border-b border-border pb-0.5 text-[0.92rem] transition-colors hover:border-fg"

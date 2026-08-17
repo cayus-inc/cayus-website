@@ -9,6 +9,7 @@ const COLS: { title: string; links: { label: string; href: string }[] }[] = [
       { label: "Pricing", href: "/#pricing" },
       { label: "How we work", href: "/work" },
       { label: "About", href: "/about" },
+      { label: "Talk to us first", href: "/contact" },
     ],
   },
   {

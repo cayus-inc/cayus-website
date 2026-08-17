@@ -10,8 +10,7 @@ import { ScanField } from "@/components/ui/ScanField";
 import { ParticleField } from "@/components/three/ParticleField";
 import { FAQ } from "@/components/ui/FAQ";
 import { CTA } from "@/components/ui/CTA";
-
-const BOOK_A_CALL_HREF = "/contact";
+import { GET_STARTED_HREF } from "@/lib/links";
 
 const oldWay = [
   "An unanswered call rarely gets a callback, most buyers just move on",
@@ -115,7 +114,7 @@ export default function Home() {
             Nothing to configure, nothing to learn.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
-            <CTA href={BOOK_A_CALL_HREF}>Get started</CTA>
+            <CTA href={GET_STARTED_HREF}>Get started</CTA>
             <Link
               href="/#how"
               className="border-b border-border pb-0.5 text-[0.92rem] transition-colors hover:border-fg"
@@ -186,7 +185,7 @@ Without an assistant
       </section>
 
       {/* Missed-call calculator */}
-      <section className="overflow-clip border-t border-border px-6 py-28 md:py-40">
+      <section id="calculator" className="overflow-clip border-t border-border px-6 py-28 md:py-40">
         <div className="mx-auto max-w-[1160px]">
           <Reveal>
             <SectionHead
@@ -439,7 +438,7 @@ Without an assistant
             </h2>
             <div className="mt-9 flex justify-center">
               <CTA
-                href={BOOK_A_CALL_HREF}
+                href={GET_STARTED_HREF}
                 variant="invert"
                 style={{ background: "#faf8f4", color: "#0d0d0c" }}
               >
