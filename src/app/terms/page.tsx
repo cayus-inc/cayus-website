@@ -64,7 +64,23 @@ export default function TermsPage() {
         for use that violates Section 3.
       </p>
 
-      <h2>5. AI-Assisted Work</h2>
+      <h2>5. Lead Guarantee</h2>
+      <p>
+        If your assistant has not captured at least three (3) qualified
+        leads within your first 30 days live, email{" "}
+        <a href="mailto:contact@cayus.io">contact@cayus.io</a> within 45 days
+        of going live and Cayus will refund your setup fee and that first
+        month&apos;s subscription in full. A qualified lead is one your
+        assistant marks as ready for a showing (status &quot;qualified&quot;
+        or &quot;booked&quot; on your dashboard), visible to you as it
+        happens, not a metric decided after the fact. This guarantee applies
+        once per client and requires that call forwarding remained active
+        for the full 30-day period; it does not apply if forwarding was
+        disabled, misconfigured on the client&apos;s carrier, or removed
+        before the period ended.
+      </p>
+
+      <h2>6. AI-Assisted Work</h2>
       <p>
         The assistant that responds to your leads is an AI system,
         configured per client and disclosed as such in its first message
@@ -74,26 +90,27 @@ export default function TermsPage() {
         by the caller, and disclosed as AI.
       </p>
 
-      <h2>6. Data and Privacy</h2>
+      <h2>7. Data and Privacy</h2>
       <p>
         Cayus processes personal data of both clients and the leads who
         contact them. See our{" "}
         <a href="/privacy">Privacy Policy</a>, incorporated by reference.
       </p>
 
-      <h2>7. Disclaimer of Warranties</h2>
+      <h2>8. Disclaimer of Warranties</h2>
       <p>
         The Service is provided &quot;as is.&quot; Cayus does not warrant
         that any lead will result in a sale, remain responsive, or proceed
         to a showing. Cayus warrants only that the Service will attempt to
         respond to a qualifying missed call within the timeframe stated in
-        the client&apos;s onboarding materials. The Service depends on
-        third-party providers (telephony, calendar, AI infrastructure);
-        Cayus is not liable for an outage or limitation originating from a
-        third-party provider outside its control.
+        the client&apos;s onboarding materials, and the Lead Guarantee in
+        Section 5. The Service depends on third-party providers (telephony,
+        calendar, AI infrastructure); Cayus is not liable for an outage or
+        limitation originating from a third-party provider outside its
+        control.
       </p>
 
-      <h2>8. Limitation of Liability</h2>
+      <h2>9. Limitation of Liability</h2>
       <p>
         To the maximum extent permitted by applicable law, Cayus shall not
         be liable for indirect, incidental, or consequential damages,
@@ -103,7 +120,7 @@ export default function TermsPage() {
         claim.
       </p>
 
-      <h2>9. Governing Law and Dispute Resolution</h2>
+      <h2>10. Governing Law and Dispute Resolution</h2>
       <p>
         These Terms are governed by the laws of France. Disputes are first
         subject to good-faith negotiation; if unresolved, they are
@@ -111,13 +128,13 @@ export default function TermsPage() {
         mandatory local law requires otherwise.
       </p>
 
-      <h2>10. Changes to Terms</h2>
+      <h2>11. Changes to Terms</h2>
       <p>
         We may update these Terms. Material changes are notified by email
         at least 30 days before taking effect for active clients.
       </p>
 
-      <h2>11. Contact</h2>
+      <h2>12. Contact</h2>
       <p>
         For questions about these Terms:{" "}
         <a href="mailto:contact@cayus.io">contact@cayus.io</a>

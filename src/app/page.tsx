@@ -82,6 +82,10 @@ const faqs = [
     q: "Isn't this expensive?",
     a: "Compare it to what you're already paying for lead software that still requires you to do the answering. We're a fraction of that, and we're the ones who actually respond.",
   },
+  {
+    q: "What if it doesn't work for me?",
+    a: "You're covered by the 3-lead guarantee: if your assistant hasn't captured at least 3 qualified leads in your first 30 days live, we refund the setup fee and that month's subscription in full, no argument.",
+  },
 ];
 
 export default function Home() {
@@ -359,6 +363,26 @@ Without an assistant
               </StaggerItem>
             ))}
           </StaggerGroup>
+          <Reveal delay={0.12}>
+            <div className="mt-6 flex items-start gap-3 rounded-sm border border-border bg-bg-raised px-6 py-5">
+              <svg width="18" height="18" viewBox="0 0 12 12" className="mt-0.5 flex-none text-metal">
+                <path
+                  d="M2 6.5 L5 9.5 L10 3"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.6"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+              <p className="text-[0.92rem] leading-[1.55] text-fg-soft">
+                <strong className="text-fg">3-lead guarantee.</strong> If your
+                assistant hasn&rsquo;t captured at least 3 qualified leads in
+                your first 30 days, we refund the setup fee and that
+                month&rsquo;s subscription in full.
+              </p>
+            </div>
+          </Reveal>
         </div>
       </section>
 
