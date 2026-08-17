@@ -100,11 +100,8 @@ export default function Home() {
             <span className="h-px w-6 bg-border" />
             Right now
           </span>
-          <h1 className="font-serif-display text-[3.4rem] font-medium leading-[0.95] tracking-[-0.02em] text-balance md:text-[6.8rem]">
-            A missed call
-            <br />
-            just cost you
-            <br />
+          <h1 className="font-serif-display text-[2.7rem] font-medium leading-[1.05] tracking-[-0.02em] text-balance md:text-[4.6rem]">
+            A missed call just cost you{" "}
             <span style={{ color: "var(--metal)" }}>$7,500 to $15,000.</span>
           </h1>
           <p className="mt-8 max-w-[46ch] text-[1.15rem] leading-[1.6] text-fg-soft">
@@ -135,7 +132,7 @@ export default function Home() {
             <SectionHead
               eyebrow="The bottleneck"
               title="A buyer who can't reach you calls the next name on the list."
-              sub="You're at an open house, showing another property, or it's 9pm on a Sunday. Add up every hour you're not physically free to answer, evenings, weekends, showings, a lunch, a different time zone entirely, and the honest total isn't a few gaps in your day. It's most of the week. The number on your For Sale sign doesn't stop ringing just because you're busy. Every minute a call goes unanswered is a minute closer to them dialing someone else."
+              sub="You're at an open house, showing another property, or it's 9pm on a Sunday. Add it all up and it's not a few gaps, it's most of the week, and every minute unanswered is a minute closer to them dialing someone else."
             />
           </Reveal>
           <StaggerGroup className="mx-auto mt-14 grid max-w-3xl gap-4 sm:grid-cols-2">
@@ -215,7 +212,7 @@ Without an assistant
               align="left"
               eyebrow="How it actually works"
               title="The moment doesn't wait. So we don't either."
-              sub="Answer within the first minute and most buyers still want to talk. Wait past that and they've already called the next agent. Your assistant is built to never miss that window, at 2pm or 2am, on a Tuesday or a Sunday, no matter what time zone the caller is in."
+              sub="Answer within the first minute and most buyers still want to talk. Wait past that and they've already called the next agent. Your assistant never misses that window, day or night, any time zone."
               invert
             />
           </Reveal>
