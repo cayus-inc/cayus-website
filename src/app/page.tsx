@@ -99,19 +99,20 @@ export default function Home() {
         <Reveal direction="left">
           <span className="mb-8 inline-flex items-center gap-2.5 text-[0.72rem] font-semibold uppercase tracking-[0.16em] text-fg-soft">
             <span className="h-px w-6 bg-border" />
-            Never miss another lead
+            Right now
           </span>
           <h1 className="font-serif-display text-[3.4rem] font-medium leading-[0.95] tracking-[-0.02em] text-balance md:text-[6.8rem]">
-            We catch the <span style={{ color: "var(--metal)" }}>lead.</span>
+            A missed call
             <br />
-            You close
+            just cost you
             <br />
-            the sale.
+            <span style={{ color: "var(--metal)" }}>$7,500 to $15,000.</span>
           </h1>
           <p className="mt-8 max-w-[46ch] text-[1.15rem] leading-[1.6] text-fg-soft">
-            An AI assistant answers every missed call within seconds, in
-            your name, qualifies the buyer, and books the showing straight
-            into your calendar. Nothing to configure, nothing to learn.
+            We catch the lead. You keep the client. An AI assistant answers
+            every missed call within seconds, in your name, qualifies the
+            buyer, and books the showing straight into your calendar.
+            Nothing to configure, nothing to learn.
           </p>
           <div className="mt-10 flex flex-wrap items-center gap-4">
             <CTA href={BOOK_A_CALL_HREF}>Get started</CTA>

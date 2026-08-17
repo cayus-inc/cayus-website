@@ -11,7 +11,7 @@ const sourceSerif = Source_Serif_4({
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://cayus.io"),
-  title: "Cayus: We catch the lead. You close the sale.",
+  title: "Cayus: We catch the lead. You keep the client.",
   description:
     "An AI assistant answers every missed call within seconds, in your name, qualifies the buyer, and books the showing straight into your calendar.",
 };
