@@ -60,6 +60,11 @@ export default function PrivacyPage() {
         telemarketing and messaging law (including the TCPA) for how they
         represent and use this service.
       </p>
+      <p>
+        We do not share or sell mobile phone numbers to third parties for
+        marketing purposes. Message frequency varies depending on your
+        conversation with the assistant. Message and data rates may apply.
+      </p>
 
       <h2>6. How We Use This Data</h2>
       <ul>
