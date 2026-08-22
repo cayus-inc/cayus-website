@@ -24,7 +24,7 @@ export default function ConsentProofPage() {
           How a caller consents to receive an SMS from Cayus
         </h1>
         <p className="mt-4 text-[0.95rem] leading-relaxed text-fg-soft">
-          Cayus (a service operated by EI - ENZO ROMA) is a missed-call
+          Cayus (a service operated by ENZO ROMA) is a missed-call
           answering service for independent US real estate agents. There is
           no text-to-join or keyword opt-in: consent is call-based. A lead
           dials the agent&apos;s own publicly listed business phone number.
