@@ -29,6 +29,19 @@
   --color-fg-soft: var(--fg-soft);
   --color-metal: var(--metal);
   --color-border: var(--border);
+  /* Raw ink/paper/pewter tokens, for the deliberately dark hero sections
+     (/start, /watch) that invert the site's usual light theme - these were
+     used as bg-ink/text-paper/etc without ever being registered here, so
+     they silently generated no CSS at all (found 2026-08-26: both pages
+     rendered as plain unstyled light backgrounds instead of the intended
+     dark contrast). */
+  --color-ink: var(--ink);
+  --color-ink-raised: var(--ink-raised);
+  --color-paper: var(--paper);
+  --color-paper-dim: var(--paper-dim);
+  --color-pewter: var(--pewter);
+  --color-pewter-bright: var(--pewter-bright);
+  --color-pewter-dim: var(--pewter-dim);
   --font-serif-display: var(--font-source-serif), Georgia, serif;
   --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
 }
