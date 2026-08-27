@@ -91,10 +91,18 @@ export default function PrivacyPage() {
         agreement: a telephony and messaging provider (call forwarding and
         SMS), an AI-assisted conversation provider, a cloud hosting
         provider, and a payment processor (client billing only). Identities
-        are available on request under Section 11.
+        are available on request under Section 12.
       </p>
 
-      <h2>9. International Data Transfers</h2>
+      <h2 id="security">9. Data Security</h2>
+      <ul>
+        <li>Servers are physically located in the United States (Boston, Massachusetts).</li>
+        <li>All data in transit is encrypted (HTTPS/TLS), including every message between your dashboard, our servers, and our infrastructure providers.</li>
+        <li>Each client dashboard is protected by a unique, unguessable link rather than a public URL or a shared password &mdash; do not share your link, anyone who has it can view your conversations.</li>
+        <li>We do not sell or share client or lead personal data with third parties for marketing purposes.</li>
+      </ul>
+
+      <h2>10. International Data Transfers</h2>
       <p>
         Cayus is based in France and serves clients in the United States.
         Where data is transferred outside the EEA, we rely on Standard
@@ -102,14 +110,14 @@ export default function PrivacyPage() {
         where applicable.
       </p>
 
-      <h2>10. Data Retention</h2>
+      <h2>11. Data Retention</h2>
       <ul>
         <li>Client account data: retained for the duration of the relationship, deleted within 30 days of a written request thereafter.</li>
         <li>Lead conversation data: retained for up to 12 months for continuity of service, then deleted or anonymized, unless earlier deletion is requested.</li>
         <li>Financial records: 10 years, as required under French law.</li>
       </ul>
 
-      <h2>11. Your Rights</h2>
+      <h2>12. Your Rights</h2>
       <p>Under GDPR, clients and leads have the right to:</p>
       <ul>
         <li>Access the personal data we hold</li>
@@ -126,22 +134,22 @@ export default function PrivacyPage() {
         within 30 days.
       </p>
 
-      <h2>12. Cookies</h2>
+      <h2>13. Cookies</h2>
       <p>
         The Cayus website does not set cookies. See our{" "}
         <a href="/cookies">Cookie Policy</a>.
       </p>
 
-      <h2>13. Children&apos;s Privacy</h2>
+      <h2>14. Children&apos;s Privacy</h2>
       <p>The Service is not directed at individuals under 18.</p>
 
-      <h2>14. Changes to This Policy</h2>
+      <h2>15. Changes to This Policy</h2>
       <p>
         We may update this Privacy Policy. Material changes are notified by
         email to active clients at least 30 days before taking effect.
       </p>
 
-      <h2>15. Contact and Complaints</h2>
+      <h2>16. Contact and Complaints</h2>
       <p>
         Questions about this policy or your data:{" "}
         <a href="mailto:privacy@cayus.io">privacy@cayus.io</a>. EU

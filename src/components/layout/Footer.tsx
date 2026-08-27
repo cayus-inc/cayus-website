@@ -70,6 +70,12 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col items-start justify-between gap-3 border-t border-border pt-6 text-[0.78rem] text-fg-soft sm:flex-row sm:items-center">
           <p>&copy; {new Date().getFullYear()} Cayus. All rights reserved.</p>
+          <p>
+            Hosted securely on U.S. servers.{" "}
+            <Link href="/privacy#security" className="hover:text-fg">
+              Learn more
+            </Link>
+          </p>
           <a href="mailto:contact@cayus.io" className="hover:text-fg">
             contact@cayus.io
           </a>

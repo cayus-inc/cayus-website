@@ -32,6 +32,13 @@ export default function WatchPage() {
           >
             See exactly how it works
           </Link>
+
+          <p className="mt-6 text-[0.78rem] text-paper/50">
+            Hosted securely on U.S. servers.{" "}
+            <Link href="/privacy#security" className="underline hover:text-paper/80">
+              Learn more
+            </Link>
+          </p>
         </div>
       </section>
     </main>
