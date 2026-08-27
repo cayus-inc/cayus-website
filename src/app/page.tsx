@@ -328,6 +328,82 @@ Without an assistant
         </div>
       </section>
 
+      {/* Everything else, orchestrated around the core assistant */}
+      <section className="overflow-clip border-t border-border px-6 py-28 md:py-40">
+        <div className="mx-auto max-w-[1160px]">
+          <Reveal>
+            <SectionHead
+              align="left"
+              eyebrow="Built around the core"
+              title="One assistant. Five things it never drops."
+              sub="Answering the missed call is the job. What happens after is what actually protects the sale, so it's not an add-on, it runs the same way from day one."
+            />
+          </Reveal>
+
+          <Reveal delay={0.1}>
+            <div className="mx-auto mt-14 max-w-[360px] rounded-sm border border-fg bg-fg px-7 py-6 text-center text-bg">
+              <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] opacity-60">
+                The core
+              </p>
+              <p className="mt-2 text-[1.05rem] font-semibold">
+                Never miss a lead
+              </p>
+              <p className="mt-1.5 text-[0.86rem] leading-[1.5] opacity-80">
+                Every missed call answered, qualified, and booked in minutes.
+              </p>
+            </div>
+          </Reveal>
+
+          {/* Connector: stem down from the core into a shared bus, then a
+              short stem back up into each of the four cards - a deliberate
+              tree diagram, not four more equal-weight steps. */}
+          <div className="hidden md:block">
+            <div className="mx-auto h-10 w-px bg-border" />
+            <div className="grid grid-cols-4 border-t border-border">
+              {[0, 1, 2, 3].map((i) => (
+                <div key={i} className="flex justify-center">
+                  <div className="h-6 w-px bg-border" />
+                </div>
+              ))}
+            </div>
+          </div>
+
+          <StaggerGroup className="mt-6 grid grid-cols-1 gap-6 md:mt-0 md:grid-cols-4">
+            {[
+              {
+                title: "Showing reminders",
+                body: "A text ~24h before every showing. A no-show is lost time and a lost sale, not just an empty slot.",
+              },
+              {
+                title: "Long-term follow-up",
+                body: "7, 21, and 60 days later for leads who weren't ready yet, instead of writing them off after one no.",
+              },
+              {
+                title: "Weekly report",
+                body: "Exactly what your assistant caught this week. The less you have to wonder, the less reason to churn.",
+              },
+              {
+                title: "Review requests",
+                body: "One click once a deal closes. Real social proof for your business, not just a lead source for us.",
+              },
+            ].map((item) => (
+              <StaggerItem
+                key={item.title}
+                className="rounded-sm border border-border px-6 py-6"
+              >
+                <h4 className="text-[0.98rem] font-semibold">{item.title}</h4>
+                <p className="mt-2 text-[0.88rem] leading-[1.55] text-fg-soft">
+                  {item.body}
+                </p>
+              </StaggerItem>
+            ))}
+          </StaggerGroup>
+          <p className="mt-8 text-center text-[0.82rem] text-fg-soft">
+            All four run automatically for every client. Nothing extra to set up, nothing extra to pay.
+          </p>
+        </div>
+      </section>
+
       {/* Pricing */}
       <section id="pricing" className="overflow-clip border-t border-border px-6 py-28 md:py-40">
         <div className="mx-auto max-w-[1160px]">
@@ -394,27 +470,6 @@ Without an assistant
                 assistant hasn&rsquo;t captured at least 3 qualified leads in
                 your first 30 days, we refund the setup fee and that
                 month&rsquo;s subscription in full.
-              </p>
-            </div>
-          </Reveal>
-          <Reveal delay={0.18}>
-            <div className="mt-4 flex items-start gap-3 rounded-sm border border-border bg-bg-raised px-6 py-5">
-              <svg width="18" height="18" viewBox="0 0 12 12" className="mt-0.5 flex-none text-metal">
-                <path
-                  d="M2 6.5 L5 9.5 L10 3"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="1.6"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-              <p className="text-[0.92rem] leading-[1.55] text-fg-soft">
-                <strong className="text-fg">Also included, no extra charge.</strong>{" "}
-                Showing reminders, follow-ups for leads who weren&rsquo;t ready
-                yet, a weekly report on what your assistant captured, and
-                one-click review requests once a deal closes. We run all of
-                it, you set up nothing extra.
               </p>
             </div>
           </Reveal>

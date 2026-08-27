@@ -31,11 +31,6 @@ const cards: { eyebrow: string; title: string; body: string }[] = [
     body: "Connect your calendar, forward your calls, live within 48 hours. We handle the rest.",
   },
   {
-    eyebrow: "And more, included",
-    title: "It doesn't stop at the text back.",
-    body: "Showing reminders, follow-ups for leads who weren't ready yet, a weekly report, review requests. No extra setup, no extra charge.",
-  },
-  {
     eyebrow: "Pricing",
     title: "$299 to start, then $149/mo.",
     body: "One kept client pays for this 50 to 100 months over.",
@@ -81,6 +76,39 @@ export default function StartPage() {
           >
             Get started
           </Link>
+        </div>
+      </section>
+
+      {/* Built around the core - same tree diagram as the home page, sized
+          for this page's narrower 720px column (2x2 instead of 4-across). */}
+      <section className="border-t border-border px-6 py-16">
+        <div className="mx-auto max-w-[560px] text-center">
+          <p className="text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-fg-soft">
+            Built around the core
+          </p>
+          <div className="mx-auto mt-6 max-w-[320px] rounded-sm border border-fg bg-fg px-6 py-5 text-bg">
+            <p className="text-[0.95rem] font-semibold">Never miss a lead</p>
+            <p className="mt-1 text-[0.8rem] leading-[1.45] opacity-80">
+              Every missed call answered, qualified, and booked in minutes.
+            </p>
+          </div>
+          <div className="mx-auto h-8 w-px bg-border" />
+          <div className="grid grid-cols-2 gap-4 border-t border-border pt-6">
+            {[
+              { title: "Showing reminders", body: "Fewer no-shows, so you don't lose the time or the sale." },
+              { title: "Long-term follow-up", body: "7/21/60-day check-ins for leads who weren't ready yet." },
+              { title: "Weekly report", body: "Exactly what got captured, every week, no digging." },
+              { title: "Review requests", body: "One click once a deal closes. Real social proof." },
+            ].map((item) => (
+              <div key={item.title} className="rounded-sm border border-border px-4 py-4 text-left">
+                <h4 className="text-[0.86rem] font-semibold">{item.title}</h4>
+                <p className="mt-1.5 text-[0.78rem] leading-[1.45] text-fg-soft">{item.body}</p>
+              </div>
+            ))}
+          </div>
+          <p className="mt-5 text-[0.78rem] text-fg-soft">
+            All four run automatically. Nothing extra to set up, nothing extra to pay.
+          </p>
         </div>
       </section>
 
