@@ -39,8 +39,11 @@ export default function WatchPage() {
             href="/start"
             className="mt-8 inline-flex items-center justify-center rounded-full bg-paper px-8 py-3.5 text-[0.95rem] font-semibold text-ink"
           >
-            See exactly how it works
+            See exactly how we fix it
           </Link>
+          <p className="mt-3 text-[0.8rem] text-paper/60">
+            Under 2 minutes, start to finish.
+          </p>
 
           <p className="mt-6 text-[0.78rem] text-paper/50">
             Hosted securely on U.S. servers.{" "}

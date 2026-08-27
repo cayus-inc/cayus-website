@@ -85,7 +85,7 @@ export default function StartPage() {
       <section className="border-t border-border bg-bg-raised py-14">
         <CardCarousel cards={cards} />
         <p className="mt-4 text-center text-[0.76rem] text-fg-soft">
-          Start to finish, in order &mdash; swipe, drag, or use the arrows.
+          Start to finish, in order. Swipe, drag, or use the arrows.
         </p>
       </section>
 

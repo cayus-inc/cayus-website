@@ -98,7 +98,7 @@ export default function PrivacyPage() {
       <ul>
         <li>Servers are physically located in the United States (Boston, Massachusetts).</li>
         <li>All data in transit is encrypted (HTTPS/TLS), including every message between your dashboard, our servers, and our infrastructure providers.</li>
-        <li>Each client dashboard is protected by a unique, unguessable link rather than a public URL or a shared password &mdash; do not share your link, anyone who has it can view your conversations.</li>
+        <li>Each client dashboard is protected by a unique, unguessable link rather than a public URL or a shared password. Do not share your link, anyone who has it can view your conversations.</li>
         <li>We do not sell or share client or lead personal data with third parties for marketing purposes.</li>
       </ul>
 
