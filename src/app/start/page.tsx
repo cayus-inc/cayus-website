@@ -87,6 +87,9 @@ export default function StartPage() {
         <p className="mt-4 text-center text-[0.76rem] text-fg-soft">
           Start to finish, in order. Swipe, drag, or use the arrows.
         </p>
+        <p className="mt-2 text-center text-[0.82rem] font-medium text-fg">
+          $299 to start, $149/mo. 3 leads in 30 days, or it&apos;s free.
+        </p>
       </section>
 
       <section className="border-t border-border bg-ink px-6 py-20 text-paper md:py-28">
