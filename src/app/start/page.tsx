@@ -31,6 +31,11 @@ const cards: { eyebrow: string; title: string; body: string }[] = [
     body: "Connect your calendar, forward your calls, live within 48 hours. We handle the rest.",
   },
   {
+    eyebrow: "And more, included",
+    title: "It doesn't stop at the text back.",
+    body: "Showing reminders, follow-ups for leads who weren't ready yet, a weekly report, review requests. No extra setup, no extra charge.",
+  },
+  {
     eyebrow: "Pricing",
     title: "$299 to start, then $149/mo.",
     body: "One kept client pays for this 50 to 100 months over.",

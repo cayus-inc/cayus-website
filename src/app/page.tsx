@@ -397,6 +397,27 @@ Without an assistant
               </p>
             </div>
           </Reveal>
+          <Reveal delay={0.18}>
+            <div className="mt-4 flex items-start gap-3 rounded-sm border border-border bg-bg-raised px-6 py-5">
+              <svg width="18" height="18" viewBox="0 0 12 12" className="mt-0.5 flex-none text-metal">
+                <path
+                  d="M2 6.5 L5 9.5 L10 3"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="1.6"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+              <p className="text-[0.92rem] leading-[1.55] text-fg-soft">
+                <strong className="text-fg">Also included, no extra charge.</strong>{" "}
+                Showing reminders, follow-ups for leads who weren&rsquo;t ready
+                yet, a weekly report on what your assistant captured, and
+                one-click review requests once a deal closes. We run all of
+                it, you set up nothing extra.
+              </p>
+            </div>
+          </Reveal>
         </div>
       </section>
 
