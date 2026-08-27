@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { GET_STARTED_HREF } from "@/lib/links";
+import { CardCarousel } from "@/components/start/CardCarousel";
+import { StickyCta } from "@/components/start/StickyCta";
 
 export const metadata: Metadata = {
   title: "Cayus - see exactly how it works",
@@ -68,6 +70,7 @@ export default function StartPage() {
           </div>
 
           <Link
+            id="hero-cta"
             href={GET_STARTED_HREF}
             className="mt-8 inline-flex items-center justify-center rounded-full bg-paper px-8 py-3.5 text-[0.95rem] font-semibold text-ink"
           >
@@ -76,29 +79,13 @@ export default function StartPage() {
         </div>
       </section>
 
-      {/* Recap carousel - swipeable, native scroll-snap, no JS library */}
+      {/* Recap carousel - arrows + drag-to-scroll for mouse users, numbered
+          cards and progress dots for a clear start-to-finish reading order
+          (see CardCarousel.tsx). */}
       <section className="border-t border-border bg-bg-raised py-14">
-        <div
-          className="flex snap-x snap-mandatory gap-4 overflow-x-auto px-6 pb-4 [-ms-overflow-style:none] [scrollbar-width:none] [&::-webkit-scrollbar]:hidden md:justify-center"
-          style={{ scrollPaddingInline: "1.5rem" }}
-        >
-          {cards.map((card) => (
-            <div
-              key={card.title}
-              className="w-[78vw] flex-none snap-center rounded-sm border border-border bg-bg p-6 sm:w-[320px]"
-            >
-              <p className="text-[0.66rem] font-semibold uppercase tracking-[0.14em] text-fg-soft">
-                {card.eyebrow}
-              </p>
-              <h3 className="mt-2 font-serif-display text-balance text-[1.2rem] font-medium leading-[1.2]">
-                {card.title}
-              </h3>
-              <p className="mt-2 text-[0.88rem] leading-relaxed text-fg-soft">{card.body}</p>
-            </div>
-          ))}
-        </div>
-        <p className="mt-2 text-center text-[0.76rem] text-fg-soft">
-          Swipe to see how it works, start to finish &rarr;
+        <CardCarousel cards={cards} />
+        <p className="mt-4 text-center text-[0.76rem] text-fg-soft">
+          Start to finish, in order &mdash; swipe, drag, or use the arrows.
         </p>
       </section>
 
@@ -111,6 +98,7 @@ export default function StartPage() {
             Two minutes to set up, live in 48 hours, cancel anytime.
           </p>
           <Link
+            id="final-cta"
             href={GET_STARTED_HREF}
             className="mt-8 inline-flex items-center justify-center rounded-full bg-paper px-8 py-3.5 text-[0.95rem] font-semibold text-ink"
           >
@@ -125,6 +113,8 @@ export default function StartPage() {
           </p>
         </div>
       </section>
+
+      <StickyCta href={GET_STARTED_HREF} heroCtaId="hero-cta" finalCtaId="final-cta" />
     </main>
   );
 }

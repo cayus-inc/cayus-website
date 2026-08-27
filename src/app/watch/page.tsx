@@ -18,9 +18,18 @@ export default function WatchPage() {
     <main className="min-h-screen bg-ink text-paper">
       <section className="px-6 py-16 md:py-24">
         <div className="mx-auto max-w-[720px] text-center">
-          <div className="mx-auto aspect-video w-full overflow-hidden rounded-sm border border-white/10 bg-black">
-            {/* TODO: replace with the real exported video file once recorded
-                (e.g. /videos/watch.mp4), self-hosted - no Tella player/branding. */}
+          <p className="mb-3 text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-pewter-bright">
+            29 seconds
+          </p>
+          <h1 className="font-serif-display text-balance text-[1.7rem] font-medium leading-[1.15] sm:text-[2.1rem]">
+            A missed call just cost you<br />
+            <span className="text-pewter-bright">$7,500 to $15,000 in commission.</span>
+          </h1>
+          <p className="mx-auto mt-4 max-w-[420px] text-[0.98rem] leading-relaxed text-paper/70">
+            Here&apos;s the fix, in less time than it took to read this.
+          </p>
+
+          <div className="mx-auto mt-8 aspect-video w-full overflow-hidden rounded-sm border border-white/10 bg-black">
             <video controls className="h-full w-full" poster="">
               <source src="/videos/watch.mp4" type="video/mp4" />
             </video>
