@@ -126,6 +126,9 @@ export default function Home() {
             </a>{" "}
             right now, it&apos;s the exact AI you&apos;d be buying.
           </p>
+          <p className="mt-2 text-[0.86rem] text-fg-soft">
+            The moment you pay, it provisions itself automatically. No one to wait on.
+          </p>
         </Reveal>
         <Reveal delay={0.12} direction="right" className="order-first md:order-last">
           <HeroStage />
@@ -531,6 +534,9 @@ Without an assistant
                 {DEMO_PHONE_DISPLAY}
               </a>{" "}
               right now, it&apos;s the exact AI you&apos;d be buying.
+            </p>
+            <p className="mt-2 text-[0.86rem]" style={{ color: "rgba(250,248,244,0.6)" }}>
+              The moment you pay, it provisions itself automatically. No one to wait on.
             </p>
           </Reveal>
         </div>

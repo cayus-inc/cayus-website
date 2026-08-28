@@ -83,6 +83,9 @@ export default function StartPage() {
             </a>{" "}
             right now, it&apos;s the exact AI you&apos;d be buying.
           </p>
+          <p className="mt-2 text-[0.8rem] text-paper/60">
+            The moment you pay, it provisions itself automatically. No one to wait on.
+          </p>
         </div>
       </section>
 
@@ -153,6 +156,9 @@ export default function StartPage() {
               {DEMO_PHONE_DISPLAY}
             </a>{" "}
             right now, it&apos;s the exact AI you&apos;d be buying.
+          </p>
+          <p className="mt-2 text-[0.8rem] text-paper/60">
+            The moment you pay, it provisions itself automatically. No one to wait on.
           </p>
 
           <p className="mt-6 text-[0.78rem] text-paper/50">
