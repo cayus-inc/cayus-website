@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { DEMO_PHONE_DISPLAY, DEMO_PHONE_TEL } from "@/lib/links";
 
 const COLS: { title: string; links: { label: string; href: string }[] }[] = [
   {
@@ -44,6 +45,12 @@ export function Footer() {
             </Link>
             <p className="mt-3 max-w-[28ch] text-[0.85rem] leading-[1.6] text-fg-soft">
               The assistant that answers when you can&rsquo;t.
+            </p>
+            <p className="mt-3 max-w-[28ch] text-[0.8rem] leading-[1.6] text-fg-soft">
+              Try it yourself:{" "}
+              <a href={`tel:${DEMO_PHONE_TEL}`} className="font-medium text-fg hover:underline">
+                {DEMO_PHONE_DISPLAY}
+              </a>
             </p>
           </div>
 

@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
-import { GET_STARTED_HREF } from "@/lib/links";
+import { GET_STARTED_HREF, DEMO_PHONE_DISPLAY, DEMO_PHONE_TEL } from "@/lib/links";
 import { CardCarousel } from "@/components/start/CardCarousel";
 import { StickyCta } from "@/components/start/StickyCta";
 
@@ -76,6 +76,13 @@ export default function StartPage() {
           >
             Get started
           </Link>
+          <p className="mt-4 text-[0.8rem] text-paper/60">
+            Or text/call{" "}
+            <a href={`tel:${DEMO_PHONE_TEL}`} className="font-medium text-paper underline decoration-white/25 underline-offset-2">
+              {DEMO_PHONE_DISPLAY}
+            </a>{" "}
+            right now, it&apos;s the exact AI you&apos;d be buying.
+          </p>
         </div>
       </section>
 
@@ -140,6 +147,13 @@ export default function StartPage() {
           >
             Get started
           </Link>
+          <p className="mt-4 text-[0.8rem] text-paper/60">
+            Or text/call{" "}
+            <a href={`tel:${DEMO_PHONE_TEL}`} className="font-medium text-paper underline decoration-white/25 underline-offset-2">
+              {DEMO_PHONE_DISPLAY}
+            </a>{" "}
+            right now, it&apos;s the exact AI you&apos;d be buying.
+          </p>
 
           <p className="mt-6 text-[0.78rem] text-paper/50">
             Hosted securely on U.S. servers.{" "}

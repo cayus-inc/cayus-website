@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Link from "next/link";
+import { DEMO_PHONE_DISPLAY, DEMO_PHONE_TEL } from "@/lib/links";
 
 export const metadata: Metadata = {
   title: "Cayus - a missed call just cost you",
@@ -43,6 +44,14 @@ export default function WatchPage() {
           </Link>
           <p className="mt-3 text-[0.8rem] text-paper/60">
             Under 2 minutes, start to finish.
+          </p>
+
+          <p className="mt-5 text-[0.8rem] text-paper/60">
+            Or skip the video: text/call{" "}
+            <a href={`tel:${DEMO_PHONE_TEL}`} className="font-medium text-paper underline decoration-white/25 underline-offset-2">
+              {DEMO_PHONE_DISPLAY}
+            </a>{" "}
+            right now, it&apos;s the exact AI you&apos;d be buying.
           </p>
 
           <p className="mt-6 text-[0.78rem] text-paper/50">

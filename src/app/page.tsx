@@ -10,7 +10,7 @@ import { ScanField } from "@/components/ui/ScanField";
 import { ParticleField } from "@/components/three/ParticleField";
 import { FAQ } from "@/components/ui/FAQ";
 import { CTA } from "@/components/ui/CTA";
-import { GET_STARTED_HREF } from "@/lib/links";
+import { GET_STARTED_HREF, DEMO_PHONE_DISPLAY, DEMO_PHONE_TEL } from "@/lib/links";
 
 const oldWay = [
   "An unanswered call rarely gets a callback, most buyers just move on",
@@ -119,6 +119,13 @@ export default function Home() {
               See how it works
             </Link>
           </div>
+          <p className="mt-5 text-[0.86rem] text-fg-soft">
+            Or skip straight to it: text or call{" "}
+            <a href={`tel:${DEMO_PHONE_TEL}`} className="font-medium text-fg underline decoration-border underline-offset-2">
+              {DEMO_PHONE_DISPLAY}
+            </a>{" "}
+            right now, it&apos;s the exact AI you&apos;d be buying.
+          </p>
         </Reveal>
         <Reveal delay={0.12} direction="right" className="order-first md:order-last">
           <HeroStage />
@@ -518,6 +525,13 @@ Without an assistant
                 Get started
               </CTA>
             </div>
+            <p className="mt-5 text-[0.86rem]" style={{ color: "rgba(250,248,244,0.6)" }}>
+              Or text/call{" "}
+              <a href={`tel:${DEMO_PHONE_TEL}`} className="font-medium underline decoration-white/25 underline-offset-2" style={{ color: "#faf8f4" }}>
+                {DEMO_PHONE_DISPLAY}
+              </a>{" "}
+              right now, it&apos;s the exact AI you&apos;d be buying.
+            </p>
           </Reveal>
         </div>
       </section>
