@@ -118,7 +118,7 @@ export function CardCarousel({ cards }: { cards: Card[] }) {
             aria-label="Previous"
             onClick={() => scrollByCard(-1)}
             disabled={atStart}
-            className="flex h-11 w-11 items-center justify-center rounded-full bg-ink text-paper transition-opacity disabled:opacity-25"
+            className="flex h-11 w-11 items-center justify-center rounded-full bg-ink text-paper transition-all duration-150 ease-out hover:opacity-90 active:scale-90 disabled:opacity-25 disabled:active:scale-100"
           >
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
               <path d="M10 3L5 8L10 13" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />
@@ -129,7 +129,7 @@ export function CardCarousel({ cards }: { cards: Card[] }) {
             aria-label="Next"
             onClick={() => scrollByCard(1)}
             disabled={atEnd}
-            className="flex h-11 w-11 items-center justify-center rounded-full bg-ink text-paper transition-opacity disabled:opacity-25"
+            className="flex h-11 w-11 items-center justify-center rounded-full bg-ink text-paper transition-all duration-150 ease-out hover:opacity-90 active:scale-90 disabled:opacity-25 disabled:active:scale-100"
           >
             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
               <path d="M6 3L11 8L6 13" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round" />

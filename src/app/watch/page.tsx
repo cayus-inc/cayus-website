@@ -38,7 +38,7 @@ export default function WatchPage() {
 
           <Link
             href="/start"
-            className="mt-8 inline-flex items-center justify-center rounded-full bg-paper px-8 py-3.5 text-[0.95rem] font-semibold text-ink"
+            className="mt-8 inline-flex items-center justify-center rounded-full bg-paper px-8 py-3.5 text-[0.95rem] font-semibold text-ink transition-all duration-200 ease-out hover:-translate-y-0.5 hover:opacity-90 hover:shadow-[0_14px_28px_-10px_rgba(0,0,0,0.5)] active:scale-[0.97] active:duration-75"
           >
             See exactly how we fix it
           </Link>

@@ -4,6 +4,7 @@ import { Footer } from "@/components/layout/Footer";
 import { Reveal, StaggerGroup, StaggerItem } from "@/components/ui/Reveal";
 import { ContactForm } from "@/components/ui/ContactForm";
 import { ParticleField } from "@/components/three/ParticleField";
+import { DEMO_PHONE_DISPLAY, DEMO_PHONE_TEL } from "@/lib/links";
 
 export const metadata: Metadata = {
   title: "Get started",
@@ -50,6 +51,13 @@ export default function ContactPage() {
               No scheduling link, no calendar dance. Give us the basics and
               we&rsquo;ll reply directly, usually within one business day, to
               get you set up.
+            </p>
+            <p className="mt-4 max-w-[42ch] text-[0.88rem] leading-[1.6] text-fg-soft">
+              Or skip the form: text or call{" "}
+              <a href={`tel:${DEMO_PHONE_TEL}`} className="font-medium text-fg underline decoration-border underline-offset-2">
+                {DEMO_PHONE_DISPLAY}
+              </a>{" "}
+              right now and talk to the exact AI you&rsquo;d be buying.
             </p>
           </Reveal>
           <StaggerGroup className="relative mt-12 flex flex-col gap-5 border-t border-border pt-8">

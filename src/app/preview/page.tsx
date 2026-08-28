@@ -1,5 +1,7 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { MissedCallCalculator } from "@/components/ui/MissedCallCalculator";
+import { DEMO_PHONE_DISPLAY, DEMO_PHONE_TEL } from "@/lib/links";
 
 export const metadata: Metadata = {
   title: "Cayus - what we're building",
@@ -7,20 +9,23 @@ export const metadata: Metadata = {
 };
 
 // Deliberately not the main marketing site: no header, no footer, no
-// pricing, no "Get Started". This is the link used in early outreach to
-// agents we haven't sold to yet, while the product isn't fully live
-// (Twilio A2P still pending) - see MEMORY.md 2026-08-18. Showing the
-// calculator here instead of on cayus.io avoids implying the full site
-// (Stripe checkout included) is ready to buy from right now.
+// pricing, no "Get Started" checkout button. This is the value-first touch
+// in the outreach sequence (calculator, no email required) - kept separate
+// from cayus.io so it never feels like a sales page.
+//
+// Correction 2026-08-30: this used to say the product wasn't live yet
+// (carrier approval pending) - that's been done for days, this page was
+// stale and actively wrong for anyone reaching it from a live campaign.
+// Fixed, and added the demo number now that it's true and testable.
 export default function PreviewPage() {
   return (
     <main className="min-h-screen bg-bg px-6 py-20 text-fg">
       <div className="mx-auto max-w-[720px]">
         <p className="mb-3 text-[0.7rem] font-semibold uppercase tracking-[0.18em] text-fg-soft">
-          Early look, not a live product yet
+          A quick look, no signup
         </p>
         <h1 className="font-serif-display text-balance text-[1.9rem] font-medium leading-[1.15] sm:text-[2.4rem]">
-          What we&apos;re building for real estate agents
+          What Cayus does for real estate agents
         </h1>
         <p className="mt-5 max-w-[540px] text-[1.02rem] leading-relaxed text-fg-soft">
           When you miss a call, an AI assistant texts the caller back within seconds, in
@@ -31,9 +36,12 @@ export default function PreviewPage() {
           the day before so fewer people no-show.
         </p>
         <p className="mt-4 max-w-[540px] text-[1.02rem] leading-relaxed text-fg-soft">
-          It&apos;s built, and we&apos;re finishing carrier approval for text messaging
-          before opening it up. In the meantime, here&apos;s a calculator with your own
-          numbers, no email required.
+          It&apos;s live. Try it yourself, no signup: text or call{" "}
+          <a href={`tel:${DEMO_PHONE_TEL}`} className="font-medium text-fg underline decoration-border underline-offset-2">
+            {DEMO_PHONE_DISPLAY}
+          </a>
+          , it&apos;s the exact AI you&apos;d be buying. Or start with your own numbers
+          below, no email required.
         </p>
 
         <div className="mt-14">
@@ -41,7 +49,11 @@ export default function PreviewPage() {
         </div>
 
         <p className="mt-14 text-[0.92rem] text-fg-soft">
-          Questions or thoughts on any of this? Just reply to the email this came from.
+          Want to see the full thing?{" "}
+          <Link href="/watch" className="font-medium text-fg underline decoration-border underline-offset-2">
+            Watch the 29-second version
+          </Link>
+          . Questions? Just reply to the email this came from.
         </p>
       </div>
     </main>

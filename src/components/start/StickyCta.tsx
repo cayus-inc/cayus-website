@@ -51,7 +51,7 @@ export function StickyCta({ href, heroCtaId, finalCtaId }: { href: string; heroC
         <p className="hidden text-[0.85rem] text-fg-soft sm:block">Two minutes to set up, live in 48 hours.</p>
         <Link
           href={href}
-          className="inline-flex flex-1 items-center justify-center rounded-full bg-ink px-6 py-2.5 text-[0.9rem] font-semibold text-paper sm:flex-none"
+          className="inline-flex flex-1 items-center justify-center rounded-full bg-ink px-6 py-2.5 text-[0.9rem] font-semibold text-paper transition-all duration-150 ease-out hover:opacity-90 active:scale-95 sm:flex-none"
         >
           Get started
         </Link>
